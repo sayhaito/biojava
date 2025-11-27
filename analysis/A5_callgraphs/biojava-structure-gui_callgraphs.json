@@ -1,0 +1,14 @@
+[
+  {
+    "class": "CoordManager",
+    "method": "getSeqPos",
+    "calls": [
+      {
+        "from": "CoordManager.getSeqPos",
+        "to": "Math.round"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "feature": "GeneNamesParser",
+    "module": "biojava-genome",
+    "actor": "System",
+    "summary": "System uses GeneNamesParser to parses input data",
+    "steps": [
+      "Execute main",
+      "Retrieve GeneNames",
+      "Retrieve GeneNames",
+      "Retrieve GeneName"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "GeneChromosomePositionParser",
+    "module": "biojava-genome",
+    "actor": "System",
+    "summary": "System uses GeneChromosomePositionParser to parses input data",
+    "steps": [
+      "Execute main",
+      "Retrieve ChromosomeMappings",
+      "Retrieve ChromosomeMappings",
+      "Retrieve GeneChromosomePosition",
+      "Retrieve IntegerList"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "GFF3Reader",
+    "module": "biojava-genome",
+    "actor": "System",
+    "summary": "System uses GFF3Reader to reads data from source",
+    "steps": [
+      "Read ",
+      "Read ",
+      "Read ",
+      "Read ",
+      "Parse Line",
+      "Execute main"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "GeneIDGFF2Reader",
+    "module": "biojava-genome",
+    "actor": "System",
+    "summary": "System uses GeneIDGFF2Reader to reads data from source",
+    "steps": [
+      "Read ",
+      "Parse Line",
+      "Write ",
+      "Write Line",
+      "Execute main"
+    ],
+    "next_step": "continue"
+  }
+]

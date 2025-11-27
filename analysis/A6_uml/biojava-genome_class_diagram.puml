@@ -1,0 +1,99 @@
+@startuml
+title biojava-genome - Class Diagram
+
+class GeneNamesParser {
+  - logger: Logger
+  + DEFAULT_GENENAMES_URL: String
+  + main(String[] args): void
+  + getGeneNames(): List<GeneName>
+  + getGeneNames(InputStream inStream): List<GeneName>
+  - getGeneName(String line): GeneName
+}
+
+class GeneChromosomePositionParser {
+  - logger: Logger
+  + DEFAULT_MAPPING_URL: String
+  + main(String[] args): void
+  + getChromosomeMappings(): List<GeneChromosomePosition>
+  + getChromosomeMappings(InputStream inStream): List<GeneChromosomePosition>
+  - getGeneChromosomePosition(String line): GeneChromosomePosition
+  - getIntegerList(String lst): List<Integer>
+}
+
+interface FeatureI {
+}
+
+class GFF3Reader {
+  - logger: Logger
+  - p: Pattern
+  + read(String filename, List<String> indexes): FeatureList
+  + read(Path path, List<String> indexes): FeatureList
+  + read(String filename): FeatureList
+  + read(Path path): FeatureList
+  - parseLine(String s): Feature
+  + main(String[] args): void
+}
+
+class GeneIDGFF2Reader {
+  - logger: Logger
+  + read(String filename): FeatureList
+  - parseLine(String s): Feature
+  + write(FeatureList features, String filename): void
+  - writeLine(Feature f, BufferedWriter bw): void
+  + main(String[] args): void
+}
+
+class GFF3Writer {
+  + write(OutputStream outputStream, Map<String, ChromosomeSequence> chromosomeSequenceList): void
+  - getGFF3Note(List<String> notesList): String
+}
+
+class GeneMarkGTFReader {
+  - logger: Logger
+  + read(String filename): FeatureList
+  - parseLine(String s): Feature
+  + main(String[] args): void
+}
+
+class CytobandParser {
+  - logger: Logger
+  + DEFAULT_LOCATION: String
+  + main(String[] args): void
+  + getAllCytobands(URL u): SortedSet<Cytoband>
+  + getAllCytobands(InputStream instream): SortedSet<Cytoband>
+}
+
+class GeneIDXMLReader {
+  - logger: Logger
+  + main(String[] args): void
+}
+
+class TwoBitParser {
+  - logger: Logger
+  + DEFAULT_BUFFER_SIZE: int
+  - raf: RandomAccessFile
+  - f: File
+  - reverse: boolean
+  - readFourBytes(): long
+  + getSequenceNames(): String[]
+  + setCurrentSequence(String seq_name): void
+  + getCurrentSequencePosition(): long
+  + setCurrentSequencePosition(long pos): void
+  - loadBits(): void
+  + read(): int
+  + close(): void
+}
+
+
+GeneNamesParser --> InputStreamProvider
+GeneChromosomePositionParser --> InputStreamProvider
+GeneChromosomePositionParser --> App
+GFF3Writer --> *
+GeneIDXMLReader --> ProteinSequence
+GeneIDXMLReader --> XMLHelper
+GeneIDXMLReader --> DNASequence
+GeneIDXMLReader --> AccessionID
+GeneIDXMLReader --> FastaWriterHelper
+InputStream <|-- TwoBitParser
+
+@enduml

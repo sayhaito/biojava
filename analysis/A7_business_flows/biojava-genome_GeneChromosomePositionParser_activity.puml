@@ -1,0 +1,12 @@
+@startuml
+title GeneChromosomePositionParser - Activity Flow
+
+start
+:Execute main;
+:Retrieve ChromosomeMappings;
+:Retrieve ChromosomeMappings;
+:Retrieve GeneChromosomePosition;
+:Retrieve IntegerList;
+stop
+
+@enduml

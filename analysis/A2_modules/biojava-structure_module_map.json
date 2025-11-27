@@ -1,0 +1,2509 @@
+{
+  "module": "biojava-structure",
+  "packages": [
+    "org.biojava.nbio.structure",
+    "org.biojava.nbio.structure.align",
+    "org.biojava.nbio.structure.align.ce",
+    "org.biojava.nbio.structure.align.client",
+    "org.biojava.nbio.structure.align.fatcat",
+    "org.biojava.nbio.structure.align.fatcat.calc",
+    "org.biojava.nbio.structure.align.helper",
+    "org.biojava.nbio.structure.align.model",
+    "org.biojava.nbio.structure.align.multiple",
+    "org.biojava.nbio.structure.align.multiple.mc",
+    "org.biojava.nbio.structure.align.multiple.util",
+    "org.biojava.nbio.structure.align.pairwise",
+    "org.biojava.nbio.structure.align.quaternary",
+    "org.biojava.nbio.structure.align.seq",
+    "org.biojava.nbio.structure.align.util",
+    "org.biojava.nbio.structure.align.xml",
+    "org.biojava.nbio.structure.asa",
+    "org.biojava.nbio.structure.basepairs",
+    "org.biojava.nbio.structure.cath",
+    "org.biojava.nbio.structure.chem",
+    "org.biojava.nbio.structure.cluster",
+    "org.biojava.nbio.structure.contact",
+    "org.biojava.nbio.structure.domain",
+    "org.biojava.nbio.structure.domain.pdp",
+    "org.biojava.nbio.structure.ecod",
+    "org.biojava.nbio.structure.geometry",
+    "org.biojava.nbio.structure.io",
+    "org.biojava.nbio.structure.io.cif",
+    "org.biojava.nbio.structure.io.mmtf",
+    "org.biojava.nbio.structure.io.sifts",
+    "org.biojava.nbio.structure.io.util",
+    "org.biojava.nbio.structure.jama",
+    "org.biojava.nbio.structure.math",
+    "org.biojava.nbio.structure.quaternary",
+    "org.biojava.nbio.structure.scop",
+    "org.biojava.nbio.structure.secstruc",
+    "org.biojava.nbio.structure.symmetry.axis",
+    "org.biojava.nbio.structure.symmetry.core",
+    "org.biojava.nbio.structure.symmetry.geometry",
+    "org.biojava.nbio.structure.symmetry.internal",
+    "org.biojava.nbio.structure.symmetry.misc",
+    "org.biojava.nbio.structure.symmetry.utils",
+    "org.biojava.nbio.structure.xtal",
+    "org.biojava.nbio.structure.xtal.io"
+  ],
+  "total_classes": 406,
+  "classes": [
+    {
+      "name": "ResidueRange",
+      "path": "src/main/java/org/biojava/nbio/structure/ResidueRange.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "PDBRecord",
+      "path": "src/main/java/org/biojava/nbio/structure/PDBRecord.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "URLIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/URLIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Chain",
+      "path": "src/main/java/org/biojava/nbio/structure/Chain.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Atom",
+      "path": "src/main/java/org/biojava/nbio/structure/Atom.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "EntityType",
+      "path": "src/main/java/org/biojava/nbio/structure/EntityType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "AtomPositionMap",
+      "path": "src/main/java/org/biojava/nbio/structure/AtomPositionMap.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "StructureIO",
+      "path": "src/main/java/org/biojava/nbio/structure/StructureIO.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Model",
+      "path": "src/main/java/org/biojava/nbio/structure/Model.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "StructureTools",
+      "path": "src/main/java/org/biojava/nbio/structure/StructureTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "AtomIterator",
+      "path": "src/main/java/org/biojava/nbio/structure/AtomIterator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "StructureImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/StructureImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "BioAssemblyIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/BioAssemblyIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "PassthroughIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/PassthroughIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "ElementType",
+      "path": "src/main/java/org/biojava/nbio/structure/ElementType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "NucleotideImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/NucleotideImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "GroupIterator",
+      "path": "src/main/java/org/biojava/nbio/structure/GroupIterator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "SeqMisMatch",
+      "path": "src/main/java/org/biojava/nbio/structure/SeqMisMatch.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "EntityInfo",
+      "path": "src/main/java/org/biojava/nbio/structure/EntityInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "AtomImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/AtomImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "BondType",
+      "path": "src/main/java/org/biojava/nbio/structure/BondType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "SeqMisMatchImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/SeqMisMatchImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "PDBHeader",
+      "path": "src/main/java/org/biojava/nbio/structure/PDBHeader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "PDBStatus",
+      "path": "src/main/java/org/biojava/nbio/structure/PDBStatus.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Element",
+      "path": "src/main/java/org/biojava/nbio/structure/Element.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Calc",
+      "path": "src/main/java/org/biojava/nbio/structure/Calc.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "AminoAcidImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/AminoAcidImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "ChainImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/ChainImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "AugmentedResidueRange",
+      "path": "src/main/java/org/biojava/nbio/structure/AugmentedResidueRange.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "JournalArticle",
+      "path": "src/main/java/org/biojava/nbio/structure/JournalArticle.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "GroupType",
+      "path": "src/main/java/org/biojava/nbio/structure/GroupType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "AminoAcid",
+      "path": "src/main/java/org/biojava/nbio/structure/AminoAcid.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Author",
+      "path": "src/main/java/org/biojava/nbio/structure/Author.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "HetatomImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/HetatomImpl.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "SubstructureIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/SubstructureIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "DBRef",
+      "path": "src/main/java/org/biojava/nbio/structure/DBRef.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "StructureIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/StructureIdentifier.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "StructureException",
+      "path": "src/main/java/org/biojava/nbio/structure/StructureException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "ResidueNumber",
+      "path": "src/main/java/org/biojava/nbio/structure/ResidueNumber.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Mutator",
+      "path": "src/main/java/org/biojava/nbio/structure/Mutator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Site",
+      "path": "src/main/java/org/biojava/nbio/structure/Site.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "BondImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/BondImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "PDBCrystallographicInfo",
+      "path": "src/main/java/org/biojava/nbio/structure/PDBCrystallographicInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Bond",
+      "path": "src/main/java/org/biojava/nbio/structure/Bond.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "DatabasePDBRevRecord",
+      "path": "src/main/java/org/biojava/nbio/structure/DatabasePDBRevRecord.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "ResidueRangeAndLength",
+      "path": "src/main/java/org/biojava/nbio/structure/ResidueRangeAndLength.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "PdbId",
+      "path": "src/main/java/org/biojava/nbio/structure/PdbId.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Group",
+      "path": "src/main/java/org/biojava/nbio/structure/Group.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "Structure",
+      "path": "src/main/java/org/biojava/nbio/structure/Structure.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "StandardAminoAcid",
+      "path": "src/main/java/org/biojava/nbio/structure/StandardAminoAcid.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "ExperimentalTechnique",
+      "path": "src/main/java/org/biojava/nbio/structure/ExperimentalTechnique.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure"
+    },
+    {
+      "name": "SubunitClustererMethod",
+      "path": "src/main/java/org/biojava/nbio/structure/cluster/SubunitClustererMethod.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.cluster"
+    },
+    {
+      "name": "SubunitExtractor",
+      "path": "src/main/java/org/biojava/nbio/structure/cluster/SubunitExtractor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cluster"
+    },
+    {
+      "name": "SubunitClusterer",
+      "path": "src/main/java/org/biojava/nbio/structure/cluster/SubunitClusterer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cluster"
+    },
+    {
+      "name": "SubunitCluster",
+      "path": "src/main/java/org/biojava/nbio/structure/cluster/SubunitCluster.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cluster"
+    },
+    {
+      "name": "SubunitClustererParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/cluster/SubunitClustererParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cluster"
+    },
+    {
+      "name": "Subunit",
+      "path": "src/main/java/org/biojava/nbio/structure/cluster/Subunit.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cluster"
+    },
+    {
+      "name": "DownloadChemCompProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/DownloadChemCompProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ReducedChemCompProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ReducedChemCompProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemCompProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemCompProvider.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemCompBond",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemCompBond.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemComp",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemComp.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemCompTools",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemCompTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ResidueType",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ResidueType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "MetalBondDistance",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/MetalBondDistance.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemCompAtom",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemCompAtom.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemicalComponentDictionary",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemicalComponentDictionary.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ZipChemCompProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ZipChemCompProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "AllChemCompProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/AllChemCompProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "PolymerType",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/PolymerType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemCompGroupFactory",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemCompGroupFactory.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "ChemCompDescriptor",
+      "path": "src/main/java/org/biojava/nbio/structure/chem/ChemCompDescriptor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.chem"
+    },
+    {
+      "name": "CathNode",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathNode.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathFragment",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathFragment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathDatabase",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathDatabase.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathInstallation",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathInstallation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathSegment",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathSegment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathFactory",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathFactory.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathDomain",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathDomain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "CathCategory",
+      "path": "src/main/java/org/biojava/nbio/structure/cath/CathCategory.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.cath"
+    },
+    {
+      "name": "BasePairParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/basepairs/BasePairParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.basepairs"
+    },
+    {
+      "name": "MismatchedBasePairParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/basepairs/MismatchedBasePairParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.basepairs"
+    },
+    {
+      "name": "TertiaryBasePairParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/basepairs/TertiaryBasePairParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.basepairs"
+    },
+    {
+      "name": "SecStrucElement",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucElement.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SecStrucGroup",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucGroup.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SecStrucTools",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "DSSPParser",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/DSSPParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SecStrucInfo",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SecStrucCalc",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucCalc.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "BetaBridge",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/BetaBridge.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "BridgeType",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/BridgeType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "HBond",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/HBond.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "Ladder",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/Ladder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SecStrucType",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SecStrucState",
+      "path": "src/main/java/org/biojava/nbio/structure/secstruc/SecStrucState.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.secstruc"
+    },
+    {
+      "name": "SymbolTable",
+      "path": "src/main/java/org/biojava/nbio/structure/math/SymbolTable.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.math"
+    },
+    {
+      "name": "SparseVector",
+      "path": "src/main/java/org/biojava/nbio/structure/math/SparseVector.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.math"
+    },
+    {
+      "name": "SparseSquareMatrix",
+      "path": "src/main/java/org/biojava/nbio/structure/math/SparseSquareMatrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.math"
+    },
+    {
+      "name": "CallableStructureAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/CallableStructureAlignment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "StructureAlignmentFactory",
+      "path": "src/main/java/org/biojava/nbio/structure/align/StructureAlignmentFactory.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "StrucAligParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/StrucAligParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "ClusterAltAligs",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ClusterAltAligs.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "StructurePairAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/align/StructurePairAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "MultipleStructureAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/align/MultipleStructureAligner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "AbstractStructureAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/AbstractStructureAlignment.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "AFPTwister",
+      "path": "src/main/java/org/biojava/nbio/structure/align/AFPTwister.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "StructureAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/StructureAlignment.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "BioJavaStructureAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/BioJavaStructureAlignment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align"
+    },
+    {
+      "name": "AlignUtils",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/AlignUtils.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "AligMatEl",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/AligMatEl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "JointFragments",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/JointFragments.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "GapArray",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/GapArray.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "IdxComparator",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/IdxComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "IndexPair",
+      "path": "src/main/java/org/biojava/nbio/structure/align/helper/IndexPair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.helper"
+    },
+    {
+      "name": "AFPChainScorer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/AFPChainScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "AlignmentTools",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/AlignmentTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "AFPAlignmentDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/AFPAlignmentDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "RotationAxis",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/RotationAxis.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "CliTools",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/CliTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "CollectionTools",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/CollectionTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "ConfigurationException",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/ConfigurationException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "ResourceManager",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/ResourceManager.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "AtomCache",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/AtomCache.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "SynchronizedOutFile",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/SynchronizedOutFile.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "URLConnectionTools",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/URLConnectionTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "UserConfiguration",
+      "path": "src/main/java/org/biojava/nbio/structure/align/util/UserConfiguration.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.util"
+    },
+    {
+      "name": "AlignmentProgressListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/AlignmentProgressListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "AligNPE",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/AligNPE.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "Alignable",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/Alignable.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "FragmentPair",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/FragmentPair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "AlignmentResult",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/AlignmentResult.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "FragmentJoiner",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/FragmentJoiner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "StrCompAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/StrCompAlignment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "Gotoh",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/Gotoh.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "AltAligComparator",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/AltAligComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "AlternativeAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/pairwise/AlternativeAlignment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.pairwise"
+    },
+    {
+      "name": "SmithWaterman3DParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/seq/SmithWaterman3DParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.seq"
+    },
+    {
+      "name": "SmithWaterman3Daligner",
+      "path": "src/main/java/org/biojava/nbio/structure/align/seq/SmithWaterman3Daligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.seq"
+    },
+    {
+      "name": "SmithWatermanUserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/seq/SmithWatermanUserArgumentProcessor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.seq"
+    },
+    {
+      "name": "StructureName",
+      "path": "src/main/java/org/biojava/nbio/structure/align/client/StructureName.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.align.client"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/client/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.client"
+    },
+    {
+      "name": "PdbPair",
+      "path": "src/main/java/org/biojava/nbio/structure/align/client/PdbPair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.client"
+    },
+    {
+      "name": "CeCPUserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeCPUserArgumentProcessor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "UserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/UserArgumentProcessor.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "GuiWrapper",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/GuiWrapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "StartupParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/StartupParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "OptimalCECPMain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/OptimalCECPMain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeMain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeMain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeSideChainMain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeSideChainMain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeCPMain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeCPMain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeCalculatorEnhanced",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeCalculatorEnhanced.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeSideChainUserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeSideChainUserArgumentProcessor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "ConfigStrucAligParams",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/ConfigStrucAligParams.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "MatrixListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/MatrixListener.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CECPParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CECPParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "AbstractUserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/AbstractUserArgumentProcessor.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CeUserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CeUserArgumentProcessor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "OptimalCECPParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/OptimalCECPParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "CECalculator",
+      "path": "src/main/java/org/biojava/nbio/structure/align/ce/CECalculator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.ce"
+    },
+    {
+      "name": "MultipleAlignmentXMLParser",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/MultipleAlignmentXMLParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "AFPChainFlipper",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/AFPChainFlipper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "AFPChainXMLParser",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/AFPChainXMLParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "PdbPairXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/PdbPairXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "AFPChainXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/AFPChainXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "MultipleAlignmentXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/MultipleAlignmentXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "PdbPairsMessage",
+      "path": "src/main/java/org/biojava/nbio/structure/align/xml/PdbPairsMessage.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.xml"
+    },
+    {
+      "name": "MultipleAlignment",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/MultipleAlignment.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "MultipleAlignmentEnsembleImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/MultipleAlignmentEnsembleImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "ScoresCache",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/ScoresCache.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "AbstractScoresCache",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/AbstractScoresCache.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "Block",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/Block.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "MultipleAlignmentEnsemble",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/MultipleAlignmentEnsemble.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "BlockSetImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/BlockSetImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "MultipleAlignmentImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/MultipleAlignmentImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "BlockImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/BlockImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "BlockSet",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/BlockSet.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.multiple"
+    },
+    {
+      "name": "MultipleAlignmentWriter",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/MultipleAlignmentWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "CoreSuperimposer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/CoreSuperimposer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "MultipleAlignmentDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/MultipleAlignmentDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "MultipleAlignmentTools",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/MultipleAlignmentTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "MultipleSuperimposer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/MultipleSuperimposer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "ReferenceSuperimposer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/ReferenceSuperimposer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "MultipleAlignmentScorer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/util/MultipleAlignmentScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.util"
+    },
+    {
+      "name": "MultipleMcParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/mc/MultipleMcParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.mc"
+    },
+    {
+      "name": "MultipleMcMain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/mc/MultipleMcMain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.mc"
+    },
+    {
+      "name": "MultipleMcOptimizer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/multiple/mc/MultipleMcOptimizer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.multiple.mc"
+    },
+    {
+      "name": "FatCatRigid",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/FatCatRigid.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat"
+    },
+    {
+      "name": "FatCatFlexible",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/FatCatFlexible.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat"
+    },
+    {
+      "name": "FatCat",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/FatCat.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat"
+    },
+    {
+      "name": "FatCatUserArgumentProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/FatCatUserArgumentProcessor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat"
+    },
+    {
+      "name": "StructureAlignmentOptimizer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/StructureAlignmentOptimizer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "AFPOptimizer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/AFPOptimizer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "AFPPostProcessor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/AFPPostProcessor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "SigEva",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/SigEva.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "FatCatAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/FatCatAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "FatCatParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/FatCatParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "AFPChainer",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/AFPChainer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "AFPCalculator",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/AFPCalculator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "FCAlignHelper",
+      "path": "src/main/java/org/biojava/nbio/structure/align/fatcat/calc/FCAlignHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.fatcat.calc"
+    },
+    {
+      "name": "QsAlignParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/align/quaternary/QsAlignParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.quaternary"
+    },
+    {
+      "name": "QsAlignResult",
+      "path": "src/main/java/org/biojava/nbio/structure/align/quaternary/QsAlignResult.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.quaternary"
+    },
+    {
+      "name": "QsAlign",
+      "path": "src/main/java/org/biojava/nbio/structure/align/quaternary/QsAlign.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.quaternary"
+    },
+    {
+      "name": "QsRelation",
+      "path": "src/main/java/org/biojava/nbio/structure/align/quaternary/QsRelation.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.align.quaternary"
+    },
+    {
+      "name": "AFP",
+      "path": "src/main/java/org/biojava/nbio/structure/align/model/AFP.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.model"
+    },
+    {
+      "name": "AFPChain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/model/AFPChain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.model"
+    },
+    {
+      "name": "AfpChainWriter",
+      "path": "src/main/java/org/biojava/nbio/structure/align/model/AfpChainWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.model"
+    },
+    {
+      "name": "GroupAsa",
+      "path": "src/main/java/org/biojava/nbio/structure/asa/GroupAsa.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.asa"
+    },
+    {
+      "name": "AsaCalculator",
+      "path": "src/main/java/org/biojava/nbio/structure/asa/AsaCalculator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.asa"
+    },
+    {
+      "name": "CAConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/io/CAConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "PDBBioAssemblyParser",
+      "path": "src/main/java/org/biojava/nbio/structure/io/PDBBioAssemblyParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "FileConvert",
+      "path": "src/main/java/org/biojava/nbio/structure/io/FileConvert.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "PDBFileParser",
+      "path": "src/main/java/org/biojava/nbio/structure/io/PDBFileParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "GroupToSDF",
+      "path": "src/main/java/org/biojava/nbio/structure/io/GroupToSDF.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "FileParsingParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/io/FileParsingParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "PDBFileReader",
+      "path": "src/main/java/org/biojava/nbio/structure/io/PDBFileReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "BondMaker",
+      "path": "src/main/java/org/biojava/nbio/structure/io/BondMaker.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "PDBParseException",
+      "path": "src/main/java/org/biojava/nbio/structure/io/PDBParseException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "ChargeAdder",
+      "path": "src/main/java/org/biojava/nbio/structure/io/ChargeAdder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "FastaAFPChainConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/io/FastaAFPChainConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/io/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "StructureFiletype",
+      "path": "src/main/java/org/biojava/nbio/structure/io/StructureFiletype.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "StructureProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/io/StructureProvider.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "EntityFinder",
+      "path": "src/main/java/org/biojava/nbio/structure/io/EntityFinder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "StructureIOFile",
+      "path": "src/main/java/org/biojava/nbio/structure/io/StructureIOFile.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "CifFileReader",
+      "path": "src/main/java/org/biojava/nbio/structure/io/CifFileReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "SeqRes2AtomAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/io/SeqRes2AtomAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "LocalPDBDirectory",
+      "path": "src/main/java/org/biojava/nbio/structure/io/LocalPDBDirectory.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "MMTFFileReader",
+      "path": "src/main/java/org/biojava/nbio/structure/io/MMTFFileReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "FastaStructureParser",
+      "path": "src/main/java/org/biojava/nbio/structure/io/FastaStructureParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "StructureSequenceMatcher",
+      "path": "src/main/java/org/biojava/nbio/structure/io/StructureSequenceMatcher.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "SSBondImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/io/SSBondImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "BcifFileReader",
+      "path": "src/main/java/org/biojava/nbio/structure/io/BcifFileReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io"
+    },
+    {
+      "name": "PDBTemporaryStorageUtils",
+      "path": "src/main/java/org/biojava/nbio/structure/io/util/PDBTemporaryStorageUtils.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.util"
+    },
+    {
+      "name": "MmtfSummaryDataBean",
+      "path": "src/main/java/org/biojava/nbio/structure/io/mmtf/MmtfSummaryDataBean.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.mmtf"
+    },
+    {
+      "name": "MmtfUtils",
+      "path": "src/main/java/org/biojava/nbio/structure/io/mmtf/MmtfUtils.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.mmtf"
+    },
+    {
+      "name": "MmtfStructureWriter",
+      "path": "src/main/java/org/biojava/nbio/structure/io/mmtf/MmtfStructureWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.mmtf"
+    },
+    {
+      "name": "MmtfStructureReader",
+      "path": "src/main/java/org/biojava/nbio/structure/io/mmtf/MmtfStructureReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.mmtf"
+    },
+    {
+      "name": "MmtfActions",
+      "path": "src/main/java/org/biojava/nbio/structure/io/mmtf/MmtfActions.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.mmtf"
+    },
+    {
+      "name": "SiftsResidue",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsResidue.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "SiftsXMLParser",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsXMLParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "SiftsMappingProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsMappingProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "SiftsEntity",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsEntity.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "SiftsChainToUniprotMapping",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsChainToUniprotMapping.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "SiftsChainEntry",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsChainEntry.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "SiftsSegment",
+      "path": "src/main/java/org/biojava/nbio/structure/io/sifts/SiftsSegment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.sifts"
+    },
+    {
+      "name": "MetalBondConsumerImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/MetalBondConsumerImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifStructureConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifStructureConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifStructureConsumer",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifStructureConsumer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifChainSupplierImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifChainSupplierImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifStructureConsumerImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifStructureConsumerImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "MetalBondConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/MetalBondConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "ChemCompConsumerImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/ChemCompConsumerImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifBean",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifBean.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "ChemCompConsumer",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/ChemCompConsumer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifStructureSupplierImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifStructureSupplierImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "ChemCompConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/ChemCompConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifFileSupplier",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifFileSupplier.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "CifFileConsumer",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/CifFileConsumer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "MetalBondConsumer",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/MetalBondConsumer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "AbstractCifFileSupplier",
+      "path": "src/main/java/org/biojava/nbio/structure/io/cif/AbstractCifFileSupplier.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.io.cif"
+    },
+    {
+      "name": "LUDecomposition",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/LUDecomposition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "QRDecomposition",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/QRDecomposition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "CholeskyDecomposition",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/CholeskyDecomposition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "Maths",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/Maths.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "SingularValueDecomposition",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/SingularValueDecomposition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "EigenvalueDecomposition",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/EigenvalueDecomposition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "Matrix",
+      "path": "src/main/java/org/biojava/nbio/structure/jama/Matrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.jama"
+    },
+    {
+      "name": "UnitQuaternions",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/UnitQuaternions.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "SuperPositionQuat",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/SuperPositionQuat.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "SuperPositionQCP",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/SuperPositionQCP.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "CalcPoint",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/CalcPoint.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "SuperPositionSVD",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/SuperPositionSVD.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "Matrices",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/Matrices.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "SuperPositions",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/SuperPositions.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "MomentsOfInertia",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/MomentsOfInertia.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "SuperPositionAbstract",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/SuperPositionAbstract.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "SuperPosition",
+      "path": "src/main/java/org/biojava/nbio/structure/geometry/SuperPosition.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.geometry"
+    },
+    {
+      "name": "ProteinComplexSignature",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/misc/ProteinComplexSignature.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.misc"
+    },
+    {
+      "name": "ChainSignature",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/misc/ChainSignature.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.misc"
+    },
+    {
+      "name": "Tetrahedron",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/Tetrahedron.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "RectangularPrism",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/RectangularPrism.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "Prism",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/Prism.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "IcosahedralSampler",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/IcosahedralSampler.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "SphereSampler",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/SphereSampler.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "DistanceBox",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/DistanceBox.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "Icosahedron",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/Icosahedron.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "Octahedron",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/Octahedron.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "Polyhedron",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/geometry/Polyhedron.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.symmetry.geometry"
+    },
+    {
+      "name": "HelixAxisAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/axis/HelixAxisAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.axis"
+    },
+    {
+      "name": "RotationAxisAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/axis/RotationAxisAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.axis"
+    },
+    {
+      "name": "AxisAligner",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/axis/AxisAligner.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.symmetry.axis"
+    },
+    {
+      "name": "PowerSet",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/utils/PowerSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.utils"
+    },
+    {
+      "name": "PermutationGenerator",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/utils/PermutationGenerator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.utils"
+    },
+    {
+      "name": "SymmetryTools",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/utils/SymmetryTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.utils"
+    },
+    {
+      "name": "BlastClustReader",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/utils/BlastClustReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.utils"
+    },
+    {
+      "name": "CeSymmIterative",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/CeSymmIterative.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "RefinerFailedException",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/RefinerFailedException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "GraphComponentOrderDetector",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/GraphComponentOrderDetector.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "SequenceFunctionOrderDetector",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/SequenceFunctionOrderDetector.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "ResidueGroup",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/ResidueGroup.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "SymmetryAxes",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/SymmetryAxes.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "SequenceFunctionRefiner",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/SequenceFunctionRefiner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "CeSymm",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/CeSymm.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "CeSymmResult",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/CeSymmResult.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "SymmOptimizer",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/SymmOptimizer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "SymmetryRefiner",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/SymmetryRefiner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "AngleOrderDetectorPlus",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/AngleOrderDetectorPlus.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "OrderDetector",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/OrderDetector.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "GraphComponentRefiner",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/GraphComponentRefiner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "CESymmParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/internal/CESymmParameters.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.symmetry.internal"
+    },
+    {
+      "name": "QuatSymmetrySubunits",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSymmetrySubunits.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "QuatSymmetryResults",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSymmetryResults.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "PermutationGroup",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/PermutationGroup.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "SystematicSolver",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/SystematicSolver.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "QuatSymmetryParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSymmetryParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "HelixExtender",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/HelixExtender.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "Rotation",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/Rotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "SymmetryPerceptionMethod",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/SymmetryPerceptionMethod.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "Stoichiometry",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/Stoichiometry.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "HelixSolver",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/HelixSolver.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "RotationSolver",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/RotationSolver.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "C2RotationSolver",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/C2RotationSolver.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "HelicalRepeatUnit",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/HelicalRepeatUnit.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "QuatSymmetryScores",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSymmetryScores.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "RotationGroup",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/RotationGroup.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "Helix",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/Helix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "QuatSuperpositionScorer",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSuperpositionScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "QuatSymmetryDetector",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSymmetryDetector.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "HelixLayers",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/HelixLayers.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "QuatSymmetrySolver",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/core/QuatSymmetrySolver.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.symmetry.core"
+    },
+    {
+      "name": "OrderedPair",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/OrderedPair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "BioAssemblyTools",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/BioAssemblyTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "BioAssemblyInfo",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/BioAssemblyInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "OperatorResolver",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/OperatorResolver.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "CartesianProduct",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/CartesianProduct.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "BiologicalAssemblyBuilder",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/BiologicalAssemblyBuilder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "BiologicalAssemblyTransformation",
+      "path": "src/main/java/org/biojava/nbio/structure/quaternary/BiologicalAssemblyTransformation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.quaternary"
+    },
+    {
+      "name": "ResidueIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/ResidueIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "BoundingBox",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/BoundingBox.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "GroupContact",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/GroupContact.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "StructureInterfaceCluster",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/StructureInterfaceCluster.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "AtomContactSet",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/AtomContactSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "Contact",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/Contact.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "GridCell",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/GridCell.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "Pair",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/Pair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "GroupContactSet",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/GroupContactSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "InterfaceFinder",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/InterfaceFinder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "AtomIdentifier",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/AtomIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "Grid",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/Grid.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "StructureInterface",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/StructureInterface.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "StructureInterfaceList",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/StructureInterfaceList.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "AtomContact",
+      "path": "src/main/java/org/biojava/nbio/structure/contact/AtomContact.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.contact"
+    },
+    {
+      "name": "SymoplibParser",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/SymoplibParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "SpaceGroup",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/SpaceGroup.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "BravaisLattice",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/BravaisLattice.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "TransformType",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/TransformType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "CrystalBuilder",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/CrystalBuilder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "CrystalTransform",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/CrystalTransform.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "UnitCellBoundingBox",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/UnitCellBoundingBox.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "CrystalCell",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/CrystalCell.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal"
+    },
+    {
+      "name": "TransfAlgebraicAdapter",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/io/TransfAlgebraicAdapter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal.io"
+    },
+    {
+      "name": "SpaceGroupMapAdapter",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/io/SpaceGroupMapAdapter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal.io"
+    },
+    {
+      "name": "SpaceGroupMapElements",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/io/SpaceGroupMapElements.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal.io"
+    },
+    {
+      "name": "TreeMapSpaceGroupWrapper",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/io/TreeMapSpaceGroupWrapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal.io"
+    },
+    {
+      "name": "SpaceGroupMapRoot",
+      "path": "src/main/java/org/biojava/nbio/structure/xtal/io/SpaceGroupMapRoot.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.xtal.io"
+    },
+    {
+      "name": "EcodInstallation",
+      "path": "src/main/java/org/biojava/nbio/structure/ecod/EcodInstallation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.ecod"
+    },
+    {
+      "name": "EcodDomain",
+      "path": "src/main/java/org/biojava/nbio/structure/ecod/EcodDomain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.ecod"
+    },
+    {
+      "name": "EcodFactory",
+      "path": "src/main/java/org/biojava/nbio/structure/ecod/EcodFactory.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.ecod"
+    },
+    {
+      "name": "EcodDatabase",
+      "path": "src/main/java/org/biojava/nbio/structure/ecod/EcodDatabase.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.ecod"
+    },
+    {
+      "name": "BerkeleyScopInstallation",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/BerkeleyScopInstallation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopInstallation",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopInstallation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopFactory",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopFactory.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "LocalScopDatabase",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/LocalScopDatabase.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopDatabase",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopDatabase.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopIOException",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopIOException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "Astral",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/Astral.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopDomain",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopDomain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopNode",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopNode.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopDescription",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopDescription.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopMirror",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopMirror.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "ScopCategory",
+      "path": "src/main/java/org/biojava/nbio/structure/scop/ScopCategory.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.scop"
+    },
+    {
+      "name": "LocalProteinDomainParser",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/LocalProteinDomainParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain"
+    },
+    {
+      "name": "SerializableCache",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/SerializableCache.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain"
+    },
+    {
+      "name": "DomainProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/DomainProvider.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.domain"
+    },
+    {
+      "name": "ShortSegmentRemover",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/ShortSegmentRemover.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "GetDistanceMatrix",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/GetDistanceMatrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "SegmentComparator",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/SegmentComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "ClusterDomains",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/ClusterDomains.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "CutValues",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/CutValues.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "PDPParameters",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/PDPParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "Domain",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/Domain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "CutDomain",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/CutDomain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "CutSites",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/CutSites.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "PDPDistanceMatrix",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/PDPDistanceMatrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "Cut",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/Cut.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    },
+    {
+      "name": "Segment",
+      "path": "src/main/java/org/biojava/nbio/structure/domain/pdp/Segment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.domain.pdp"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "com.fasterxml.jackson.core",
+      "jakarta.xml.bind",
+      "java3d",
+      "junit",
+      "org.apache.logging.log4j",
+      "org.glassfish.jaxb",
+      "org.jgrapht",
+      "org.junit.jupiter",
+      "org.junit.vintage",
+      "org.rcsb",
+      "org.slf4j",
+      "xmlunit"
+    ],
+    "internal": [
+      "org.biojava.biojava-alignment",
+      "org.biojava.biojava-core"
+    ]
+  },
+  "next_step": "continue"
+}

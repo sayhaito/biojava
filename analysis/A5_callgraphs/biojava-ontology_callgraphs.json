@@ -1,0 +1,50 @@
+[
+  {
+    "class": "Term",
+    "method": "getSynonyms",
+    "calls": [
+      {
+        "from": "Term.getSynonyms",
+        "to": "synonyms.toArray"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "RemoteTerm",
+    "method": "getSynonyms",
+    "calls": [
+      {
+        "from": "RemoteTerm.getSynonyms",
+        "to": "synonyms.toArray"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "RemoteTerm",
+    "method": "getName",
+    "calls": [
+      {
+        "from": "RemoteTerm.getName",
+        "to": "remoteTerm.getName"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "RemoteTerm",
+    "method": "getDescription",
+    "calls": [
+      {
+        "from": "RemoteTerm.getDescription",
+        "to": "remoteTerm.getDescription"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

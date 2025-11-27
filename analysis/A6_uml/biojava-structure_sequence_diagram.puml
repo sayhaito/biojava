@@ -1,0 +1,29 @@
+@startuml
+title biojava-structure - Sequence Diagram
+
+actor User
+
+participant StructureIO
+participant StructureTools
+participant atoms
+participant c
+participant cache
+participant iter
+participant s
+
+User -> StructureIO: getStructure()
+StructureIO -> cache: getStructure()
+
+User -> StructureTools: getNrAtoms()
+StructureTools -> iter: hasNext()
+StructureTools -> iter: next()
+
+User -> StructureTools: getNrGroups()
+StructureTools -> s: getChains()
+StructureTools -> c: getAtomLength()
+
+User -> StructureTools: getAtomArray()
+StructureTools -> s: getModel()
+StructureTools -> atoms: toArray()
+
+@enduml

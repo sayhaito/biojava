@@ -1,0 +1,36 @@
+@startuml
+title biojava-survival - Class Diagram
+
+interface ChangeValue {
+}
+
+class CompactCharSequence {
+  # serialVersionUID: long
+  - ENCODING: String
+  - offset: int
+  - end: int
+  - data: byte[]
+  + charAt(int index): char
+  + length(): int
+  + subSequence(int start, int end): CharSequence
+  + toString(): String
+}
+
+interface DiscreteQuantizerInterface {
+}
+
+interface CensorStatusSelect {
+}
+
+interface CoxComparatorInterface {
+}
+
+
+CharSequence <|.. CompactCharSequence
+Serializable <|.. CompactCharSequence
+DiscreteQuantizerInterface --> WorkSheet
+CensorStatusSelect --> WorkSheet
+Comparator<CoxVariables> <|-- CoxComparatorInterface
+CoxComparatorInterface --> CoxVariables
+
+@enduml

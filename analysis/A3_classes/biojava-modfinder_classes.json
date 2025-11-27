@@ -1,0 +1,1281 @@
+[
+  {
+    "class_name": "ProteinModification",
+    "package": "org.biojava.nbio.protmod",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@author",
+      "@return",
+      "@link"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ModificationCondition",
+    "package": "org.biojava.nbio.protmod",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProteinModificationImpl",
+    "package": "org.biojava.nbio.protmod",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "ProteinModification",
+      "Comparable<ProteinModification>"
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "condition",
+        "type": "ModificationCondition",
+        "visibility": "private"
+      },
+      {
+        "name": "category",
+        "type": "ModificationCategory",
+        "visibility": "private"
+      },
+      {
+        "name": "occurrenceType",
+        "type": "ModificationOccurrenceType",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbccId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbccName",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "residId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "residName",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "psimodId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "psimodName",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "sysName",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "formula",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "keywords",
+        "type": "Set<String>",
+        "visibility": "private"
+      },
+      {
+        "name": "id",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "condition",
+        "type": "ModificationCondition",
+        "visibility": "private"
+      },
+      {
+        "name": "category",
+        "type": "ModificationCategory",
+        "visibility": "private"
+      },
+      {
+        "name": "occurrenceType",
+        "type": "ModificationOccurrenceType",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbccId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbccName",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "residId",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getId",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getPdbccId",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getPdbccName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getResidId",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getResidName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getPsimodId",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getPsimodName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getSystematicName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getKeywords",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "getCondition",
+        "params": [],
+        "return_type": "ModificationCondition",
+        "visibility": "public"
+      },
+      {
+        "name": "getFormula",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getCategory",
+        "params": [],
+        "return_type": "ModificationCategory",
+        "visibility": "public"
+      },
+      {
+        "name": "getOccurrenceType",
+        "params": [],
+        "return_type": "ModificationOccurrenceType",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "setCategory",
+        "params": [
+          "final ModificationCategory cat"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setOccurrenceType",
+        "params": [
+          "final ModificationOccurrenceType occType"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setCondition",
+        "params": [
+          "final ModificationCondition condition"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setPdbccId",
+        "params": [
+          "final String pdbccId"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setPdbccName",
+        "params": [
+          "final String pdbccName"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setResidId",
+        "params": [
+          "final String residId"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setResidName",
+        "params": [
+          "final String residName"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setPsimodId",
+        "params": [
+          "final String psimodId"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setPsimodName",
+        "params": [
+          "final String psimodName"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setSystematicName",
+        "params": [
+          "final String sysName"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "setDescription",
+        "params": [
+          "final String description"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "addKeyword",
+        "params": [
+          "String keyword"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      },
+      {
+        "name": "addKeywords",
+        "params": [
+          "Collection<String> keywords"
+        ],
+        "return_type": "Builder",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProteinModificationRegistry",
+    "package": "org.biojava.nbio.protmod",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "registry",
+        "type": "Set<ProteinModification>",
+        "visibility": "private"
+      },
+      {
+        "name": "DIR_XML_PTM_LIST",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "registerCommonProteinModifications",
+        "params": [
+          "InputStream inStream"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "init",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "init",
+        "params": [
+          "InputStream inStream"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "register",
+        "params": [
+          "final ProteinModification modification"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "unregister",
+        "params": [
+          "ProteinModification modification"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getById",
+        "params": [
+          "final String id"
+        ],
+        "return_type": "ProteinModification",
+        "visibility": "public"
+      },
+      {
+        "name": "getByResidId",
+        "params": [
+          "final String residId"
+        ],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "getByPsimodId",
+        "params": [
+          "final String psimodId"
+        ],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "getByPdbccId",
+        "params": [
+          "final String pdbccId"
+        ],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "getByKeyword",
+        "params": [
+          "final String keyword"
+        ],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "allModifications",
+        "params": [],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "getByCategory",
+        "params": [
+          "final ModificationCategory cat"
+        ],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "getByOccurrenceType",
+        "params": [
+          "final ModificationOccurrenceType occ"
+        ],
+        "return_type": "Set<ProteinModification>",
+        "visibility": "public"
+      },
+      {
+        "name": "allIds",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "allPdbccIds",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "allResidIds",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "allPsimodIds",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "allComponents",
+        "params": [],
+        "return_type": "Set<Component>",
+        "visibility": "public"
+      },
+      {
+        "name": "allKeywords",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "ProteinModificationXmlReader"
+    ],
+    "external_references": [
+      "java.io.InputStream",
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureAtomXMLConverter",
+    "package": "org.biojava.nbio.protmod.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "toXML",
+        "params": [
+          "StructureAtom atom"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "toXML",
+        "params": [
+          "StructureAtom atom",
+          "PrettyXMLWriter xml"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "fromXML",
+        "params": [
+          "Node structureAtomElement"
+        ],
+        "return_type": "StructureAtom",
+        "visibility": "public"
+      },
+      {
+        "name": "getAttribute",
+        "params": [
+          "Node node",
+          "String attr"
+        ],
+        "return_type": "String",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "PrettyXMLWriter",
+      "StructureGroup",
+      "StructureAtom"
+    ],
+    "external_references": [
+      "java.io.StringWriter",
+      "java.io.IOException",
+      "java.io.PrintWriter",
+      "org.w3c.dom.Node",
+      "org.w3c.dom.NodeList",
+      "org.w3c.dom.NamedNodeMap"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureGroupXMLConverter",
+    "package": "org.biojava.nbio.protmod.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "toXML",
+        "params": [
+          "StructureGroup group",
+          "PrettyXMLWriter xml"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "fromXML",
+        "params": [
+          "Node n"
+        ],
+        "return_type": "StructureGroup",
+        "visibility": "public"
+      },
+      {
+        "name": "getAttribute",
+        "params": [
+          "Node node",
+          "String attr"
+        ],
+        "return_type": "String",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "PrettyXMLWriter",
+      "StructureGroup",
+      "ResidueNumber"
+    ],
+    "external_references": [
+      "org.w3c.dom.Node",
+      "java.io.IOException",
+      "org.w3c.dom.NamedNodeMap"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProteinModificationXmlReader",
+    "package": "org.biojava.nbio.protmod.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "registerProteinModificationFromXml",
+        "params": [
+          "InputStream isXml"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "*"
+    ],
+    "external_references": [
+      "javax.xml.parsers.DocumentBuilder",
+      "java.io.InputStream",
+      "java.io.IOException",
+      "javax.xml.parsers.DocumentBuilderFactory",
+      "org.w3c.dom.Node",
+      "org.w3c.dom.NodeList",
+      "org.w3c.dom.NamedNodeMap",
+      "javax.xml.parsers.ParserConfigurationException",
+      "org.w3c.dom.Document",
+      "org.xml.sax.SAXException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureUtil",
+    "package": "org.biojava.nbio.protmod.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "getStructureGroup",
+        "params": [
+          "Group group",
+          "boolean isAminoAcid"
+        ],
+        "return_type": "StructureGroup",
+        "visibility": "public"
+      },
+      {
+        "name": "getStructureAtom",
+        "params": [
+          "Atom atom",
+          "boolean isParentAminoAcid"
+        ],
+        "return_type": "StructureAtom",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtomDistance",
+        "params": [
+          "Atom atom1",
+          "Atom atom2"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "hasMetalBond",
+        "params": [
+          "Atom a1",
+          "Atom a2",
+          "MetalBondDistance definition"
+        ],
+        "return_type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "getMetalDistanceCutoff",
+        "params": [
+          "String name1",
+          "String name2"
+        ],
+        "return_type": "MetalBondDistance",
+        "visibility": "private"
+      },
+      {
+        "name": "getAtomNames",
+        "params": [
+          "Group group"
+        ],
+        "return_type": "List<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "getAminoAcids",
+        "params": [
+          "Chain chain"
+        ],
+        "return_type": "List<Group>",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "MetalBondConverter",
+      "*",
+      "MetalBondDistance"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ModifiedCompound",
+    "package": "org.biojava.nbio.protmod.structure",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "ProteinModification"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureAtomLinkage",
+    "package": "org.biojava.nbio.protmod.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "atom1",
+        "type": "StructureAtom",
+        "visibility": "private"
+      },
+      {
+        "name": "atom2",
+        "type": "StructureAtom",
+        "visibility": "private"
+      },
+      {
+        "name": "distance",
+        "type": "double",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getAtom1",
+        "params": [],
+        "return_type": "StructureAtom",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtom2",
+        "params": [],
+        "return_type": "StructureAtom",
+        "visibility": "public"
+      },
+      {
+        "name": "getDistance",
+        "params": [],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureGroup",
+    "package": "org.biojava.nbio.protmod.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "Comparable<StructureGroup>"
+    ],
+    "fields": [
+      {
+        "name": "resNum",
+        "type": "ResidueNumber",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbName",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "isAminoAcid",
+        "type": "Boolean",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getPDBResidueNumber",
+        "params": [],
+        "return_type": "ResidueNumber",
+        "visibility": "public"
+      },
+      {
+        "name": "setPDBResidueNumber",
+        "params": [
+          "ResidueNumber resNum"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getChainId",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setChainId",
+        "params": [
+          "String chainId"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getResidueNumber",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "setResidueNumber",
+        "params": [
+          "int seqNr"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getInsCode",
+        "params": [],
+        "return_type": "Character",
+        "visibility": "public"
+      },
+      {
+        "name": "setInsCode",
+        "params": [
+          "Character c"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getPDBName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setPDBName",
+        "params": [
+          "String pdbName"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setIsAminoAcid",
+        "params": [
+          "boolean isAminoAcid"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "isAminoAcid",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "compareTo",
+        "params": [
+          "StructureGroup aGroup"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [
+      "ResidueNumber"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureAtom",
+    "package": "org.biojava.nbio.protmod.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "group",
+        "type": "StructureGroup",
+        "visibility": "private"
+      },
+      {
+        "name": "atomName",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getGroup",
+        "params": [],
+        "return_type": "StructureGroup",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtomName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProteinModificationIdentifier",
+    "package": "org.biojava.nbio.protmod.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "bondLengthTolerance",
+        "type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "recordUnidentifiableModifiedCompounds",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "recordAdditionalAttachments",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "identifiedModifiedCompounds",
+        "type": "Set<ModifiedCompound>",
+        "visibility": "private"
+      },
+      {
+        "name": "unidentifiableAtomLinkages",
+        "type": "Set<StructureAtomLinkage>",
+        "visibility": "private"
+      },
+      {
+        "name": "unidentifiableModifiedResidues",
+        "type": "Set<StructureGroup>",
+        "visibility": "private"
+      },
+      {
+        "name": "residues",
+        "type": "List<Group>",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "destroy",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setbondLengthTolerance",
+        "params": [
+          "final double bondLengthTolerance"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setRecordUnidentifiableCompounds",
+        "params": [
+          "boolean recordUnidentifiableModifiedCompounds"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getRecordUnidentifiableCompounds",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "setRecordAdditionalAttachments",
+        "params": [
+          "boolean recordAdditionalAttachments"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getRecordAdditionalAttachments",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "getIdentifiedModifiedCompound",
+        "params": [],
+        "return_type": "Set<ModifiedCompound>",
+        "visibility": "public"
+      },
+      {
+        "name": "getUnidentifiableAtomLinkages",
+        "params": [],
+        "return_type": "Set<StructureAtomLinkage>",
+        "visibility": "public"
+      },
+      {
+        "name": "getUnidentifiableModifiedResidues",
+        "params": [],
+        "return_type": "Set<StructureGroup>",
+        "visibility": "public"
+      },
+      {
+        "name": "identify",
+        "params": [
+          "final Structure structure"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "identify",
+        "params": [
+          "final Chain chain"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "identify",
+        "params": [
+          "final List<Chain> chains"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "reset",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "getGroup",
+        "params": [
+          "StructureGroup num",
+          "List<Chain> chains"
+        ],
+        "return_type": "Group",
+        "visibility": "private"
+      },
+      {
+        "name": "mergeModComps",
+        "params": [
+          "List<ModifiedCompound> modComps"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "recordUnidentifiableModifiedResidues",
+        "params": [
+          "List<ModifiedCompound> modComps"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "unionComponentSet",
+        "params": [
+          "Set<Component> set1",
+          "Set<Component> set2"
+        ],
+        "return_type": "Set<Component>",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "*"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  }
+]

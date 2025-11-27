@@ -1,0 +1,1100 @@
+[
+  {
+    "class_name": "Alignments",
+    "package": "org.biojava.nbio.alignment",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@SuppressWarnings",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "SubstitutionMatrix",
+      "CompoundSet",
+      "Sequence",
+      "AminoAcidCompoundSet",
+      "*",
+      "AmbiguityDNACompoundSet",
+      "Compound",
+      "ProfilePair",
+      "SubstitutionMatrixHelper",
+      "ConcurrencyTools",
+      "Profile",
+      "DNACompoundSet",
+      "SequencePair"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "AnchoredPairwiseSequenceAligner",
+    "package": "org.biojava.nbio.alignment.routines",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "getAnchors",
+        "params": [],
+        "return_type": "int[]",
+        "visibility": "public"
+      },
+      {
+        "name": "setAnchors",
+        "params": [
+          "int[] anchors"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addAnchor",
+        "params": [
+          "int queryIndex",
+          "int targetIndex"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setProfile",
+        "params": [
+          "List<Step> sx",
+          "List<Step> sy"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@link",
+      "@author",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "Step",
+      "Anchor",
+      "SubstitutionMatrix",
+      "AbstractPairwiseSequenceAligner",
+      "Sequence",
+      "AlignedSequence",
+      "Compound",
+      "GapPenalty",
+      "SimpleSequencePair"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StockholmStructure",
+    "package": "org.biojava.nbio.alignment.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      },
+      {
+        "name": "PFAM",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "RFAM",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "fileAnnotation",
+        "type": "StockholmFileAnnotation",
+        "visibility": "private"
+      },
+      {
+        "name": "consAnnotation",
+        "type": "StockholmConsensusAnnotation",
+        "visibility": "private"
+      },
+      {
+        "name": "EXPERT",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "MIM",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "PFAMB",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "PRINTS",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "PROSITE",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "PROSITE_PROFILE",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "SCOP",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "PDB",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "SMART",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "URL",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "LOAD",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "HOMSTRAD",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "INTERPRO",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "database",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "reference",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getFileAnnotation",
+        "params": [],
+        "return_type": "StockholmFileAnnotation",
+        "visibility": "public"
+      },
+      {
+        "name": "getConsAnnotation",
+        "params": [],
+        "return_type": "StockholmConsensusAnnotation",
+        "visibility": "public"
+      },
+      {
+        "name": "appendToSequence",
+        "params": [
+          "String seqName",
+          "String seqText"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSequenceAnnotation",
+        "params": [
+          "String seqName"
+        ],
+        "return_type": "StockholmSequenceAnnotation",
+        "visibility": "private"
+      },
+      {
+        "name": "addGSAccessionNumber",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addGSDescription",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addGSdbReference",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addGSOrganismSpecies",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addGSOrganismClassification",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addGSLook",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getResidueAnnotation",
+        "params": [
+          "String seqName"
+        ],
+        "return_type": "StockholmResidueAnnotation",
+        "visibility": "private"
+      },
+      {
+        "name": "addSurfaceAccessibility",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addTransMembrane",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addPosteriorProbability",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addLigandBinding",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addActiveSite",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addASPFamPredicted",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addASSwissProt",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addIntron",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addSecondaryStructure",
+        "params": [
+          "String seqName",
+          "String text"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "splitSeqName",
+        "params": [
+          "String sequenceName"
+        ],
+        "return_type": "String[]",
+        "visibility": "private"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getDatabase",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getReference",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@link",
+      "@author",
+      "@since",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "ProteinSequence",
+      "AbstractSequence",
+      "CompoundNotFoundException",
+      "RNASequence",
+      "AbstractCompound"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StockholmSequenceAnnotation",
+    "package": "org.biojava.nbio.alignment.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "accessionNumber",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "description",
+        "type": "CharSequence",
+        "visibility": "private"
+      },
+      {
+        "name": "dbReferences",
+        "type": "Set<DatabaseReference>",
+        "visibility": "private"
+      },
+      {
+        "name": "organism",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "organismClassification",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "look",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setDescription",
+        "params": [
+          "CharSequence description"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addToDescription",
+        "params": [
+          "CharSequence description"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getDbReferences",
+        "params": [],
+        "return_type": "Set<DatabaseReference>",
+        "visibility": "public"
+      },
+      {
+        "name": "setDbReferences",
+        "params": [
+          "Set<DatabaseReference> dbReferences"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addDBReference",
+        "params": [
+          "String dbReferenceRepresentingString"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getAccessionNumber",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setAccessionNumber",
+        "params": [
+          "String accessionNumber"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getOrganism",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setOrganism",
+        "params": [
+          "String organism"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getOrganismClassification",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setOrganismClassification",
+        "params": [
+          "String organismClassification"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getLook",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setLook",
+        "params": [
+          "String look"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@param",
+      "@author"
+    ],
+    "internal_references": [
+      "DatabaseReference"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StockholmFileParser",
+    "package": "org.biojava.nbio.alignment.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      },
+      {
+        "name": "INFINITY",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "GENERIC_PER_FILE_ANNOTATION",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GENERIC_PER_CONSENSUS_ANNOTATION",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GENERIC_PER_SEQUENCE_ANNOTATION",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GENERIC_PER_RESIDUE_ANNOTATION",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_ACCESSION_NUMBER",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_IDENTIFICATION",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_DEFINITION",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_AUTHOR",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_ALIGNMENT_METHOD",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_BUILD_METHOD",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_SEARCH_METHOD",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_SOURCE_SEED",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_SOURCE_STRUCTURE",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_GATHERING_THRESHOLD",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_TRUSTED_CUTOFF",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_NOISE_CUTOFF",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_TYPE_FIELD",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "GF_SEQUENCE",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "parse",
+        "params": [
+          "String filename"
+        ],
+        "return_type": "StockholmStructure",
+        "visibility": "public"
+      },
+      {
+        "name": "parse",
+        "params": [
+          "String filename",
+          "int max"
+        ],
+        "return_type": "List<StockholmStructure>",
+        "visibility": "public"
+      },
+      {
+        "name": "parse",
+        "params": [
+          "InputStream inStream"
+        ],
+        "return_type": "StockholmStructure",
+        "visibility": "public"
+      },
+      {
+        "name": "parse",
+        "params": [
+          "InputStream inStream",
+          "int max"
+        ],
+        "return_type": "List<StockholmStructure>",
+        "visibility": "public"
+      },
+      {
+        "name": "parseNext",
+        "params": [
+          "int max"
+        ],
+        "return_type": "List<StockholmStructure>",
+        "visibility": "public"
+      },
+      {
+        "name": "handleSequenceLine",
+        "params": [
+          "String line"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "handleFileAnnotation",
+        "params": [
+          "String featureName",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "handleConsensusAnnotation",
+        "params": [
+          "String featureName",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "handleSequenceAnnotation",
+        "params": [
+          "String seqName",
+          "String featureName",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "handleResidueAnnotation",
+        "params": [
+          "String seqName",
+          "String featureName",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@author",
+      "@throws",
+      "@since",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "ParserException",
+      "InputStreamProvider",
+      "StockholmFileAnnotationReference"
+    ],
+    "external_references": [
+      "java.io.IOException",
+      "java.io.InputStream",
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "MatrixAligner",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "Sequence",
+      "Compound"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "PairwiseSequenceAligner",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "Sequence",
+      "Compound",
+      "SequencePair"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "HierarchicalClusterer",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "Sequence",
+      "Compound"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GapPenalty",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@link"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "AbstractPairwiseSequenceAligner",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "abstract",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "setQuery",
+        "params": [
+          "S query"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setTarget",
+        "params": [
+          "S target"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getQuery",
+        "params": [],
+        "return_type": "S",
+        "visibility": "public"
+      },
+      {
+        "name": "getTarget",
+        "params": [],
+        "return_type": "S",
+        "visibility": "public"
+      },
+      {
+        "name": "getCompoundSet",
+        "params": [],
+        "return_type": "CompoundSet<C>",
+        "visibility": "protected"
+      },
+      {
+        "name": "getCompoundsOfQuery",
+        "params": [],
+        "return_type": "List<C>",
+        "visibility": "protected"
+      },
+      {
+        "name": "getCompoundsOfTarget",
+        "params": [],
+        "return_type": "List<C>",
+        "visibility": "protected"
+      },
+      {
+        "name": "getScoreMatrixDimensions",
+        "params": [],
+        "return_type": "int[]",
+        "visibility": "protected"
+      },
+      {
+        "name": "getSubstitutionScore",
+        "params": [
+          "int queryColumn",
+          "int targetColumn"
+        ],
+        "return_type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "isReady",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "protected"
+      },
+      {
+        "name": "reset",
+        "params": [],
+        "return_type": "void",
+        "visibility": "protected"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "SubstitutionMatrix",
+      "CompoundSet",
+      "Sequence",
+      "Compound",
+      "SequencePair"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "RescoreRefiner",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "PairInProfileScorerType",
+      "Sequence",
+      "ProfileProfileAlignerType",
+      "Compound"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "PartitionRefiner",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "Sequence",
+      "ProfileProfileAlignerType",
+      "Compound"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Aligner",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "Profile",
+      "Compound",
+      "Sequence"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Scorer",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProfileProfileScorer",
+    "package": "org.biojava.nbio.alignment.template",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@param",
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "Profile",
+      "Compound",
+      "Sequence"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  }
+]

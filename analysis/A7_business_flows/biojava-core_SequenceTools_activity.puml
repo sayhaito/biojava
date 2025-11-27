@@ -1,0 +1,11 @@
+@startuml
+title SequenceTools - Activity Flow
+
+start
+:Execute permuteCyclic;
+:Execute percentNucleotideSequence;
+:Execute isNucleotideSequence;
+:Execute equalLengthSequences;
+stop
+
+@enduml

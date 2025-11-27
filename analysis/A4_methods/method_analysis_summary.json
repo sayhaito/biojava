@@ -1,0 +1,6 @@
+{
+  "project": "BioJava",
+  "total_methods_analyzed": 67,
+  "analysis_level": "A4_METHOD_LOGIC",
+  "next_step": "A5_CALL_GRAPH"
+}

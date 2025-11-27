@@ -1,0 +1,10 @@
+@startuml
+title biojava-protein-comparison-tool - Class Diagram
+
+class HelloWorld {
+  + print(): void
+}
+
+
+
+@enduml

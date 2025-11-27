@@ -1,0 +1,15 @@
+@startuml
+title PrettyXMLWriter - Activity Flow
+
+start
+:Execute declareNamespace;
+:Execute handleDeclaredNamespaces;
+:Write Indent;
+:Execute _openTag;
+:Execute allocPrefix;
+:Execute openTag;
+:Execute openTag;
+:Execute attribute;
+stop
+
+@enduml

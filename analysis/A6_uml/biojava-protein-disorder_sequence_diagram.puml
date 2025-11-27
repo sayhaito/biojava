@@ -1,0 +1,20 @@
+@startuml
+title biojava-protein-disorder - Sequence Diagram
+
+actor User
+
+participant Pattern
+participant SequenceUtil
+participant infasta
+participant line
+participant seqs
+participant sname
+
+User -> SequenceUtil: readFasta()
+SequenceUtil -> Pattern: compile()
+SequenceUtil -> infasta: readLine()
+SequenceUtil -> line: startsWith()
+SequenceUtil -> seqs: add()
+SequenceUtil -> sname: substring()
+
+@enduml

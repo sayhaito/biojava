@@ -1,0 +1,55 @@
+[
+  {
+    "feature": "Convert2SecondaryStructure",
+    "module": "biojava-aa-prop",
+    "actor": "User",
+    "summary": "User uses Convert2SecondaryStructure to processes molecular structures",
+    "steps": [
+      "Execute convert",
+      "Retrieve Grouping",
+      "Retrieve Attribute"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "PeptidePropertiesImpl",
+    "module": "biojava-aa-prop",
+    "actor": "User",
+    "summary": "User uses PeptidePropertiesImpl to perform operations",
+    "steps": [
+      "Retrieve WaterMoleculeWeight",
+      "Retrieve Sequence",
+      "Retrieve MolecularWeight",
+      "Retrieve MolecularWeight",
+      "Retrieve MolecularWeight",
+      "Retrieve MolecularWeightBasedOnXML",
+      "Execute obtainAminoAcidCompositionTable",
+      "Execute obtainAminoAcidCompositionTable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "Utils",
+    "module": "biojava-aa-prop",
+    "actor": "User",
+    "summary": "User uses Utils to perform operations",
+    "steps": [
+      "Execute checkSequence",
+      "Execute checkSequence"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "CommandPrompt",
+    "module": "biojava-aa-prop",
+    "actor": "User",
+    "summary": "User uses CommandPrompt to perform operations",
+    "steps": [
+      "Execute main",
+      "Execute run",
+      "Execute printHeader",
+      "Execute showHelp"
+    ],
+    "next_step": "continue"
+  }
+]

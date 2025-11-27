@@ -1,0 +1,137 @@
+{
+  "module": "biojava-ws",
+  "packages": [
+    "org.biojava.nbio.ws.alignment",
+    "org.biojava.nbio.ws.alignment.qblast",
+    "org.biojava.nbio.ws.hmmer"
+  ],
+  "total_classes": 19,
+  "classes": [
+    {
+      "name": "RemotePairwiseAlignmentProperties",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/RemotePairwiseAlignmentProperties.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ws.alignment"
+    },
+    {
+      "name": "RemotePairwiseAlignmentService",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/RemotePairwiseAlignmentService.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ws.alignment"
+    },
+    {
+      "name": "RemotePairwiseAlignmentOutputProperties",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/RemotePairwiseAlignmentOutputProperties.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ws.alignment"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.alignment"
+    },
+    {
+      "name": "BlastOutputAlignmentFormatEnum",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastOutputAlignmentFormatEnum.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "BlastAlignmentParameterEnum",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastAlignmentParameterEnum.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "BlastMatrixEnum",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastMatrixEnum.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "BlastJob",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastJob.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "BlastOutputFormatEnum",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastOutputFormatEnum.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "BlastProgramEnum",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastProgramEnum.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "MapToStringTransformer",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/MapToStringTransformer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "NCBIQBlastService",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/NCBIQBlastService.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "BlastOutputParameterEnum",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/BlastOutputParameterEnum.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "NCBIQBlastOutputProperties",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/NCBIQBlastOutputProperties.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "NCBIQBlastAlignmentProperties",
+      "path": "src/main/java/org/biojava/nbio/ws/alignment/qblast/NCBIQBlastAlignmentProperties.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.alignment.qblast"
+    },
+    {
+      "name": "HmmerScan",
+      "path": "src/main/java/org/biojava/nbio/ws/hmmer/HmmerScan.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ws.hmmer"
+    },
+    {
+      "name": "HmmerResult",
+      "path": "src/main/java/org/biojava/nbio/ws/hmmer/HmmerResult.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.hmmer"
+    },
+    {
+      "name": "HmmerDomain",
+      "path": "src/main/java/org/biojava/nbio/ws/hmmer/HmmerDomain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.hmmer"
+    },
+    {
+      "name": "RemoteHmmerScan",
+      "path": "src/main/java/org/biojava/nbio/ws/hmmer/RemoteHmmerScan.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ws.hmmer"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "junit",
+      "net.sf.json-lib",
+      "org.apache.logging.log4j",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-core"
+    ]
+  },
+  "next_step": "continue"
+}

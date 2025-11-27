@@ -1,0 +1,158 @@
+[
+  {
+    "class_name": "ChangeValue",
+    "package": "org.biojava.nbio.survival.data",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "CompactCharSequence",
+    "package": "org.biojava.nbio.survival.data",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "CharSequence",
+      "Serializable"
+    ],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "static"
+      },
+      {
+        "name": "ENCODING",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "offset",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "end",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "data",
+        "type": "byte[]",
+        "visibility": "private"
+      },
+      {
+        "name": "nullstring",
+        "type": "boolean",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "charAt",
+        "params": [
+          "int index"
+        ],
+        "return_type": "char",
+        "visibility": "public"
+      },
+      {
+        "name": "length",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "subSequence",
+        "params": [
+          "int start",
+          "int end"
+        ],
+        "return_type": "CharSequence",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@param",
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.UnsupportedEncodingException",
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "DiscreteQuantizerInterface",
+    "package": "org.biojava.nbio.survival.kaplanmeier.metadata",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author"
+    ],
+    "internal_references": [
+      "WorkSheet"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "CensorStatusSelect",
+    "package": "org.biojava.nbio.survival.kaplanmeier.figure",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [
+      "WorkSheet"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "CoxComparatorInterface",
+    "package": "org.biojava.nbio.survival.cox.comparators",
+    "type": "interface",
+    "extends": "Comparator<CoxVariables>",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "CoxVariables"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  }
+]

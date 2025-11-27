@@ -1,0 +1,1186 @@
+[
+  {
+    "class_name": "Selection",
+    "package": "org.biojava.nbio.structure.gui",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "AtomInfo"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SequenceDisplay",
+    "package": "org.biojava.nbio.structure.gui",
+    "type": "class",
+    "extends": "JPanel implements ChangeListener",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "MAX_SCALE",
+        "type": "int",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "windowClosing",
+        "params": [
+          "WindowEvent e"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "clearListeners",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addAlignmentPositionListener",
+        "params": [
+          "AlignmentPositionListener li"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getStructurePairAligner",
+        "params": [],
+        "return_type": "StructurePairAligner",
+        "visibility": "public"
+      },
+      {
+        "name": "setStructurePairAligner",
+        "params": [
+          "StructurePairAligner structurePairAligner"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getIdx1",
+        "params": [],
+        "return_type": "int[]",
+        "visibility": "public"
+      },
+      {
+        "name": "setIdx1",
+        "params": [
+          "int[] idx"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "getIdx2",
+        "params": [],
+        "return_type": "int[]",
+        "visibility": "public"
+      },
+      {
+        "name": "setIdx2",
+        "params": [
+          "int[] idx"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "buildAligMap",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "setAtoms",
+        "params": [
+          "Structure s",
+          "SequenceScalePanel panel"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "setStructure1",
+        "params": [
+          "Structure structure"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setStructure2",
+        "params": [
+          "Structure structure"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setAlternativeAlignment",
+        "params": [
+          "AlternativeAlignment alig"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getAligMap",
+        "params": [],
+        "return_type": "List<AlignedPosition>",
+        "visibility": "public"
+      },
+      {
+        "name": "stateChanged",
+        "params": [
+          "ChangeEvent e"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "updateDisplay",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "updatePercentageDisplay",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "getMaxSequenceLength",
+        "params": [],
+        "return_type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "getScaleForZoom",
+        "params": [
+          "int zoomFactor"
+        ],
+        "return_type": "float",
+        "visibility": "private"
+      },
+      {
+        "name": "calcScale",
+        "params": [
+          "int zoomFactor"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getScale",
+        "params": [],
+        "return_type": "float",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@since",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "SequenceScalePanel",
+      "*",
+      "StructurePairAligner",
+      "AlignmentPositionListener",
+      "AlternativeAlignment",
+      "PDBFileReader",
+      "SequenceMouseListener",
+      "AlignedPosition"
+    ],
+    "external_references": [
+      "org.slf4j.Logger",
+      "java.awt.*",
+      "javax.swing.event.ChangeEvent",
+      "org.slf4j.LoggerFactory",
+      "java.awt.event.WindowAdapter",
+      "javax.swing.*",
+      "java.awt.event.WindowEvent",
+      "javax.swing.event.ChangeListener"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureViewer",
+    "package": "org.biojava.nbio.structure.gui",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author"
+    ],
+    "internal_references": [
+      "Structure"
+    ],
+    "external_references": [
+      "java.awt.*"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "CoordManager",
+    "package": "org.biojava.nbio.structure.gui.util",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "setLength",
+        "params": [
+          "int length"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setScale",
+        "params": [
+          "float scale"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSeqPos",
+        "params": [
+          "int panelPos"
+        ],
+        "return_type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "getPanelPos",
+        "params": [
+          "int seqPos"
+        ],
+        "return_type": "int",
+        "visibility": "protected"
+      }
+    ],
+    "annotations": [
+      "@author",
+      "@since",
+      "@version",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructurePairSelector",
+    "package": "org.biojava.nbio.structure.gui.util",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@author"
+    ],
+    "internal_references": [
+      "Structure",
+      "StructureException"
+    ],
+    "external_references": [
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SequenceMouseListener",
+    "package": "org.biojava.nbio.structure.gui.util",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "MouseListener",
+      "MouseMotionListener"
+    ],
+    "fields": [],
+    "methods": [
+      {
+        "name": "clearListeners",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addAlignmentPositionListener",
+        "params": [
+          "AlignmentPositionListener li"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mousePressed",
+        "params": [
+          "MouseEvent event"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSeqPos",
+        "params": [
+          "MouseEvent e"
+        ],
+        "return_type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "setChain",
+        "params": [
+          "Chain c"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setSelectionStart",
+        "params": [
+          "int start"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "setSelectionEnd",
+        "params": [
+          "int end"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "mouseDragged",
+        "params": [
+          "MouseEvent e"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseMoved",
+        "params": [
+          "MouseEvent e"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseClicked",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseEntered",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseExited",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseReleased",
+        "params": [
+          "MouseEvent event"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "triggerMouseOverPosition",
+        "params": [
+          "int pos",
+          "int mouseY"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [
+      "Chain",
+      "SequenceDisplay",
+      "AlignmentPositionListener"
+    ],
+    "external_references": [
+      "org.slf4j.Logger",
+      "java.awt.event.MouseListener",
+      "org.slf4j.LoggerFactory",
+      "java.awt.event.MouseMotionListener",
+      "java.awt.event.MouseEvent",
+      "java.awt.Cursor"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SequenceScalePanel",
+    "package": "org.biojava.nbio.structure.gui.util",
+    "type": "class",
+    "extends": "JPanel",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "static"
+      },
+      {
+        "name": "DEFAULT_X_START",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "DEFAULT_X_RIGHT_BORDER",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "DEFAULT_Y_START",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "DEFAULT_Y_STEP",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "DEFAULT_Y_HEIGHT",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "DEFAULT_Y_BOTTOM",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "LINE_HEIGHT",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "MINIMUM_HEIGHT",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "SEQUENCE_COLOR",
+        "type": "Color",
+        "visibility": "public"
+      },
+      {
+        "name": "SCALE_COLOR",
+        "type": "Color",
+        "visibility": "public"
+      },
+      {
+        "name": "TEXT_SCALE_COLOR",
+        "type": "Color",
+        "visibility": "public"
+      },
+      {
+        "name": "IDX_COLOR",
+        "type": "Color",
+        "visibility": "public"
+      },
+      {
+        "name": "GAP_COLOR",
+        "type": "Color",
+        "visibility": "public"
+      },
+      {
+        "name": "BACKGROUND_COLOR",
+        "type": "Color",
+        "visibility": "public"
+      },
+      {
+        "name": "seqFont",
+        "type": "Font",
+        "visibility": "public"
+      },
+      {
+        "name": "SEQUENCE_SHOW",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "SIZE",
+        "type": "int",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setPrefSize",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "setAligMap",
+        "params": [
+          "List<AlignedPosition> apos"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getChain",
+        "params": [],
+        "return_type": "Chain",
+        "visibility": "public"
+      },
+      {
+        "name": "setScale",
+        "params": [
+          "float scale"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setPaintDefaults",
+        "params": [
+          "Graphics2D g2D"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      },
+      {
+        "name": "paintComponent",
+        "params": [
+          "Graphics g"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "drawScale",
+        "params": [
+          "Graphics2D g2D",
+          "int y"
+        ],
+        "return_type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "drawIdx",
+        "params": [
+          "Graphics2D g2D",
+          "int y"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      },
+      {
+        "name": "drawSequence",
+        "params": [
+          "Graphics2D g2D",
+          "int y"
+        ],
+        "return_type": "int",
+        "visibility": "protected"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "*"
+    ],
+    "external_references": [
+      "java.awt.*",
+      "javax.swing.*"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "AlternativeAlignmentFrame",
+    "package": "org.biojava.nbio.structure.gui.util",
+    "type": "class",
+    "extends": "JFrame",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "columnNames",
+        "type": "String[]",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setStructurePairAligner",
+        "params": [
+          "StructurePairAligner aligner"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setAlternativeAlignments",
+        "params": [
+          "AlternativeAlignment[] aligs"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getDataFromAligs",
+        "params": [
+          "AlternativeAlignment[] aligs"
+        ],
+        "return_type": "Object[][]",
+        "visibility": "private"
+      },
+      {
+        "name": "showDistanceMatrix",
+        "params": [
+          "int position"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "windowClosing",
+        "params": [
+          "WindowEvent e"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "showAlternative",
+        "params": [
+          "int position"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "windowClosing",
+        "params": [
+          "WindowEvent e"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "createRasmolScripts",
+        "params": [
+          "AlternativeAlignment alig"
+        ],
+        "return_type": "String[]",
+        "visibility": "private"
+      },
+      {
+        "name": "mouseClicked",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mousePressed",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseReleased",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseEntered",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseExited",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseClicked",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mousePressed",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseReleased",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseEntered",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mouseExited",
+        "params": [
+          "MouseEvent arg0"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@version",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [
+      "*",
+      "StructurePairAligner",
+      "AlternativeAlignment",
+      "Matrix",
+      "ScaleableMatrixPanel",
+      "JmolAlignedPositionListener",
+      "BiojavaJmol",
+      "SequenceDisplay"
+    ],
+    "external_references": [
+      "java.text.MessageFormat",
+      "org.slf4j.Logger",
+      "java.awt.*",
+      "java.awt.event.MouseListener",
+      "org.slf4j.LoggerFactory",
+      "java.awt.event.WindowAdapter",
+      "javax.swing.table.TableCellRenderer",
+      "javax.swing.*",
+      "java.awt.event.WindowEvent",
+      "java.awt.event.MouseEvent"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "AlignmentCalc",
+    "package": "org.biojava.nbio.structure.gui.util",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "Runnable"
+    ],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "run",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "showAlignment",
+        "params": [
+          "StructurePairAligner alignment",
+          "AlternativeAlignment[] aligs"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "interrupt",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "cleanup",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@since",
+      "@version",
+      "@param"
+    ],
+    "internal_references": [
+      "StructurePairAligner",
+      "ClusterAltAligs",
+      "AlternativeAlignment",
+      "Structure",
+      "AlignmentGui",
+      "StructureException"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ColorInterpolator",
+    "package": "org.biojava.nbio.structure.gui.util.color",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.awt.*"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ContinuousColorMapper",
+    "package": "org.biojava.nbio.structure.gui.util.color",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.awt.*"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "AlignmentPositionListener",
+    "package": "org.biojava.nbio.structure.gui.events",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "AlignedPosition"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureLoaderThread",
+    "package": "org.biojava.nbio.structure.align.gui",
+    "type": "class",
+    "extends": "SwingWorker<String, Object>",
+    "implements": [],
+    "fields": [
+      {
+        "name": "frame",
+        "type": "JFrame",
+        "visibility": "final"
+      },
+      {
+        "name": "progressBar",
+        "type": "JProgressBar",
+        "visibility": "final"
+      },
+      {
+        "name": "contentPane",
+        "type": "JPanel",
+        "visibility": "final"
+      },
+      {
+        "name": "progressFrame",
+        "type": "JFrame",
+        "visibility": "static"
+      }
+    ],
+    "methods": [
+      {
+        "name": "doInBackground",
+        "params": [],
+        "return_type": "String",
+        "visibility": "protected"
+      },
+      {
+        "name": "showProgressBar",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "run",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "hideProgressBar",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "run",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [
+      "StructureAlignmentJmol",
+      "UserConfiguration",
+      "Structure",
+      "StructureImpl",
+      "StructureTools",
+      "AtomCache",
+      "StructureIO",
+      "BioAssemblyTools"
+    ],
+    "external_references": [
+      "java.awt.*",
+      "javax.swing.*"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "MultipleAlignmentJmolDisplay",
+    "package": "org.biojava.nbio.structure.align.gui",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "display",
+        "params": [
+          "MultipleAlignment multAln"
+        ],
+        "return_type": "MultipleAlignmentJmol",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@author",
+      "@throws",
+      "@since",
+      "@Deprecated",
+      "@deprecated",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "JmolTools",
+      "MultipleAligPanel",
+      "Atom",
+      "MultipleAlignmentDisplay",
+      "MultipleAlignment",
+      "MultipleAlignmentJmol",
+      "MultipleStatusDisplay",
+      "AbstractAlignmentJmol",
+      "Block",
+      "StructureException"
+    ],
+    "external_references": [
+      "java.awt.Dimension",
+      "javax.swing.JScrollPane",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "javax.swing.Box",
+      "javax.swing.JMenuBar",
+      "javax.swing.JFrame"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "MultipleAlignmentCalc",
+    "package": "org.biojava.nbio.structure.align.gui",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "AlignmentCalculationRunnable"
+    ],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "names",
+        "type": "List<StructureIdentifier>",
+        "visibility": "private"
+      },
+      {
+        "name": "structures",
+        "type": "List<Structure>",
+        "visibility": "private"
+      },
+      {
+        "name": "parent",
+        "type": "MultipleAlignmentGUI",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "run",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "interrupt",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "cleanup",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setNrCPUs",
+        "params": [
+          "int useNrCPUs"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@param",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [
+      "StructureIdentifier",
+      "Structure",
+      "StructureTools",
+      "MultipleStructureAligner",
+      "Atom",
+      "MultipleAlignment",
+      "StructureException"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "module": "biojava-protein-disorder",
+  "packages": [
+    "org.biojava.nbio.data.sequence",
+    "org.biojava.nbio.ronn"
+  ],
+  "total_classes": 12,
+  "classes": [
+    {
+      "name": "FastaSequence",
+      "path": "src/main/java/org/biojava/nbio/data/sequence/FastaSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.data.sequence"
+    },
+    {
+      "name": "SequenceUtil",
+      "path": "src/main/java/org/biojava/nbio/data/sequence/SequenceUtil.java",
+      "type": "class",
+      "package": "org.biojava.nbio.data.sequence"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/data/sequence/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.data.sequence"
+    },
+    {
+      "name": "NullOutputStream",
+      "path": "src/main/java/org/biojava/nbio/ronn/NullOutputStream.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/ronn/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "Timer",
+      "path": "src/main/java/org/biojava/nbio/ronn/Timer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "InputParameters",
+      "path": "src/main/java/org/biojava/nbio/ronn/InputParameters.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "ModelLoader",
+      "path": "src/main/java/org/biojava/nbio/ronn/ModelLoader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "Jronn",
+      "path": "src/main/java/org/biojava/nbio/ronn/Jronn.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "RonnConstraint",
+      "path": "src/main/java/org/biojava/nbio/ronn/RonnConstraint.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "ORonnModel",
+      "path": "src/main/java/org/biojava/nbio/ronn/ORonnModel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    },
+    {
+      "name": "ORonn",
+      "path": "src/main/java/org/biojava/nbio/ronn/ORonn.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ronn"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "jakarta.xml.bind",
+      "junit",
+      "org.apache.logging.log4j",
+      "org.glassfish.jaxb",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-core"
+    ]
+  },
+  "next_step": "continue"
+}

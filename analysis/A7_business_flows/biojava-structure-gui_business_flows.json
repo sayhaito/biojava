@@ -1,0 +1,32 @@
+[
+  {
+    "feature": "SequenceDisplay",
+    "module": "biojava-structure-gui",
+    "actor": "User",
+    "summary": "User uses SequenceDisplay to manipulates biological sequences",
+    "steps": [
+      "Execute main",
+      "Execute windowClosing",
+      "Execute clearListeners",
+      "Execute addAlignmentPositionListener",
+      "Retrieve StructurePairAligner",
+      "Set StructurePairAligner",
+      "Retrieve Idx1",
+      "Set Idx1"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "CoordManager",
+    "module": "biojava-structure-gui",
+    "actor": "User",
+    "summary": "User uses CoordManager to perform operations",
+    "steps": [
+      "Set Length",
+      "Set Scale",
+      "Retrieve SeqPos",
+      "Retrieve PanelPos"
+    ],
+    "next_step": "continue"
+  }
+]

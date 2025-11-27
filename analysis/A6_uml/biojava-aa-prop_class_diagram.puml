@@ -1,0 +1,61 @@
+@startuml
+title biojava-aa-prop - Class Diagram
+
+interface IPeptideProperties {
+}
+
+class Convert2SecondaryStructure {
+  - subCategory: String[]
+  + convert(char c): char
+  + getGrouping(): String[]
+  + getAttribute(): String
+}
+
+class PeptidePropertiesImpl {
+  # logger: Logger
+  # hydrogenMW: double
+  # hydroxideMW: double
+  # a: double
+  # b: double
+  - getWaterMoleculeWeight(): double
+  - getSequence(String sequence, boolean ignoreCase): char[]
+  + getMolecularWeight(ProteinSequence sequence): double
+  + getMolecularWeight(ProteinSequence sequence, File aminoAcidCompositionFile): double
+  + getMolecularWeight(ProteinSequence sequence, File elementMassFile, File aminoAcidCompositionFile): double
+  + getMolecularWeightBasedOnXML(ProteinSequence sequence, AminoAcidCompositionTable aminoAcidCompositionTable): double
+  + obtainAminoAcidCompositionTable(File aminoAcidCompositionFile): AminoAcidCompositionTable
+  + obtainAminoAcidCompositionTable(File elementMassFile, File aminoAcidCompositionFile): AminoAcidCompositionTable
+}
+
+class Utils {
+  # logger: Logger
+  # characterSet: Set<Character>
+  + checkSequence(String sequence): String
+  + checkSequence(String sequence, Set<Character> cSet): String
+}
+
+class CommandPrompt {
+  + main(String[] args): void
+  + run(String[] args): void
+  - printHeader(PrintStream output, List<Character> propertyList, List<Character> specificList, String delimiter): void
+  - showHelp(): void
+}
+
+
+IPeptideProperties --> AminoAcidCompound
+IPeptideProperties --> ProteinSequence
+IPeptideProperties --> AminoAcidCompositionTable
+Convertor <|-- Convert2SecondaryStructure
+IPeptideProperties <|.. PeptidePropertiesImpl
+PeptidePropertiesImpl --> ProteinSequence
+PeptidePropertiesImpl --> AminoAcidCompositionTable
+PeptidePropertiesImpl --> AminoAcidCompoundSet
+PeptidePropertiesImpl --> MyValidationEventHandler
+PeptidePropertiesImpl --> ElementTable
+CommandPrompt --> CompoundSet
+CommandPrompt --> ProteinSequence
+CommandPrompt --> AminoAcidCompositionTable
+CommandPrompt --> AminoAcidCompoundSet
+CommandPrompt --> *
+
+@enduml

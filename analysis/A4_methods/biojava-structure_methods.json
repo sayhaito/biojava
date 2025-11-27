@@ -1,0 +1,138 @@
+[
+  {
+    "class": "StructureIO",
+    "method": "getStructure",
+    "steps": [
+      "checkInitAtomCache();",
+      "return cache.getStructure(name);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException",
+      "StructureException"
+    ],
+    "external_calls": [
+      "cache.getStructure()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureIO",
+    "method": "checkInitAtomCache",
+    "steps": [
+      "if (cache == null) {",
+      "cache = new AtomCache();"
+    ],
+    "branches": [
+      {
+        "condition": "cache == null",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "IOException",
+      "StructureException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureIO",
+    "method": "setAtomCache",
+    "steps": [
+      "cache = c;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException",
+      "StructureException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureTools",
+    "method": "getNrAtoms",
+    "steps": [
+      "int nrAtoms = 0;",
+      "Iterator<Group> iter = new GroupIterator(s);",
+      "while (iter.hasNext()) {",
+      "Group g = iter.next();",
+      "nrAtoms += g.size();",
+      "return nrAtoms;"
+    ],
+    "branches": [],
+    "loops": [
+      {
+        "type": "while",
+        "condition": "iter.hasNext()"
+      }
+    ],
+    "exceptions": [
+      "StructureException"
+    ],
+    "external_calls": [
+      "iter.hasNext()",
+      "iter.next()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureTools",
+    "method": "getNrGroups",
+    "steps": [
+      "int nrGroups = 0;",
+      "List<Chain> chains = s.getChains(0);",
+      "for (Chain c : chains) {",
+      "nrGroups += c.getAtomLength();",
+      "return nrGroups;"
+    ],
+    "branches": [],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "Chain c : chains"
+      },
+      {
+        "type": "foreach",
+        "collection": "chains"
+      }
+    ],
+    "exceptions": [
+      "StructureException"
+    ],
+    "external_calls": [
+      "s.getChains()",
+      "c.getAtomLength()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureTools",
+    "method": "getAtomArray",
+    "steps": [
+      "List<Chain> chains = s.getModel(0);",
+      "List<Atom> atoms = new ArrayList<>();",
+      "extractAtoms(atomNames, chains, atoms);",
+      "return atoms.toArray(new Atom[0]);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "StructureException"
+    ],
+    "external_calls": [
+      "s.getModel()",
+      "atoms.toArray()"
+    ],
+    "next_step": "continue"
+  }
+]

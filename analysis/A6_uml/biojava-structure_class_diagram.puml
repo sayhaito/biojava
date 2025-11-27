@@ -1,0 +1,92 @@
+@startuml
+title biojava-structure - Class Diagram
+
+interface PDBRecord {
+}
+
+interface Chain {
+}
+
+interface Atom {
+}
+
+class StructureIO {
+  - cache: AtomCache
+  + getStructure(String name): Structure
+  - checkInitAtomCache(): void
+  + setAtomCache(AtomCache c): void
+  + getAtomCache(): AtomCache
+  + getBiologicalAssembly(String pdbId, boolean multiModel): Structure
+  + getBiologicalAssembly(String pdbId): Structure
+  + getBiologicalAssembly(String pdbId, int biolAssemblyNr, boolean multiModel): Structure
+  + getBiologicalAssembly(String pdbId, int biolAssemblyNr): Structure
+}
+
+class StructureTools {
+  - logger: Logger
+  + CA_ATOM_NAME: String
+  + N_ATOM_NAME: String
+  + C_ATOM_NAME: String
+  + O_ATOM_NAME: String
+  + getNrAtoms(Structure s): int
+  + getNrGroups(Structure s): int
+  + getAtomArray(Structure s, String[] atomNames): Atom[]
+  + getAllAtomArray(Structure s): Atom[]
+  + getAllAtomArray(Structure s, int model): Atom[]
+  + getAllAtomArray(Chain c): Atom[]
+  + getUnalignedGroups(Atom[] ca): List<Group>
+  + getLigandsByProximity(Collection<Group> target, Atom[] query, double cutoff): List<Group>
+}
+
+class StructureImpl {
+  - serialVersionUID: long
+  - logger: Logger
+  - pdbId: PdbId
+  - models: List<Model>
+  - entityInfos: List<EntityInfo>
+  + clone(): Structure
+  + findGroup(String chainName, String pdbResnum, int modelIdx): Group
+  + findGroup(String chainName, String pdbResnum): Group
+  + setName(String nam): void
+  + getName(): String
+  + getStructureIdentifier(): StructureIdentifier
+  + setStructureIdentifier(StructureIdentifier structureIdentifier): void
+  + addChain(Chain chain): void
+}
+
+interface SeqMisMatch {
+}
+
+interface AminoAcid {
+  + ATOMRECORD: String
+  + SEQRESRECORD: String
+}
+
+interface StructureIdentifier {
+}
+
+class StructureException {
+  + serialVersionUID: long
+}
+
+
+Serializable <|-- PDBRecord
+Serializable <|-- Chain
+Chain --> Sequence
+Chain --> ChemComp
+Cloneable, PDBRecord <|-- Atom
+StructureIO --> StructureFiletype
+StructureIO --> AtomCache
+StructureTools --> FileParsingParameters
+StructureTools --> AtomContactSet
+StructureTools --> Grid
+StructureTools --> AtomCache
+StructureTools --> FileDownloadUtils
+Structure <|.. StructureImpl
+StructureImpl --> FileConvert
+Group <|-- AminoAcid
+Serializable <|-- StructureIdentifier
+StructureIdentifier --> AtomCache
+Exception <|-- StructureException
+
+@enduml

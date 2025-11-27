@@ -1,0 +1,66 @@
+[
+  {
+    "feature": "AnchoredPairwiseSequenceAligner",
+    "module": "biojava-alignment",
+    "actor": "User",
+    "summary": "User uses AnchoredPairwiseSequenceAligner to manipulates biological sequences",
+    "steps": [
+      "Retrieve Anchors",
+      "Set Anchors",
+      "Execute addAnchor",
+      "Set Profile"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "StockholmStructure",
+    "module": "biojava-alignment",
+    "actor": "User",
+    "summary": "User uses StockholmStructure to processes molecular structures",
+    "steps": [
+      "Retrieve FileAnnotation",
+      "Retrieve ConsAnnotation",
+      "Execute appendToSequence",
+      "Retrieve SequenceAnnotation",
+      "Execute addGSAccessionNumber",
+      "Execute addGSDescription",
+      "Execute addGSdbReference",
+      "Execute addGSOrganismSpecies"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "StockholmSequenceAnnotation",
+    "module": "biojava-alignment",
+    "actor": "User",
+    "summary": "User uses StockholmSequenceAnnotation to manipulates biological sequences",
+    "steps": [
+      "Retrieve Description",
+      "Set Description",
+      "Execute addToDescription",
+      "Retrieve DbReferences",
+      "Set DbReferences",
+      "Execute addDBReference",
+      "Retrieve AccessionNumber",
+      "Set AccessionNumber"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "StockholmFileParser",
+    "module": "biojava-alignment",
+    "actor": "System",
+    "summary": "System uses StockholmFileParser to parses input data",
+    "steps": [
+      "Parse ",
+      "Parse ",
+      "Parse ",
+      "Parse ",
+      "Parse Next",
+      "Execute handleSequenceLine",
+      "Execute handleFileAnnotation",
+      "Execute handleConsensusAnnotation"
+    ],
+    "next_step": "continue"
+  }
+]

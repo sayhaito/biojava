@@ -1,0 +1,116 @@
+@startuml
+title biojava-structure-gui - Class Diagram
+
+interface Selection {
+}
+
+class SequenceDisplay {
+  - serialVersionUID: long
+  + MAX_SCALE: int
+  + main(String[] args): void
+  + windowClosing(WindowEvent e): void
+  + clearListeners(): void
+  + addAlignmentPositionListener(AlignmentPositionListener li): void
+  + getStructurePairAligner(): StructurePairAligner
+  + setStructurePairAligner(StructurePairAligner structurePairAligner): void
+  + getIdx1(): int[]
+  - setIdx1(int[] idx): void
+}
+
+interface StructureViewer {
+}
+
+class CoordManager {
+  + setLength(int length): void
+  + setScale(float scale): void
+  # getSeqPos(int panelPos): int
+  # getPanelPos(int seqPos): int
+}
+
+interface StructurePairSelector {
+}
+
+class SequenceMouseListener {
+  + clearListeners(): void
+  + addAlignmentPositionListener(AlignmentPositionListener li): void
+  + mousePressed(MouseEvent event): void
+  - getSeqPos(MouseEvent e): int
+  + setChain(Chain c): void
+  - setSelectionStart(int start): void
+  - setSelectionEnd(int end): void
+  + mouseDragged(MouseEvent e): void
+}
+
+class SequenceScalePanel {
+  # serialVersionUID: long
+  + DEFAULT_X_START: int
+  + DEFAULT_X_RIGHT_BORDER: int
+  + DEFAULT_Y_START: int
+  + DEFAULT_Y_STEP: int
+  - setPrefSize(): void
+  + setAligMap(List<AlignedPosition> apos): void
+  + getChain(): Chain
+  + setScale(float scale): void
+  # setPaintDefaults(Graphics2D g2D): void
+  + paintComponent(Graphics g): void
+  # drawScale(Graphics2D g2D, int y): int
+  # drawIdx(Graphics2D g2D, int y): void
+}
+
+class AlternativeAlignmentFrame {
+  - serialVersionUID: long
+  - logger: Logger
+  - columnNames: String[]
+  + setStructurePairAligner(StructurePairAligner aligner): void
+  + setAlternativeAlignments(AlternativeAlignment[] aligs): void
+  - getDataFromAligs(AlternativeAlignment[] aligs): Object[][]
+  + showDistanceMatrix(int position): void
+  + windowClosing(WindowEvent e): void
+  + showAlternative(int position): void
+  + windowClosing(WindowEvent e): void
+  - createRasmolScripts(AlternativeAlignment alig): String[]
+}
+
+class AlignmentCalc {
+  - logger: Logger
+  + run(): void
+  - showAlignment(StructurePairAligner alignment, AlternativeAlignment[] aligs): void
+  + interrupt(): void
+  + cleanup(): void
+}
+
+interface ColorInterpolator {
+}
+
+
+Selection --> AtomInfo
+JPanel implements ChangeListener <|-- SequenceDisplay
+SequenceDisplay --> SequenceScalePanel
+SequenceDisplay --> *
+SequenceDisplay --> StructurePairAligner
+SequenceDisplay --> AlignmentPositionListener
+SequenceDisplay --> AlternativeAlignment
+StructureViewer --> Structure
+StructurePairSelector --> Structure
+StructurePairSelector --> StructureException
+MouseListener <|.. SequenceMouseListener
+MouseMotionListener <|.. SequenceMouseListener
+SequenceMouseListener --> Chain
+SequenceMouseListener --> SequenceDisplay
+SequenceMouseListener --> AlignmentPositionListener
+JPanel <|-- SequenceScalePanel
+SequenceScalePanel --> *
+JFrame <|-- AlternativeAlignmentFrame
+AlternativeAlignmentFrame --> *
+AlternativeAlignmentFrame --> StructurePairAligner
+AlternativeAlignmentFrame --> AlternativeAlignment
+AlternativeAlignmentFrame --> Matrix
+AlternativeAlignmentFrame --> ScaleableMatrixPanel
+Runnable <|.. AlignmentCalc
+AlignmentCalc --> StructurePairAligner
+AlignmentCalc --> ClusterAltAligs
+AlignmentCalc --> AlternativeAlignment
+AlignmentCalc --> Structure
+AlignmentCalc --> AlignmentGui
+
+@enduml

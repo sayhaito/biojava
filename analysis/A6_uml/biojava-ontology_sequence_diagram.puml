@@ -1,0 +1,23 @@
+@startuml
+title biojava-ontology - Sequence Diagram
+
+actor User
+
+participant RemoteTerm
+participant Term
+participant remoteTerm
+participant synonyms
+
+User -> Term: getSynonyms()
+Term -> synonyms: toArray()
+
+User -> RemoteTerm: getSynonyms()
+RemoteTerm -> synonyms: toArray()
+
+User -> RemoteTerm: getName()
+RemoteTerm -> remoteTerm: getName()
+
+User -> RemoteTerm: getDescription()
+RemoteTerm -> remoteTerm: getDescription()
+
+@enduml

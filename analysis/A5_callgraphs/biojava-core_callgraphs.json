@@ -1,0 +1,58 @@
+[
+  {
+    "class": "PrettyXMLWriter",
+    "method": "writeIndent",
+    "calls": [
+      {
+        "from": "PrettyXMLWriter.writeIndent",
+        "to": "writer.write"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "PrettyXMLWriter",
+    "method": "_closeTag",
+    "calls": [
+      {
+        "from": "PrettyXMLWriter._closeTag",
+        "to": "namespaceBindings.removeLast"
+      },
+      {
+        "from": "PrettyXMLWriter._closeTag",
+        "to": "hereBindings.iterator"
+      },
+      {
+        "from": "PrettyXMLWriter._closeTag",
+        "to": "bi.hasNext"
+      },
+      {
+        "from": "PrettyXMLWriter._closeTag",
+        "to": "namespacePrefixes.remove"
+      },
+      {
+        "from": "PrettyXMLWriter._closeTag",
+        "to": "bi.next"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "PrettyXMLWriter",
+    "method": "closeTag",
+    "calls": [
+      {
+        "from": "PrettyXMLWriter.closeTag",
+        "to": "writer.println"
+      },
+      {
+        "from": "PrettyXMLWriter.closeTag",
+        "to": "writer.print"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

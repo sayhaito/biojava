@@ -1,0 +1,383 @@
+[
+  {
+    "class": "GeneNamesParser",
+    "method": "getGeneNames",
+    "steps": [
+      "URL url = new URL(DEFAULT_GENENAMES_URL);",
+      "InputStreamProvider prov = new InputStreamProvider();",
+      "InputStream inStream = prov.getInputStream(url);",
+      "return getGeneNames(inStream);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "prov.getInputStream()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneNamesParser",
+    "method": "getGeneNames",
+    "steps": [
+      "URL url = new URL(DEFAULT_GENENAMES_URL);",
+      "InputStreamProvider prov = new InputStreamProvider();",
+      "InputStream inStream = prov.getInputStream(url);",
+      "return getGeneNames(inStream);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "prov.getInputStream()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneNamesParser",
+    "method": "getGeneName",
+    "steps": [
+      "if (line == null)",
+      "return null;",
+      "String[] s = line.split(\"\\t\");",
+      "if ( s.length != 13) {",
+      "logger.warn(\"Line does not contain 13 data items, but {}: {}\", s.length, line);",
+      "logger.warn(line.replaceAll(\"\\t\", \"|---|\"));",
+      "return null;",
+      "GeneName gn = new GeneName();",
+      "gn.setApprovedSymbol(s[0]);",
+      "gn.setApprovedName(s[1]);",
+      "gn.setStatus(s[2]);",
+      "gn.setPreviousSymbols(s[3]);",
+      "gn.setPreviousNames(s[4]);",
+      "gn.setSynonyms(s[5]);",
+      "gn.setChromosome(s[6]);",
+      "gn.setAccessionNr(s[7]);",
+      "gn.setOmimId(s[8]);",
+      "gn.setRefseqIds(s[9]);",
+      "gn.setEnsemblGeneId(s[10]);",
+      "gn.setUniprot(s[11]);"
+    ],
+    "branches": [
+      {
+        "condition": "s.length != 13",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "line.split()",
+      "logger.warn()",
+      "line.replaceAll()",
+      "gn.setApprovedSymbol()",
+      "gn.setApprovedName()",
+      "gn.setStatus()",
+      "gn.setPreviousSymbols()",
+      "gn.setPreviousNames()",
+      "gn.setSynonyms()",
+      "gn.setChromosome()",
+      "gn.setAccessionNr()",
+      "gn.setOmimId()",
+      "gn.setRefseqIds()",
+      "gn.setEnsemblGeneId()",
+      "gn.setUniprot()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneChromosomePositionParser",
+    "method": "getChromosomeMappings",
+    "steps": [
+      "URL url = new URL(DEFAULT_MAPPING_URL);",
+      "InputStreamProvider prov = new InputStreamProvider();",
+      "InputStream inStream = prov.getInputStream(url);",
+      "return getChromosomeMappings(inStream);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "prov.getInputStream()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneChromosomePositionParser",
+    "method": "getChromosomeMappings",
+    "steps": [
+      "URL url = new URL(DEFAULT_MAPPING_URL);",
+      "InputStreamProvider prov = new InputStreamProvider();",
+      "InputStream inStream = prov.getInputStream(url);",
+      "return getChromosomeMappings(inStream);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "prov.getInputStream()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneChromosomePositionParser",
+    "method": "getGeneChromosomePosition",
+    "steps": [
+      "if ( line == null)",
+      "return null;",
+      "String[] spl = line.split(\"\\t\");",
+      "if ( spl.length != 11) {",
+      "logger.warn(\"Line does not have 11 data items, but {}: {}\", spl.length, line);",
+      "return null;",
+      "GeneChromosomePosition g = new GeneChromosomePosition();",
+      "g.setGeneName(spl[0]);",
+      "g.setGenebankId(spl[1]);",
+      "g.setChromosome(spl[2]);",
+      "g.setOrientation(spl[3].charAt(0));",
+      "g.setTranscriptionStart(Integer.parseInt(spl[4]));",
+      "g.setTranscriptionEnd(Integer.parseInt(spl[5]));",
+      "g.setCdsStart(Integer.parseInt(spl[6]));",
+      "g.setCdsEnd(Integer.parseInt(spl[7]));",
+      "g.setExonCount(Integer.parseInt(spl[8]));",
+      "String exonStarts = spl[9];",
+      "String exonEnds = spl[10];",
+      "g.setExonStarts(getIntegerList(exonStarts));",
+      "g.setExonEnds(getIntegerList(exonEnds));"
+    ],
+    "branches": [
+      {
+        "condition": "spl.length != 11",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "line.split()",
+      "logger.warn()",
+      "g.setGeneName()",
+      "g.setGenebankId()",
+      "g.setChromosome()",
+      "g.setOrientation()",
+      "g.setTranscriptionStart()",
+      "Integer.parseInt()",
+      "g.setTranscriptionEnd()",
+      "g.setCdsStart()",
+      "g.setCdsEnd()",
+      "g.setExonCount()",
+      "g.setExonStarts()",
+      "g.setExonEnds()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GFF3Reader",
+    "method": "read",
+    "steps": [
+      "return read(Paths.get(filename), indexes);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "GFF3Reader",
+    "method": "read",
+    "steps": [
+      "return read(Paths.get(filename), indexes);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "GFF3Reader",
+    "method": "read",
+    "steps": [
+      "return read(Paths.get(filename), indexes);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneIDGFF2Reader",
+    "method": "read",
+    "steps": [
+      "logger.info(\"Reading: {}\", filename);",
+      "FeatureList features = new FeatureList();",
+      "try (BufferedReader br = new BufferedReader(new FileReader(filename))) {",
+      "for (s = br.readLine(); null != s; s = br.readLine()) {",
+      "s = s.trim();",
+      "if (s.length() > 0) {",
+      "if (s.charAt(0) == '#') {",
+      "FeatureI f = parseLine(s);",
+      "if (f != null) {",
+      "features.add(f);",
+      "return features;"
+    ],
+    "branches": [
+      {
+        "condition": "s.length() > 0",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      },
+      {
+        "condition": "s.charAt(0) == '#'",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      },
+      {
+        "condition": "f != null",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "s = br.readLine(); null != s; s = br.readLine()"
+      }
+    ],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "logger.info()",
+      "br.readLine()",
+      "s.trim()",
+      "s.charAt()",
+      "features.add()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneIDGFF2Reader",
+    "method": "parseLine",
+    "steps": [
+      "int start = 0;",
+      "int end = 0;",
+      "start = end;",
+      "end = s.indexOf('\\t', start);",
+      "String seqname = s.substring(start, end).trim();",
+      "start = end + 1;",
+      "end = s.indexOf('\\t', start);",
+      "String source = s.substring(start, end).trim();",
+      "start = end + 1;",
+      "end = s.indexOf('\\t', start);",
+      "String type = s.substring(start, end);",
+      "start = end + 1;",
+      "end = s.indexOf('\\t', start);",
+      "String locStart = s.substring(start, end);",
+      "start = end + 1;",
+      "end = s.indexOf('\\t', start);",
+      "String locEnd = s.substring(start, end);",
+      "start = end + 1;",
+      "end = s.indexOf('\\t', start);",
+      "score = Double.parseDouble(s.substring(start, end));"
+    ],
+    "branches": [
+      {
+        "condition": "end < 0",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "IOException",
+      "Exception"
+    ],
+    "external_calls": [
+      "s.indexOf()",
+      "s.substring()",
+      "Double.parseDouble()",
+      "s.charAt()",
+      "Location.fromBio()",
+      "Integer.parseInt()",
+      "location.isNegative()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneIDGFF2Reader",
+    "method": "write",
+    "steps": [
+      "logger.info(\"Writing: {}\", filename);",
+      "BufferedWriter bw = new BufferedWriter(new FileWriter(filename));",
+      "ListIterator<FeatureI> iter = features.listIterator();",
+      "while (iter.hasNext()) {",
+      "Feature feature = (Feature) iter.next();",
+      "writeLine(feature, bw);",
+      "bw.close();"
+    ],
+    "branches": [],
+    "loops": [
+      {
+        "type": "while",
+        "condition": "iter.hasNext()"
+      }
+    ],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "logger.info()",
+      "features.listIterator()",
+      "iter.hasNext()",
+      "iter.next()",
+      "bw.close()"
+    ],
+    "next_step": "continue"
+  }
+]

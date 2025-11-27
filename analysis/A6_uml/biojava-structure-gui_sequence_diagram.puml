@@ -1,0 +1,12 @@
+@startuml
+title biojava-structure-gui - Sequence Diagram
+
+actor User
+
+participant CoordManager
+participant Math
+
+User -> CoordManager: getSeqPos()
+CoordManager -> Math: round()
+
+@enduml

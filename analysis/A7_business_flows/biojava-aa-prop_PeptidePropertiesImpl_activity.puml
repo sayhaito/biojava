@@ -1,0 +1,15 @@
+@startuml
+title PeptidePropertiesImpl - Activity Flow
+
+start
+:Retrieve WaterMoleculeWeight;
+:Retrieve Sequence;
+:Retrieve MolecularWeight;
+:Retrieve MolecularWeight;
+:Retrieve MolecularWeight;
+:Retrieve MolecularWeightBasedOnXML;
+:Execute obtainAminoAcidCompositionTable;
+:Execute obtainAminoAcidCompositionTable;
+stop
+
+@enduml

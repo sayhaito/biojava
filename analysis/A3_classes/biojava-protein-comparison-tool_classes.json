@@ -1,0 +1,24 @@
+[
+  {
+    "class_name": "HelloWorld",
+    "package": "org.biojava.nbio.proteincomparisontool",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "print",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  }
+]

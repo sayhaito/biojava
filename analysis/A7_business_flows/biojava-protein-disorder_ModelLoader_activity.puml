@@ -1,0 +1,12 @@
+@startuml
+title ModelLoader - Activity Flow
+
+start
+:Execute hashCode;
+:Execute equals;
+:Execute toString;
+:Retrieve Model;
+:Execute main;
+stop
+
+@enduml

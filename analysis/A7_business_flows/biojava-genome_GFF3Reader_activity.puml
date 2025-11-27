@@ -1,0 +1,13 @@
+@startuml
+title GFF3Reader - Activity Flow
+
+start
+:Read ;
+:Read ;
+:Read ;
+:Read ;
+:Parse Line;
+:Execute main;
+stop
+
+@enduml

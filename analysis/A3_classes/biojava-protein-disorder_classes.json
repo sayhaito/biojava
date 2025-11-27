@@ -1,0 +1,492 @@
+[
+  {
+    "class_name": "FastaSequence",
+    "package": "org.biojava.nbio.data.sequence",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "Comparable<FastaSequence>"
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "sequence",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "p",
+        "type": "Pattern",
+        "visibility": "final"
+      },
+      {
+        "name": "m",
+        "type": "Matcher",
+        "visibility": "final"
+      },
+      {
+        "name": "sb",
+        "type": "StringBuilder",
+        "visibility": "final"
+      },
+      {
+        "name": "insPos",
+        "type": "int",
+        "visibility": "final"
+      },
+      {
+        "name": "prime",
+        "type": "int",
+        "visibility": "final"
+      },
+      {
+        "name": "other",
+        "type": "FastaSequence",
+        "visibility": "final"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getId",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getSequence",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getFormattedFasta",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getOnelineFasta",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getFormatedSequence",
+        "params": [
+          "final int width"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getLength",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "final Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "compareTo",
+        "params": [
+          "FastaSequence o"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@XmlAccessorType",
+      "@since",
+      "@version",
+      "@SuppressWarnings",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "jakarta.xml.bind.annotation.XmlAccessorType",
+      "jakarta.xml.bind.annotation.XmlAccessType"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SequenceUtil",
+    "package": "org.biojava.nbio.data.sequence",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "WHITE_SPACE",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "DIGIT",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "NONWORD",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "AA",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "NON_AA",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "AMBIGUOUS_AA",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "NUCLEOTIDE",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "AMBIGUOUS_NUCLEOTIDE",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "NON_NUCLEOTIDE",
+        "type": "Pattern",
+        "visibility": "public"
+      },
+      {
+        "name": "DNAmatcher",
+        "type": "Matcher",
+        "visibility": "final"
+      },
+      {
+        "name": "m",
+        "type": "Matcher",
+        "visibility": "final"
+      },
+      {
+        "name": "othernonSeqChars",
+        "type": "Pattern",
+        "visibility": "final"
+      },
+      {
+        "name": "protmatcher",
+        "type": "Matcher",
+        "visibility": "final"
+      },
+      {
+        "name": "amb_prot",
+        "type": "Matcher",
+        "visibility": "final"
+      },
+      {
+        "name": "writer",
+        "type": "OutputStreamWriter",
+        "visibility": "final"
+      },
+      {
+        "name": "fastawriter",
+        "type": "BufferedWriter",
+        "visibility": "final"
+      },
+      {
+        "name": "seqs",
+        "type": "List<FastaSequence>",
+        "visibility": "final"
+      },
+      {
+        "name": "infasta",
+        "type": "BufferedReader",
+        "visibility": "final"
+      },
+      {
+        "name": "pattern",
+        "type": "Pattern",
+        "visibility": "final"
+      }
+    ],
+    "methods": [
+      {
+        "name": "isNucleotideSequence",
+        "params": [
+          "final FastaSequence s"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "isNonAmbNucleotideSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "cleanSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "deepCleanSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "isProteinSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "isAmbiguosProtein",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "readFasta",
+        "params": [
+          "final InputStream inStream"
+        ],
+        "return_type": "List<FastaSequence>",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@version",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.*",
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ModelLoader",
+    "package": "org.biojava.nbio.ronn",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "mu0",
+        "type": "float",
+        "visibility": "final"
+      },
+      {
+        "name": "mu1",
+        "type": "float",
+        "visibility": "final"
+      },
+      {
+        "name": "sigma0",
+        "type": "float",
+        "visibility": "final"
+      },
+      {
+        "name": "sigma1",
+        "type": "float",
+        "visibility": "final"
+      },
+      {
+        "name": "values",
+        "type": "float[]",
+        "visibility": "final"
+      },
+      {
+        "name": "dbAA",
+        "type": "short[][]",
+        "visibility": "final"
+      },
+      {
+        "name": "Length",
+        "type": "short[]",
+        "visibility": "final"
+      },
+      {
+        "name": "W",
+        "type": "float[]",
+        "visibility": "final"
+      },
+      {
+        "name": "prime",
+        "type": "int",
+        "visibility": "final"
+      },
+      {
+        "name": "other",
+        "type": "Model",
+        "visibility": "final"
+      },
+      {
+        "name": "bfr",
+        "type": "BufferedReader",
+        "visibility": "final"
+      },
+      {
+        "name": "numberOfSeqs",
+        "type": "int",
+        "visibility": "final"
+      },
+      {
+        "name": "model",
+        "type": "Model",
+        "visibility": "final"
+      },
+      {
+        "name": "dbseq",
+        "type": "char[]",
+        "visibility": "final"
+      },
+      {
+        "name": "loader",
+        "type": "ModelLoader",
+        "visibility": "final"
+      }
+    ],
+    "methods": [
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "final Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getModel",
+        "params": [
+          "final int modelNum"
+        ],
+        "return_type": "Model",
+        "visibility": "public"
+      },
+      {
+        "name": "main",
+        "params": [
+          "final String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@link",
+      "@author",
+      "@since",
+      "@version"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "java.io.InputStreamReader",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "NullOutputStream",
+    "package": "org.biojava.nbio.ronn",
+    "type": "class",
+    "extends": "OutputStream",
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "write",
+        "params": [
+          "final int b"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@version",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.OutputStream",
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  }
+]

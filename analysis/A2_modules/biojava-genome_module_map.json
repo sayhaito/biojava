@@ -1,0 +1,339 @@
+{
+  "module": "biojava-genome",
+  "packages": [
+    "org.biojava.nbio.genome",
+    "org.biojava.nbio.genome.homology",
+    "org.biojava.nbio.genome.io.fastq",
+    "org.biojava.nbio.genome.parsers.cytoband",
+    "org.biojava.nbio.genome.parsers.geneid",
+    "org.biojava.nbio.genome.parsers.genename",
+    "org.biojava.nbio.genome.parsers.gff",
+    "org.biojava.nbio.genome.parsers.twobit",
+    "org.biojava.nbio.genome.query",
+    "org.biojava.nbio.genome.uniprot",
+    "org.biojava.nbio.genome.util"
+  ],
+  "total_classes": 51,
+  "classes": [
+    {
+      "name": "App",
+      "path": "src/main/java/org/biojava/nbio/genome/App.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome"
+    },
+    {
+      "name": "GeneFeatureHelper",
+      "path": "src/main/java/org/biojava/nbio/genome/GeneFeatureHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome"
+    },
+    {
+      "name": "GeneChromosomePosition",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/genename/GeneChromosomePosition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.genename"
+    },
+    {
+      "name": "GeneName",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/genename/GeneName.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.genename"
+    },
+    {
+      "name": "GeneNamesParser",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/genename/GeneNamesParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.genename"
+    },
+    {
+      "name": "GeneChromosomePositionParser",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/genename/GeneChromosomePositionParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.genename"
+    },
+    {
+      "name": "ChromPos",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/genename/ChromPos.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.genename"
+    },
+    {
+      "name": "LocIterator",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/LocIterator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "FeatureI",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/FeatureI.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "FeatureHelper",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/FeatureHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "GFF3Reader",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/GFF3Reader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "GeneIDGFF2Reader",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/GeneIDGFF2Reader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "GCStats",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/GCStats.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "GFF3Writer",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/GFF3Writer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "FeatureList",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/FeatureList.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "Feature",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/Feature.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "GeneMarkGTFReader",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/GeneMarkGTFReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "Location",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/gff/Location.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.gff"
+    },
+    {
+      "name": "StainType",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/cytoband/StainType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.genome.parsers.cytoband"
+    },
+    {
+      "name": "CytobandParser",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/cytoband/CytobandParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.cytoband"
+    },
+    {
+      "name": "Cytoband",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/cytoband/Cytoband.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.cytoband"
+    },
+    {
+      "name": "GeneIDXMLReader",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/geneid/GeneIDXMLReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.geneid"
+    },
+    {
+      "name": "TwoBitParser",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/twobit/TwoBitParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.twobit"
+    },
+    {
+      "name": "TwoBitFacade",
+      "path": "src/main/java/org/biojava/nbio/genome/parsers/twobit/TwoBitFacade.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.parsers.twobit"
+    },
+    {
+      "name": "ChromosomeMappingTools",
+      "path": "src/main/java/org/biojava/nbio/genome/util/ChromosomeMappingTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.util"
+    },
+    {
+      "name": "SplitFasta",
+      "path": "src/main/java/org/biojava/nbio/genome/util/SplitFasta.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.util"
+    },
+    {
+      "name": "ProteinMappingTools",
+      "path": "src/main/java/org/biojava/nbio/genome/util/ProteinMappingTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.util"
+    },
+    {
+      "name": "ParseListener",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/ParseListener.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "SolexaFastqReader",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/SolexaFastqReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "Fastq",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/Fastq.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "FastqReader",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/FastqReader.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "FastqBuilder",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/FastqBuilder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "FastqTools",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/FastqTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "StreamListener",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/StreamListener.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "IlluminaFastqReader",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/IlluminaFastqReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "FastqVariant",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/FastqVariant.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "SangerFastqWriter",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/SangerFastqWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "IlluminaFastqWriter",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/IlluminaFastqWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "AbstractFastqWriter",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/AbstractFastqWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "SolexaFastqWriter",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/SolexaFastqWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "AbstractFastqReader",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/AbstractFastqReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "SangerFastqReader",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/SangerFastqReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "FastqParser",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/FastqParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "FastqWriter",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/FastqWriter.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "StreamingFastqParser",
+      "path": "src/main/java/org/biojava/nbio/genome/io/fastq/StreamingFastqParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.io.fastq"
+    },
+    {
+      "name": "BlastHomologyHits",
+      "path": "src/main/java/org/biojava/nbio/genome/homology/BlastHomologyHits.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.homology"
+    },
+    {
+      "name": "GFF3FromUniprotBlastHits",
+      "path": "src/main/java/org/biojava/nbio/genome/homology/GFF3FromUniprotBlastHits.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.homology"
+    },
+    {
+      "name": "UniprotToFasta",
+      "path": "src/main/java/org/biojava/nbio/genome/uniprot/UniprotToFasta.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.uniprot"
+    },
+    {
+      "name": "OutputHitsGFF",
+      "path": "src/main/java/org/biojava/nbio/genome/query/OutputHitsGFF.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.query"
+    },
+    {
+      "name": "BlastXMLQuery",
+      "path": "src/main/java/org/biojava/nbio/genome/query/BlastXMLQuery.java",
+      "type": "class",
+      "package": "org.biojava.nbio.genome.query"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "com.google.guava",
+      "junit",
+      "junit-addons",
+      "org.apache.logging.log4j",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-alignment",
+      "org.biojava.biojava-core"
+    ]
+  },
+  "next_step": "continue"
+}

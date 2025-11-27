@@ -1,0 +1,38 @@
+[
+  {
+    "class": "SequenceUtil",
+    "method": "readFasta",
+    "calls": [
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "Pattern.compile"
+      },
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "infasta.readLine"
+      },
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "line.startsWith"
+      },
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "seqs.add"
+      },
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "sname.substring"
+      },
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "pattern.matcher"
+      },
+      {
+        "from": "SequenceUtil.readFasta",
+        "to": "infasta.close"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

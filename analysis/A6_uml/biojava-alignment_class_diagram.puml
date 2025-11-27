@@ -1,0 +1,119 @@
+@startuml
+title biojava-alignment - Class Diagram
+
+class Alignments {
+  # logger: Logger
+}
+
+class AnchoredPairwiseSequenceAligner {
+  + getAnchors(): int[]
+  + setAnchors(int[] anchors): void
+  + addAnchor(int queryIndex, int targetIndex): void
+  # setProfile(List<Step> sx, List<Step> sy): void
+}
+
+class StockholmStructure {
+  # logger: Logger
+  + PFAM: String
+  + RFAM: String
+  - fileAnnotation: StockholmFileAnnotation
+  - consAnnotation: StockholmConsensusAnnotation
+  + getFileAnnotation(): StockholmFileAnnotation
+  + getConsAnnotation(): StockholmConsensusAnnotation
+  + appendToSequence(String seqName, String seqText): void
+  - getSequenceAnnotation(String seqName): StockholmSequenceAnnotation
+  + addGSAccessionNumber(String seqName, String text): void
+  + addGSDescription(String seqName, String text): void
+  + addGSdbReference(String seqName, String text): void
+  + addGSOrganismSpecies(String seqName, String text): void
+}
+
+class StockholmSequenceAnnotation {
+  - accessionNumber: String
+  - description: CharSequence
+  - dbReferences: Set<DatabaseReference>
+  - organism: String
+  - organismClassification: String
+  + getDescription(): String
+  + setDescription(CharSequence description): void
+  + addToDescription(CharSequence description): void
+  + getDbReferences(): Set<DatabaseReference>
+  + setDbReferences(Set<DatabaseReference> dbReferences): void
+  + addDBReference(String dbReferenceRepresentingString): void
+  + getAccessionNumber(): String
+  + setAccessionNumber(String accessionNumber): void
+}
+
+class StockholmFileParser {
+  # logger: Logger
+  + INFINITY: int
+  - GENERIC_PER_FILE_ANNOTATION: String
+  - GENERIC_PER_CONSENSUS_ANNOTATION: String
+  - GENERIC_PER_SEQUENCE_ANNOTATION: String
+  + parse(String filename): StockholmStructure
+  + parse(String filename, int max): List<StockholmStructure>
+  + parse(InputStream inStream): StockholmStructure
+  + parse(InputStream inStream, int max): List<StockholmStructure>
+  + parseNext(int max): List<StockholmStructure>
+  - handleSequenceLine(String line): void
+  - handleFileAnnotation(String featureName, String value): void
+  - handleConsensusAnnotation(String featureName, String value): void
+}
+
+interface MatrixAligner {
+}
+
+interface PairwiseSequenceAligner {
+}
+
+interface HierarchicalClusterer {
+}
+
+interface GapPenalty {
+}
+
+abstract class AbstractPairwiseSequenceAligner {
+  + setQuery(S query): void
+  + setTarget(S target): void
+  + getQuery(): S
+  + getTarget(): S
+  # getCompoundSet(): CompoundSet<C>
+  # getCompoundsOfQuery(): List<C>
+  # getCompoundsOfTarget(): List<C>
+  # getScoreMatrixDimensions(): int[]
+}
+
+
+Alignments --> SubstitutionMatrix
+Alignments --> CompoundSet
+Alignments --> Sequence
+Alignments --> AminoAcidCompoundSet
+Alignments --> *
+AnchoredPairwiseSequenceAligner --> Step
+AnchoredPairwiseSequenceAligner --> Anchor
+AnchoredPairwiseSequenceAligner --> SubstitutionMatrix
+AnchoredPairwiseSequenceAligner --> AbstractPairwiseSequenceAligner
+AnchoredPairwiseSequenceAligner --> Sequence
+StockholmStructure --> ProteinSequence
+StockholmStructure --> AbstractSequence
+StockholmStructure --> CompoundNotFoundException
+StockholmStructure --> RNASequence
+StockholmStructure --> AbstractCompound
+StockholmSequenceAnnotation --> DatabaseReference
+StockholmFileParser --> ParserException
+StockholmFileParser --> InputStreamProvider
+StockholmFileParser --> StockholmFileAnnotationReference
+MatrixAligner --> Sequence
+MatrixAligner --> Compound
+PairwiseSequenceAligner --> Sequence
+PairwiseSequenceAligner --> Compound
+PairwiseSequenceAligner --> SequencePair
+HierarchicalClusterer --> Sequence
+HierarchicalClusterer --> Compound
+AbstractPairwiseSequenceAligner --> SubstitutionMatrix
+AbstractPairwiseSequenceAligner --> CompoundSet
+AbstractPairwiseSequenceAligner --> Sequence
+AbstractPairwiseSequenceAligner --> Compound
+AbstractPairwiseSequenceAligner --> SequencePair
+
+@enduml

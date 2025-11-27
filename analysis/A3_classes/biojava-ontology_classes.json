@@ -1,0 +1,1275 @@
+[
+  {
+    "class_name": "Term",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": "Annotatable",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "ontology",
+        "type": "Ontology",
+        "visibility": "private"
+      },
+      {
+        "name": "annotation",
+        "type": "Annotation",
+        "visibility": "private"
+      },
+      {
+        "name": "synonyms",
+        "type": "Set<Object>",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "addSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "removeSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSynonyms",
+        "params": [],
+        "return_type": "Object[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setAnnotation",
+        "params": [
+          "Annotation annotation"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setSynonyms",
+        "params": [
+          "Set<Object> synonyms"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getOntology",
+        "params": [],
+        "return_type": "Ontology",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getAnnotation",
+        "params": [],
+        "return_type": "Annotation",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "Object obj"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@link",
+      "@author",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "Annotation",
+      "Annotatable",
+      "SmallAnnotation"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Variable",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": "Term",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "RemoteTerm",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": "Term",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "ontology",
+        "type": "Ontology",
+        "visibility": "private"
+      },
+      {
+        "name": "remoteTerm",
+        "type": "Term",
+        "visibility": "private"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "synonyms",
+        "type": "Set",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "addSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "removeSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSynonyms",
+        "params": [],
+        "return_type": "Object[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getOntology",
+        "params": [],
+        "return_type": "Ontology",
+        "visibility": "public"
+      },
+      {
+        "name": "getRemoteTerm",
+        "params": [],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getAnnotation",
+        "params": [],
+        "return_type": "Annotation",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author",
+      "@return",
+      "@Override"
+    ],
+    "internal_references": [
+      "Annotation"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "OntologyOps",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "OntologyFactory",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Triple",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": "Term",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "subject",
+        "type": "Term",
+        "visibility": "private"
+      },
+      {
+        "name": "object",
+        "type": "Term",
+        "visibility": "private"
+      },
+      {
+        "name": "predicate",
+        "type": "Term",
+        "visibility": "private"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "synonyms",
+        "type": "Set<Object>",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "addSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "removeSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSynonyms",
+        "params": [],
+        "return_type": "Object[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setDescription",
+        "params": [
+          "String desc"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getOntology",
+        "params": [],
+        "return_type": "Ontology",
+        "visibility": "public"
+      },
+      {
+        "name": "getSubject",
+        "params": [],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "getObject",
+        "params": [],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "getPredicate",
+        "params": [],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "getAnnotation",
+        "params": [],
+        "return_type": "Annotation",
+        "visibility": "public"
+      },
+      {
+        "name": "equals",
+        "params": [
+          "Object o"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "hashCode",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@code",
+      "@author",
+      "@since",
+      "@return"
+    ],
+    "internal_references": [
+      "Annotation"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "OntologyTerm",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": "Term",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "ontology",
+        "type": "Ontology",
+        "visibility": "private"
+      },
+      {
+        "name": "target",
+        "type": "Ontology",
+        "visibility": "private"
+      },
+      {
+        "name": "synonyms",
+        "type": "Set",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "addSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "removeSynonym",
+        "params": [
+          "Object synonym"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSynonyms",
+        "params": [],
+        "return_type": "Object[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setDescription",
+        "params": [
+          "String description"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getOntology",
+        "params": [],
+        "return_type": "Ontology",
+        "visibility": "public"
+      },
+      {
+        "name": "getTargetOntology",
+        "params": [],
+        "return_type": "Ontology",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getAnnotation",
+        "params": [],
+        "return_type": "Annotation",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [
+      "Annotation"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Ontology",
+    "package": "org.biojava.nbio.ontology",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "triples",
+        "type": "Set<Triple>",
+        "visibility": "private"
+      },
+      {
+        "name": "localRemoteTerms",
+        "type": "Set<Term>",
+        "visibility": "private"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "ops",
+        "type": "OntologyOps",
+        "visibility": "private"
+      },
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getRemoteTerms",
+        "params": [],
+        "return_type": "Set<Term>",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setDescription",
+        "params": [
+          "String description"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getTerms",
+        "params": [],
+        "return_type": "Set<Term>",
+        "visibility": "public"
+      },
+      {
+        "name": "getTerm",
+        "params": [
+          "String name"
+        ],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "getTriples",
+        "params": [
+          "Term subject",
+          "Term object",
+          "Term predicate"
+        ],
+        "return_type": "Set<Triple>",
+        "visibility": "public"
+      },
+      {
+        "name": "filterTriples",
+        "params": [
+          "Set<Triple> base",
+          "Term subject",
+          "Term object",
+          "Term predicate"
+        ],
+        "return_type": "Set<Triple>",
+        "visibility": "private"
+      },
+      {
+        "name": "addTerm",
+        "params": [
+          "Term t"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "createTerm",
+        "params": [
+          "String name"
+        ],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "createTerm",
+        "params": [
+          "String name",
+          "String description"
+        ],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "createTerm",
+        "params": [
+          "String name",
+          "String description",
+          "Object[] synonyms"
+        ],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "createVariable",
+        "params": [
+          "String name",
+          "String description"
+        ],
+        "return_type": "Variable",
+        "visibility": "public"
+      },
+      {
+        "name": "createOntologyTerm",
+        "params": [
+          "Ontology o"
+        ],
+        "return_type": "OntologyTerm",
+        "visibility": "public"
+      },
+      {
+        "name": "importTerm",
+        "params": [
+          "Term t",
+          "String name"
+        ],
+        "return_type": "Term",
+        "visibility": "public"
+      },
+      {
+        "name": "deleteTerm",
+        "params": [
+          "Term t"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "containsTerm",
+        "params": [
+          "String name"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "containsTerm",
+        "params": [
+          "Term t"
+        ],
+        "return_type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "containsTriple",
+        "params": [
+          "Term subject",
+          "Term object",
+          "Term predicate"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "addTriple",
+        "params": [
+          "Triple t"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "pushTriple",
+        "params": [
+          "Map<Term",
+          "Set<Triple>> m",
+          "Term key",
+          "Triple t"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "removeTriple",
+        "params": [
+          "Triple t"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "pullTriple",
+        "params": [
+          "Map<Term",
+          "Set<Triple>> subjectTriples2",
+          "Term key",
+          "Triple t"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "getOps",
+        "params": [],
+        "return_type": "OntologyOps",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setName",
+        "params": [
+          "String name"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "AssertionFailure"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "TabDelimParser",
+    "package": "org.biojava.nbio.ontology.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "parse",
+        "params": [
+          "BufferedReader in",
+          "OntologyFactory of"
+        ],
+        "return_type": "Ontology",
+        "visibility": "public"
+      },
+      {
+        "name": "resolveTerm",
+        "params": [
+          "String termName",
+          "Ontology onto"
+        ],
+        "return_type": "Term",
+        "visibility": "private"
+      },
+      {
+        "name": "resolveTriple",
+        "params": [
+          "Term sub",
+          "Term obj",
+          "Term rel",
+          "Ontology onto"
+        ],
+        "return_type": "Triple",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [
+      "*"
+    ],
+    "external_references": [
+      "java.io.BufferedReader",
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GOParser",
+    "package": "org.biojava.nbio.ontology.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "safeAddTriple",
+        "params": [
+          "Ontology onto",
+          "Term s",
+          "Term o",
+          "Term p"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "parseTerm",
+        "params": [
+          "Ontology onto",
+          "String s"
+        ],
+        "return_type": "Term",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author"
+    ],
+    "internal_references": [
+      "*"
+    ],
+    "external_references": [
+      "java.text.ParseException",
+      "java.io.BufferedReader",
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "OboParser",
+    "package": "org.biojava.nbio.ontology.io",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "OboFileEventListener",
+      "OboFileParser",
+      "*",
+      "OboFileHandler"
+    ],
+    "external_references": [
+      "java.text.ParseException",
+      "java.io.BufferedReader",
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Annotatable",
+    "package": "org.biojava.nbio.ontology.utils",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@return",
+      "@since",
+      "@author",
+      "@sanger"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Annotation",
+    "package": "org.biojava.nbio.ontology.utils",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "EMPTY_ANNOTATION",
+        "type": "Annotation",
+        "visibility": "static"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "OboFileParser",
+    "package": "org.biojava.nbio.ontology.obo",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "line",
+        "type": "String",
+        "visibility": "protected"
+      },
+      {
+        "name": "linenum",
+        "type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "totalSize",
+        "type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "bytesRead",
+        "type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "tempBuffer",
+        "type": "StringBuffer",
+        "visibility": "protected"
+      },
+      {
+        "name": "dateFormat",
+        "type": "SimpleDateFormat",
+        "visibility": "protected"
+      },
+      {
+        "name": "str",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "endIndex",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "propertyValues",
+        "type": "Properties",
+        "visibility": "protected"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "visibility": "protected"
+      },
+      {
+        "name": "suggestedComment",
+        "type": "String",
+        "visibility": "protected"
+      }
+    ],
+    "methods": [
+      {
+        "name": "addOboFileEventListener",
+        "params": [
+          "OboFileEventListener listener"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getOboFileEventListener",
+        "params": [],
+        "return_type": "List<OboFileEventListener>",
+        "visibility": "public"
+      },
+      {
+        "name": "parseOBO",
+        "params": [
+          "BufferedReader oboFile"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "isSynonym",
+        "params": [
+          "String key"
+        ],
+        "return_type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "parseSynonym",
+        "params": [
+          "String key",
+          "String value"
+        ],
+        "return_type": "Synonym",
+        "visibility": "private"
+      },
+      {
+        "name": "triggerNewStanza",
+        "params": [
+          "String stanza"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "triggerNewKey",
+        "params": [
+          "String key",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "triggerNewSynonym",
+        "params": [
+          "Synonym synonym"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "escape",
+        "params": [
+          "String str",
+          "boolean escapespaces"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "unescape",
+        "params": [
+          "String str"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "findUnescaped",
+        "params": [
+          "String str",
+          "char toChar"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "isEscapeStarter",
+        "params": [
+          "char c"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "isQuote",
+        "params": [
+          "char c"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "getTempBuffer",
+        "params": [],
+        "return_type": "StringBuffer",
+        "visibility": "protected"
+      },
+      {
+        "name": "getNestedValue",
+        "params": [
+          "NestedValue nv",
+          "String str",
+          "int startIndex"
+        ],
+        "return_type": "int",
+        "visibility": "protected"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getPropertyValues",
+        "params": [],
+        "return_type": "Properties",
+        "visibility": "public"
+      },
+      {
+        "name": "addPropertyValue",
+        "params": [
+          "Properties pv"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "clone",
+        "params": [],
+        "return_type": "Object",
+        "visibility": "public"
+      },
+      {
+        "name": "getSuggestedComment",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setSuggestedComment",
+        "params": [
+          "String suggestedComment"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@throws",
+      "@since",
+      "@SuppressWarnings",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "Synonym"
+    ],
+    "external_references": [
+      "java.text.SimpleDateFormat",
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "OboFileEventListener",
+    "package": "org.biojava.nbio.ontology.obo",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author"
+    ],
+    "internal_references": [
+      "Synonym"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  }
+]

@@ -1,0 +1,224 @@
+[
+  {
+    "class": "AnchoredPairwiseSequenceAligner",
+    "method": "getAnchors",
+    "steps": [
+      "int[] anchor = new int[getScoreMatrixDimensions()[0] - 1];",
+      "for (int i = 0; i < anchor.length; i++) {",
+      "anchor[i] = -1;",
+      "for (int i = 0; i < anchors.size(); i++) {",
+      "anchor[anchors.get(i).getQueryIndex()] = anchors.get(i).getTargetIndex();",
+      "return anchor;"
+    ],
+    "branches": [],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "int i = 0; i < anchor.length; i++"
+      },
+      {
+        "type": "for",
+        "declaration": "int i = 0; i < anchors.size(); i++"
+      }
+    ],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "AnchoredPairwiseSequenceAligner",
+    "method": "setAnchors",
+    "steps": [
+      "super.anchors = new ArrayList<>();",
+      "if (anchors != null) {",
+      "for (int i = 0; i < anchors.length; i++) {",
+      "if (anchors[i] >= 0) {",
+      "addAnchor(i, anchors[i]);"
+    ],
+    "branches": [
+      {
+        "condition": "anchors != null",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      },
+      {
+        "condition": "anchors[i] >= 0",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "int i = 0; i < anchors.length; i++"
+      }
+    ],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "AnchoredPairwiseSequenceAligner",
+    "method": "setProfile",
+    "steps": [
+      "profile = pair = new SimpleSequencePair<>(getQuery(), getTarget(), sx, sy);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmStructure",
+    "method": "getFileAnnotation",
+    "steps": [
+      "return fileAnnotation;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmStructure",
+    "method": "getConsAnnotation",
+    "steps": [
+      "return consAnnotation;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmStructure",
+    "method": "getSequenceAnnotation",
+    "steps": [
+      "if (!seqsAnnotation.containsKey(seqName)) {",
+      "seqsAnnotation.put(seqName, new StockholmSequenceAnnotation());",
+      "return seqsAnnotation.get(seqName);"
+    ],
+    "branches": [
+      {
+        "condition": "!seqsAnnotation.containsKey(seqName)",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [
+      "seqsAnnotation.containsKey()",
+      "seqsAnnotation.put()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmSequenceAnnotation",
+    "method": "getDescription",
+    "steps": [
+      "return description.toString();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmSequenceAnnotation",
+    "method": "setDescription",
+    "steps": [
+      "this.description = description;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmSequenceAnnotation",
+    "method": "getDbReferences",
+    "steps": [
+      "return dbReferences;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmFileParser",
+    "method": "parse",
+    "steps": [
+      "InputStream inStream = new InputStreamProvider().getInputStream(filename);",
+      "StockholmStructure structure = parse(inStream);",
+      "inStream.close();",
+      "return structure;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "inStream.close()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmFileParser",
+    "method": "parse",
+    "steps": [
+      "InputStream inStream = new InputStreamProvider().getInputStream(filename);",
+      "StockholmStructure structure = parse(inStream);",
+      "inStream.close();",
+      "return structure;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "inStream.close()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmFileParser",
+    "method": "parse",
+    "steps": [
+      "InputStream inStream = new InputStreamProvider().getInputStream(filename);",
+      "StockholmStructure structure = parse(inStream);",
+      "inStream.close();",
+      "return structure;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "inStream.close()"
+    ],
+    "next_step": "continue"
+  }
+]

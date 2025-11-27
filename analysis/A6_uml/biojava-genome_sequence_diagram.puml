@@ -1,0 +1,32 @@
+@startuml
+title biojava-genome - Sequence Diagram
+
+actor User
+
+participant GeneChromosomePositionParser
+participant GeneNamesParser
+participant gn
+participant line
+participant logger
+participant prov
+
+User -> GeneNamesParser: getGeneNames()
+GeneNamesParser -> prov: getInputStream()
+
+User -> GeneNamesParser: getGeneNames()
+GeneNamesParser -> prov: getInputStream()
+
+User -> GeneNamesParser: getGeneName()
+GeneNamesParser -> line: split()
+GeneNamesParser -> logger: warn()
+GeneNamesParser -> line: replaceAll()
+GeneNamesParser -> gn: setApprovedSymbol()
+GeneNamesParser -> gn: setApprovedName()
+
+User -> GeneChromosomePositionParser: getChromosomeMappings()
+GeneChromosomePositionParser -> prov: getInputStream()
+
+User -> GeneChromosomePositionParser: getChromosomeMappings()
+GeneChromosomePositionParser -> prov: getInputStream()
+
+@enduml

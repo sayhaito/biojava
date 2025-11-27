@@ -1,0 +1,1160 @@
+{
+  "module": "biojava-core",
+  "packages": [
+    "org.biojava.nbio.core.alignment",
+    "org.biojava.nbio.core.alignment.matrices",
+    "org.biojava.nbio.core.alignment.template",
+    "org.biojava.nbio.core.exceptions",
+    "org.biojava.nbio.core.search.io",
+    "org.biojava.nbio.core.search.io.blast",
+    "org.biojava.nbio.core.sequence",
+    "org.biojava.nbio.core.sequence.compound",
+    "org.biojava.nbio.core.sequence.edits",
+    "org.biojava.nbio.core.sequence.features",
+    "org.biojava.nbio.core.sequence.io",
+    "org.biojava.nbio.core.sequence.io.embl",
+    "org.biojava.nbio.core.sequence.io.template",
+    "org.biojava.nbio.core.sequence.io.util",
+    "org.biojava.nbio.core.sequence.loader",
+    "org.biojava.nbio.core.sequence.location",
+    "org.biojava.nbio.core.sequence.location.template",
+    "org.biojava.nbio.core.sequence.reference",
+    "org.biojava.nbio.core.sequence.storage",
+    "org.biojava.nbio.core.sequence.template",
+    "org.biojava.nbio.core.sequence.transcription",
+    "org.biojava.nbio.core.sequence.views",
+    "org.biojava.nbio.core.util"
+  ],
+  "total_classes": 186,
+  "classes": [
+    {
+      "name": "FileDownloadUtils",
+      "path": "src/main/java/org/biojava/nbio/core/util/FileDownloadUtils.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "SingleLinkageClusterer",
+      "path": "src/main/java/org/biojava/nbio/core/util/SingleLinkageClusterer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "XMLWriter",
+      "path": "src/main/java/org/biojava/nbio/core/util/XMLWriter.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "Equals",
+      "path": "src/main/java/org/biojava/nbio/core/util/Equals.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "PrettyXMLWriter",
+      "path": "src/main/java/org/biojava/nbio/core/util/PrettyXMLWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "UncompressInputStream",
+      "path": "src/main/java/org/biojava/nbio/core/util/UncompressInputStream.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "SoftHashMap",
+      "path": "src/main/java/org/biojava/nbio/core/util/SoftHashMap.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "StringManipulationHelper",
+      "path": "src/main/java/org/biojava/nbio/core/util/StringManipulationHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "SequenceTools",
+      "path": "src/main/java/org/biojava/nbio/core/util/SequenceTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "Hashcoder",
+      "path": "src/main/java/org/biojava/nbio/core/util/Hashcoder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "InputStreamProvider",
+      "path": "src/main/java/org/biojava/nbio/core/util/InputStreamProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "CRC64Checksum",
+      "path": "src/main/java/org/biojava/nbio/core/util/CRC64Checksum.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "FlatFileCache",
+      "path": "src/main/java/org/biojava/nbio/core/util/FlatFileCache.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "XMLHelper",
+      "path": "src/main/java/org/biojava/nbio/core/util/XMLHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "ConcurrencyTools",
+      "path": "src/main/java/org/biojava/nbio/core/util/ConcurrencyTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.util"
+    },
+    {
+      "name": "Hit",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/Hit.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.search.io"
+    },
+    {
+      "name": "Result",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/Result.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.search.io"
+    },
+    {
+      "name": "Hsp",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/Hsp.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.search.io"
+    },
+    {
+      "name": "SearchIO",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/SearchIO.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io"
+    },
+    {
+      "name": "ResultFactory",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/ResultFactory.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.search.io"
+    },
+    {
+      "name": "BlastHitBuilder",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/blast/BlastHitBuilder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io.blast"
+    },
+    {
+      "name": "BlastResultBuilder",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/blast/BlastResultBuilder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io.blast"
+    },
+    {
+      "name": "BlastHspBuilder",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/blast/BlastHspBuilder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io.blast"
+    },
+    {
+      "name": "BlastResult",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/blast/BlastResult.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io.blast"
+    },
+    {
+      "name": "BlastXMLParser",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/blast/BlastXMLParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io.blast"
+    },
+    {
+      "name": "BlastTabularParser",
+      "path": "src/main/java/org/biojava/nbio/core/search/io/blast/BlastTabularParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.search.io.blast"
+    },
+    {
+      "name": "ExonComparator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/ExonComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "SequenceOptimizationHints",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/SequenceOptimizationHints.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "DNASequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/DNASequence.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "DataSource",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/DataSource.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "ExonSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/ExonSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "ProteinSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/ProteinSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "BasicSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/BasicSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "StopCodonSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/StopCodonSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "CDSComparator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/CDSComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "GeneSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/GeneSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "StartCodonSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/StartCodonSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "IntronSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/IntronSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "TaxonomyID",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/TaxonomyID.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "ChromosomeSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/ChromosomeSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "TranscriptSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/TranscriptSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "AccessionID",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/AccessionID.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "CDSSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/CDSSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "MultipleSequenceAlignment",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/MultipleSequenceAlignment.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "SequenceComparator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/SequenceComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "RNASequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/RNASequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "Strand",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/Strand.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.sequence"
+    },
+    {
+      "name": "TwoBitSequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/TwoBitSequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "ArrayListSequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/ArrayListSequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "FourBitSequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/FourBitSequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "BitSequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/BitSequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "SequenceAsStringHelper",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/SequenceAsStringHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "JoiningSequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/JoiningSequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "SingleCompoundSequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/storage/SingleCompoundSequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.storage"
+    },
+    {
+      "name": "ArrayListProxySequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/loader/ArrayListProxySequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.loader"
+    },
+    {
+      "name": "StringProxySequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/loader/StringProxySequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.loader"
+    },
+    {
+      "name": "GenbankProxySequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/loader/GenbankProxySequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.loader"
+    },
+    {
+      "name": "UniprotProxySequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/loader/UniprotProxySequenceReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.loader"
+    },
+    {
+      "name": "SequenceFileProxyLoader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/loader/SequenceFileProxyLoader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.loader"
+    },
+    {
+      "name": "DNACompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/DNACompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "NucleotideCompound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/NucleotideCompound.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "AminoAcidCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/AminoAcidCompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "CodonCompound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/CodonCompound.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "RNACompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/RNACompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "AminoAcidCompound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/AminoAcidCompound.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "AmbiguityDNARNAHybridCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/AmbiguityDNARNAHybridCompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "AmbiguityDNACompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/AmbiguityDNACompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "ABITracerCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/ABITracerCompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "AmbiguityRNACompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/compound/AmbiguityRNACompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.compound"
+    },
+    {
+      "name": "FeaturesKeyWordInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/FeaturesKeyWordInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "FeatureInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/FeatureInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "AbstractFeature",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/AbstractFeature.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "FeatureRetriever",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/FeatureRetriever.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "Qualifier",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/Qualifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "DatabaseReferenceInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/DatabaseReferenceInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "QualityFeature",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/QualityFeature.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "TextFeature",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/TextFeature.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "FeatureDbReferenceInfo",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/FeatureDbReferenceInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "DBReferenceInfo",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/DBReferenceInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "QuantityFeature",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/features/QuantityFeature.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.features"
+    },
+    {
+      "name": "SimpleLocation",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/SimpleLocation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "SimplePoint",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/SimplePoint.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "SequenceLocation",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/SequenceLocation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "InsdcLocations",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/InsdcLocations.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "FuzzyPoint",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/FuzzyPoint.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "InsdcParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/InsdcParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "LocationHelper",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/LocationHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.location"
+    },
+    {
+      "name": "Point",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/template/Point.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.location.template"
+    },
+    {
+      "name": "AccesionedLocation",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/template/AccesionedLocation.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.location.template"
+    },
+    {
+      "name": "Location",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/template/Location.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.location.template"
+    },
+    {
+      "name": "AbstractLocation",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/location/template/AbstractLocation.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.location.template"
+    },
+    {
+      "name": "BufferedReaderBytesRead",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/BufferedReaderBytesRead.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FileProxyRNASequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FileProxyRNASequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenbankWriterHelper",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenbankWriterHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "ABITrace",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/ABITrace.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaReaderHelper",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaReaderHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "PlainFastaHeaderParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/PlainFastaHeaderParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenbankSequenceParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenbankSequenceParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenbankReaderHelper",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenbankReaderHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenericGenbankHeaderFormat",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenericGenbankHeaderFormat.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenbankWriter",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenbankWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FileProxyProteinSequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FileProxyProteinSequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenbankReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenbankReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "ProteinSequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/ProteinSequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaStreamer",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaStreamer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "RNASequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/RNASequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "CasePreservingProteinSequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/CasePreservingProteinSequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaWriterHelper",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaWriterHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "DNASequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/DNASequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenericFastaHeaderFormat",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenericFastaHeaderFormat.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "IUPACParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/IUPACParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenericGenbankHeaderParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenericGenbankHeaderParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FileProxyDNASequenceCreator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FileProxyDNASequenceCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenericFastaHeaderParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenericFastaHeaderParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaGeneWriter",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaGeneWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "GenericInsdcHeaderFormat",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/GenericInsdcHeaderFormat.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaWriter",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaWriter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "FastaSequenceParser",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/FastaSequenceParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io"
+    },
+    {
+      "name": "ClasspathResource",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/util/ClasspathResource.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io.util"
+    },
+    {
+      "name": "IOUtils",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/util/IOUtils.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io.util"
+    },
+    {
+      "name": "EmblReference",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/embl/EmblReference.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io.embl"
+    },
+    {
+      "name": "EmblReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/embl/EmblReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io.embl"
+    },
+    {
+      "name": "EmblRecord",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/embl/EmblRecord.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io.embl"
+    },
+    {
+      "name": "EmblId",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/embl/EmblId.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.io.embl"
+    },
+    {
+      "name": "SequenceHeaderParserInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/template/SequenceHeaderParserInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.io.template"
+    },
+    {
+      "name": "GenbankHeaderFormatInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/template/GenbankHeaderFormatInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.io.template"
+    },
+    {
+      "name": "SequenceParserInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/template/SequenceParserInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.io.template"
+    },
+    {
+      "name": "SequenceCreatorInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/template/SequenceCreatorInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.io.template"
+    },
+    {
+      "name": "FastaHeaderFormatInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/io/template/FastaHeaderFormatInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.io.template"
+    },
+    {
+      "name": "DNAToRNATranslator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/transcription/DNAToRNATranslator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.transcription"
+    },
+    {
+      "name": "CaseInsensitiveCompound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/transcription/CaseInsensitiveCompound.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.transcription"
+    },
+    {
+      "name": "Frame",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/transcription/Frame.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.sequence.transcription"
+    },
+    {
+      "name": "Table",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/transcription/Table.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.transcription"
+    },
+    {
+      "name": "TranscriptionEngine",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/transcription/TranscriptionEngine.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.transcription"
+    },
+    {
+      "name": "RNAToAminoAcidTranslator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/transcription/RNAToAminoAcidTranslator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.transcription"
+    },
+    {
+      "name": "ComplementCompound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/ComplementCompound.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "SequenceProxyView",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/SequenceProxyView.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "AbstractCompoundTranslator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/AbstractCompoundTranslator.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "AbstractCompound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/AbstractCompound.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "AbstractNucleotideCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/AbstractNucleotideCompoundSet.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "CompoundTranslator",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/CompoundTranslator.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "ProxySequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/ProxySequenceReader.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "LightweightProfile",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/LightweightProfile.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "Sequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/Sequence.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "AbstractSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/AbstractSequence.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "SequenceView",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/SequenceView.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "AbstractCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/AbstractCompoundSet.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "SequenceMixin",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/SequenceMixin.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "CompoundSet",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/CompoundSet.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "Accessioned",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/Accessioned.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "Compound",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/Compound.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "SequenceReader",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/template/SequenceReader.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.template"
+    },
+    {
+      "name": "GenbankReference",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/reference/GenbankReference.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.reference"
+    },
+    {
+      "name": "AbstractReference",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/reference/AbstractReference.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.core.sequence.reference"
+    },
+    {
+      "name": "ReferenceInterface",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/reference/ReferenceInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.reference"
+    },
+    {
+      "name": "Edit",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/edits/Edit.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.sequence.edits"
+    },
+    {
+      "name": "WindowedSequence",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/views/WindowedSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.views"
+    },
+    {
+      "name": "RnaSequenceView",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/views/RnaSequenceView.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.views"
+    },
+    {
+      "name": "ComplementSequenceView",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/views/ComplementSequenceView.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.views"
+    },
+    {
+      "name": "ReversedSequenceView",
+      "path": "src/main/java/org/biojava/nbio/core/sequence/views/ReversedSequenceView.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.sequence.views"
+    },
+    {
+      "name": "SimpleAlignedSequence",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/SimpleAlignedSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment"
+    },
+    {
+      "name": "SimpleProfile",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/SimpleProfile.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment"
+    },
+    {
+      "name": "SimpleProfilePair",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/SimpleProfilePair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment"
+    },
+    {
+      "name": "SimpleSequencePair",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/SimpleSequencePair.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment"
+    },
+    {
+      "name": "ProfileView",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/ProfileView.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "MutableProfilePair",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/MutableProfilePair.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "AlignedSequence",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/AlignedSequence.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "SubstitutionMatrix",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/SubstitutionMatrix.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "SequencePair",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/SequencePair.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "MutableProfile",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/MutableProfile.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "Profile",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/Profile.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "MutableSequencePair",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/MutableSequencePair.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "ProfilePair",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/ProfilePair.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "MutableAlignedSequence",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/template/MutableAlignedSequence.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.template"
+    },
+    {
+      "name": "SimpleSubstitutionMatrix",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/SimpleSubstitutionMatrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "AAIndexFileParser",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/AAIndexFileParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "SubstitutionMatrixHelper",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/SubstitutionMatrixHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "DefaultAAIndexProvider",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/DefaultAAIndexProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "AAindexFactory",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/AAindexFactory.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "AAIndexProvider",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/AAIndexProvider.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "ScaledSubstitutionMatrix",
+      "path": "src/main/java/org/biojava/nbio/core/alignment/matrices/ScaledSubstitutionMatrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.alignment.matrices"
+    },
+    {
+      "name": "CompoundNotFoundException",
+      "path": "src/main/java/org/biojava/nbio/core/exceptions/CompoundNotFoundException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.exceptions"
+    },
+    {
+      "name": "Messages",
+      "path": "src/main/java/org/biojava/nbio/core/exceptions/Messages.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.exceptions"
+    },
+    {
+      "name": "TranslationException",
+      "path": "src/main/java/org/biojava/nbio/core/exceptions/TranslationException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.exceptions"
+    },
+    {
+      "name": "ParserException",
+      "path": "src/main/java/org/biojava/nbio/core/exceptions/ParserException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.core.exceptions"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "jakarta.xml.bind",
+      "junit",
+      "org.apache.logging.log4j",
+      "org.glassfish.jaxb",
+      "org.junit.jupiter",
+      "org.junit.vintage",
+      "org.slf4j"
+    ],
+    "internal": []
+  },
+  "next_step": "continue"
+}

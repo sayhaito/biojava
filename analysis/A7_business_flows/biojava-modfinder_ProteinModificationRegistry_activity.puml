@@ -1,0 +1,15 @@
+@startuml
+title ProteinModificationRegistry - Activity Flow
+
+start
+:Execute registerCommonProteinModifications;
+:Execute init;
+:Execute init;
+:Execute register;
+:Execute unregister;
+:Retrieve ById;
+:Retrieve ByResidId;
+:Retrieve ByPsimodId;
+stop
+
+@enduml

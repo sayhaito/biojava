@@ -1,0 +1,1473 @@
+[
+  {
+    "class_name": "XMLWriter",
+    "package": "org.biojava.nbio.core.util",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@param",
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "PrettyXMLWriter",
+    "package": "org.biojava.nbio.core.util",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "XMLWriter"
+    ],
+    "fields": [
+      {
+        "name": "indentUnit",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "writer",
+        "type": "PrintWriter",
+        "visibility": "private"
+      },
+      {
+        "name": "isOpeningTag",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "afterNewline",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "indent",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "namespaceSeed",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "namespaceBindings",
+        "type": "LinkedList<List<String>>",
+        "visibility": "private"
+      },
+      {
+        "name": "namespacesDeclared",
+        "type": "List<String>",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "declareNamespace",
+        "params": [
+          "String nsURI",
+          "String prefixHint"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "handleDeclaredNamespaces",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "writeIndent",
+        "params": [],
+        "return_type": "void",
+        "visibility": "protected"
+      },
+      {
+        "name": "_openTag",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "allocPrefix",
+        "params": [
+          "String nsURI"
+        ],
+        "return_type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "openTag",
+        "params": [
+          "String nsURI",
+          "String localName"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "openTag",
+        "params": [
+          "String qName"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "attribute",
+        "params": [
+          "String nsURI",
+          "String localName",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "attribute",
+        "params": [
+          "String qName",
+          "String value"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "_closeTag",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "closeTag",
+        "params": [
+          "String nsURI",
+          "String localName"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "closeTag",
+        "params": [
+          "String qName"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "println",
+        "params": [
+          "String data"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "print",
+        "params": [
+          "String data"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "printRaw",
+        "params": [
+          "String data"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "printChars",
+        "params": [
+          "String data"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      },
+      {
+        "name": "printAttributeValue",
+        "params": [
+          "String data"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      },
+      {
+        "name": "numericalEntity",
+        "params": [
+          "char c"
+        ],
+        "return_type": "void",
+        "visibility": "protected"
+      },
+      {
+        "name": "close",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author",
+      "@Override"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.PrintWriter",
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SequenceTools",
+    "package": "org.biojava.nbio.core.util",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "NUCLEOTIDE_LETTERS",
+        "type": "String",
+        "visibility": "protected"
+      }
+    ],
+    "methods": [
+      {
+        "name": "permuteCyclic",
+        "params": [
+          "String string",
+          "int n"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "percentNucleotideSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "isNucleotideSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "equalLengthSequences",
+        "params": [
+          "ProteinSequence[] sequences"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@code",
+      "@link",
+      "@author",
+      "@throws",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "CompoundNotFoundException",
+      "Sequence",
+      "ProteinSequence",
+      "DNASequence"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ResultFactory",
+    "package": "org.biojava.nbio.core.search.io",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [
+      "Sequence"
+    ],
+    "external_references": [
+      "java.text.ParseException",
+      "java.io.IOException",
+      "java.io.File"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastHitBuilder",
+    "package": "org.biojava.nbio.core.search.io.blast",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "hitNum",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hitId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "hitDef",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "hitAccession",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "hitLen",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hitSequence",
+        "type": "Sequence",
+        "visibility": "private"
+      },
+      {
+        "name": "hsps",
+        "type": "List<Hsp>",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setHitNum",
+        "params": [
+          "int hitNum"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHitId",
+        "params": [
+          "String hitId"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHitDef",
+        "params": [
+          "String hitDef"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHitAccession",
+        "params": [
+          "String hitAccession"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHitLen",
+        "params": [
+          "int hitLen"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHitSequence",
+        "params": [
+          "Sequence s"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHsps",
+        "params": [
+          "List<Hsp> hsps"
+        ],
+        "return_type": "BlastHitBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "createBlastHit",
+        "params": [],
+        "return_type": "BlastHit",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "Sequence",
+      "Hsp"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastResultBuilder",
+    "package": "org.biojava.nbio.core.search.io.blast",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "program",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "version",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "reference",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "dbFile",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "iterationNumber",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "queryID",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "queryDef",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "queryLength",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "querySequence",
+        "type": "Sequence",
+        "visibility": "private"
+      },
+      {
+        "name": "hits",
+        "type": "List<Hit>",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setProgram",
+        "params": [
+          "String program"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setVersion",
+        "params": [
+          "String version"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setReference",
+        "params": [
+          "String reference"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setDbFile",
+        "params": [
+          "String dbFile"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setProgramSpecificParameters",
+        "params": [
+          "Map<String",
+          "String> programSpecificParameters"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setIterationNumber",
+        "params": [
+          "int iterationNumber"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setQueryID",
+        "params": [
+          "String queryID"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setQueryDef",
+        "params": [
+          "String queryDef"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setQueryLength",
+        "params": [
+          "int queryLength"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHits",
+        "params": [
+          "List<Hit> hits"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setQuerySequence",
+        "params": [
+          "Sequence s"
+        ],
+        "return_type": "BlastResultBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "createBlastResult",
+        "params": [],
+        "return_type": "BlastResult",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "Sequence",
+      "Hit"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastHspBuilder",
+    "package": "org.biojava.nbio.core.search.io.blast",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "hspNum",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspBitScore",
+        "type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "hspScore",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspEvalue",
+        "type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "hspQueryFrom",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspQueryTo",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspHitFrom",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspHitTo",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspQueryFrame",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspHitFrame",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspIdentity",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspPositive",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspGaps",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspAlignLen",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "hspQseq",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "hspHseq",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "hspIdentityString",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "percentageIdentity",
+        "type": "Double",
+        "visibility": "private"
+      },
+      {
+        "name": "mismatchCount",
+        "type": "Integer",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setHspNum",
+        "params": [
+          "int hspNum"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspBitScore",
+        "params": [
+          "double hspBitScore"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspScore",
+        "params": [
+          "int hspScore"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspEvalue",
+        "params": [
+          "double hspEvalue"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspQueryFrom",
+        "params": [
+          "int hspQueryFrom"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspQueryTo",
+        "params": [
+          "int hspQueryTo"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspHitFrom",
+        "params": [
+          "int hspHitFrom"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspHitTo",
+        "params": [
+          "int hspHitTo"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspQueryFrame",
+        "params": [
+          "int hspQueryFrame"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspHitFrame",
+        "params": [
+          "int hspHitFrame"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspIdentity",
+        "params": [
+          "int hspIdentity"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspPositive",
+        "params": [
+          "int hspPositive"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspGaps",
+        "params": [
+          "int hspGaps"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspAlignLen",
+        "params": [
+          "int hspAlignLen"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspQseq",
+        "params": [
+          "String hspQseq"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspHseq",
+        "params": [
+          "String hspHseq"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setHspIdentityString",
+        "params": [
+          "String hspIdentityString"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setPercentageIdentity",
+        "params": [
+          "Double percentageIdentity"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "setMismatchCount",
+        "params": [
+          "Integer mismatchCount"
+        ],
+        "return_type": "BlastHspBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "createBlastHsp",
+        "params": [],
+        "return_type": "BlastHsp",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastXMLParser",
+    "package": "org.biojava.nbio.core.search.io.blast",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "ResultFactory"
+    ],
+    "fields": [
+      {
+        "name": "targetFile",
+        "type": "File",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setFile",
+        "params": [
+          "File f"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "readFile",
+        "params": [
+          "String blastFile"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "createObjects",
+        "params": [
+          "double maxEScore"
+        ],
+        "return_type": "List<Result>",
+        "visibility": "public"
+      },
+      {
+        "name": "getFileExtensions",
+        "params": [],
+        "return_type": "List<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "setQueryReferences",
+        "params": [
+          "List<Sequence> sequences"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setDatabaseReferences",
+        "params": [
+          "List<Sequence> sequences"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "mapIds",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "storeObjects",
+        "params": [
+          "List<Result> results"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [
+      "Result",
+      "ResultFactory",
+      "Sequence",
+      "XMLHelper",
+      "Hsp",
+      "Hit"
+    ],
+    "external_references": [
+      "javax.xml.xpath.XPathException",
+      "java.io.IOException",
+      "java.io.File",
+      "java.text.ParseException",
+      "org.slf4j.LoggerFactory",
+      "org.w3c.dom.Element",
+      "javax.xml.parsers.ParserConfigurationException",
+      "org.w3c.dom.Document",
+      "org.xml.sax.SAXException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastTabularParser",
+    "package": "org.biojava.nbio.core.search.io.blast",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "ResultFactory"
+    ],
+    "fields": [
+      {
+        "name": "blastReference",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "log",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "targetFile",
+        "type": "File",
+        "visibility": "private"
+      },
+      {
+        "name": "fileLinesCount",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "parsingConsistency",
+        "type": "PARSING_CONSISTENCY",
+        "visibility": "private"
+      },
+      {
+        "name": "queryId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "subjectId",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "percIdentity",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "alnLength",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "mismatchCount",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "gapOpenCount",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "queryStart",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "queryEnd",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "subjectStart",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "subjectEnd",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "evalue",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "bitScore",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getFileExtensions",
+        "params": [],
+        "return_type": "List<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "setFile",
+        "params": [
+          "File f"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "createObjects",
+        "params": [
+          "double maxEScore"
+        ],
+        "return_type": "List<Result>",
+        "visibility": "public"
+      },
+      {
+        "name": "fetchData",
+        "params": [
+          "Scanner scanner"
+        ],
+        "return_type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "storeObjects",
+        "params": [
+          "List<Result> results"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setQueryReferences",
+        "params": [
+          "List<Sequence> sequences"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setDatabaseReferences",
+        "params": [
+          "List<Sequence> sequences"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setParsingConsistency",
+        "params": [
+          "PARSING_CONSISTENCY parsingConsistency"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@param",
+      "@author"
+    ],
+    "internal_references": [
+      "Result",
+      "ResultFactory",
+      "Sequence",
+      "Hsp",
+      "Hit"
+    ],
+    "external_references": [
+      "java.io.LineNumberReader",
+      "java.io.IOException",
+      "java.io.File",
+      "java.text.ParseException",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "java.io.FileReader",
+      "java.io.FileInputStream"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SequenceOptimizationHints",
+    "package": "org.biojava.nbio.core.sequence",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "sequenceUsage",
+        "type": "SequenceUsage",
+        "visibility": "private"
+      },
+      {
+        "name": "sequenceCollection",
+        "type": "SequenceCollection",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getSequenceUsage",
+        "params": [],
+        "return_type": "SequenceUsage",
+        "visibility": "public"
+      },
+      {
+        "name": "setSequenceUsage",
+        "params": [
+          "SequenceUsage aSequenceUsage"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getSequenceCollection",
+        "params": [],
+        "return_type": "SequenceCollection",
+        "visibility": "public"
+      },
+      {
+        "name": "setSequenceCollection",
+        "params": [
+          "SequenceCollection aSequenceColection"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "DNASequence",
+    "package": "org.biojava.nbio.core.sequence",
+    "type": "class",
+    "extends": "AbstractSequence<NucleotideCompound>",
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      },
+      {
+        "name": "dnaType",
+        "type": "DNAType",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getRNASequence",
+        "params": [],
+        "return_type": "RNASequence",
+        "visibility": "public"
+      },
+      {
+        "name": "getRNASequence",
+        "params": [
+          "TranscriptionEngine engine"
+        ],
+        "return_type": "RNASequence",
+        "visibility": "public"
+      },
+      {
+        "name": "getRNASequence",
+        "params": [
+          "Frame frame"
+        ],
+        "return_type": "RNASequence",
+        "visibility": "public"
+      },
+      {
+        "name": "getRNASequence",
+        "params": [
+          "TranscriptionEngine engine",
+          "Frame frame"
+        ],
+        "return_type": "RNASequence",
+        "visibility": "public"
+      },
+      {
+        "name": "getGCCount",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "getReverse",
+        "params": [],
+        "return_type": "SequenceView<NucleotideCompound>",
+        "visibility": "public"
+      },
+      {
+        "name": "getComplement",
+        "params": [],
+        "return_type": "SequenceView<NucleotideCompound>",
+        "visibility": "public"
+      },
+      {
+        "name": "getReverseComplement",
+        "params": [],
+        "return_type": "SequenceView<NucleotideCompound>",
+        "visibility": "public"
+      },
+      {
+        "name": "getDNAType",
+        "params": [],
+        "return_type": "DNAType",
+        "visibility": "public"
+      },
+      {
+        "name": "setDNAType",
+        "params": [
+          "DNAType dnaType"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@author",
+      "@throws",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "*",
+      "ReversedSequenceView",
+      "StringProxySequenceReader",
+      "ComplementSequenceView",
+      "NucleotideCompound",
+      "TranscriptionEngine",
+      "CompoundNotFoundException",
+      "Frame",
+      "DNACompoundSet"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ExonSequence",
+    "package": "org.biojava.nbio.core.sequence",
+    "type": "class",
+    "extends": "DNASequence",
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "getLength",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@param",
+      "@author"
+    ],
+    "internal_references": [
+      "CompoundNotFoundException",
+      "DNACompoundSet"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProteinSequence",
+    "package": "org.biojava.nbio.core.sequence",
+    "type": "class",
+    "extends": "AbstractSequence<AminoAcidCompound>",
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      }
+    ],
+    "methods": [
+      {
+        "name": "setParentDNASequence",
+        "params": [
+          "AbstractSequence<NucleotideCompound> parentDNASequence",
+          "Integer begin",
+          "Integer end"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getRawParentSequence",
+        "params": [
+          "String accessId"
+        ],
+        "return_type": "DNASequence",
+        "visibility": "private"
+      },
+      {
+        "name": "getSequence",
+        "params": [
+          "Location cdna"
+        ],
+        "return_type": "String",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@throws"
+    ],
+    "internal_references": [
+      "FeatureInterface",
+      "CompoundSet",
+      "*",
+      "FastaReader",
+      "AbstractSequence",
+      "InsdcParser",
+      "CompoundNotFoundException",
+      "Location",
+      "Qualifier",
+      "PlainFastaHeaderParser",
+      "ProxySequenceReader",
+      "DNASequenceCreator"
+    ],
+    "external_references": [
+      "java.io.InputStream",
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "java.net.URL",
+      "org.slf4j.LoggerFactory"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BasicSequence",
+    "package": "org.biojava.nbio.core.sequence",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@link"
+    ],
+    "internal_references": [
+      "CompoundNotFoundException",
+      "*"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StopCodonSequence",
+    "package": "org.biojava.nbio.core.sequence",
+    "type": "class",
+    "extends": "DNASequence",
+    "implements": [],
+    "fields": [
+      {
+        "name": "parentGeneSequence",
+        "type": "DNASequence",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getLength",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  }
+]

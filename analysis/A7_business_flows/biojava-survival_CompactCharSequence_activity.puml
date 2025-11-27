@@ -1,0 +1,11 @@
+@startuml
+title CompactCharSequence - Activity Flow
+
+start
+:Execute charAt;
+:Execute length;
+:Execute subSequence;
+:Execute toString;
+stop
+
+@enduml

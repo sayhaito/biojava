@@ -1,0 +1,218 @@
+{
+  "module": "biojava-aa-prop",
+  "packages": [
+    "org.biojava.nbio.aaproperties",
+    "org.biojava.nbio.aaproperties.profeat",
+    "org.biojava.nbio.aaproperties.profeat.convertor",
+    "org.biojava.nbio.aaproperties.xml"
+  ],
+  "total_classes": 32,
+  "classes": [
+    {
+      "name": "IPeptideProperties",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/IPeptideProperties.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "PeptidePropertiesImpl",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/PeptidePropertiesImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "Utils",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/Utils.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "CommandPrompt",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/CommandPrompt.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "Constraints",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/Constraints.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "PeptideProperties",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/PeptideProperties.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "AminoAcidProperties",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/AminoAcidProperties.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties"
+    },
+    {
+      "name": "ProfeatProperties",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/ProfeatProperties.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat"
+    },
+    {
+      "name": "IProfeatProperties",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/IProfeatProperties.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.aaproperties.profeat"
+    },
+    {
+      "name": "ProfeatPropertiesImpl",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/ProfeatPropertiesImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat"
+    },
+    {
+      "name": "Convert2SolventAccessibility",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2SolventAccessibility.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convert2Polarizability",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2Polarizability.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convert2Polarity",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2Polarity.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convert2SecondaryStructure",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2SecondaryStructure.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convert2NormalizedVanDerWaalsVolume",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2NormalizedVanDerWaalsVolume.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convert2Charge",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2Charge.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convert2Hydrophobicity",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convert2Hydrophobicity.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "Convertor",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/profeat/convertor/Convertor.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.aaproperties.profeat.convertor"
+    },
+    {
+      "name": "ModifiedAminoAcidCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/ModifiedAminoAcidCompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "ElementTable",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/ElementTable.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "Isotope",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/Isotope.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "MyValidationEventHandler",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/MyValidationEventHandler.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "AminoAcidCompositionTable",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/AminoAcidCompositionTable.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "Element",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/Element.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "AminoAcidComposition",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/AminoAcidComposition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "CaseFreeAminoAcidCompoundSet",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/CaseFreeAminoAcidCompoundSet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "Name2Count",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/Name2Count.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    },
+    {
+      "name": "SchemaGenerator",
+      "path": "src/main/java/org/biojava/nbio/aaproperties/xml/SchemaGenerator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.aaproperties.xml"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "jakarta.xml.bind",
+      "junit",
+      "org.apache.logging.log4j",
+      "org.glassfish.jaxb",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-core",
+      "org.biojava.biojava-structure"
+    ]
+  },
+  "next_step": "continue"
+}

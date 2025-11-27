@@ -1,0 +1,225 @@
+{
+  "module": "biojava-ontology",
+  "packages": [
+    "org.biojava.nbio.ontology",
+    "org.biojava.nbio.ontology.io",
+    "org.biojava.nbio.ontology.obo",
+    "org.biojava.nbio.ontology.utils"
+  ],
+  "total_classes": 34,
+  "classes": [
+    {
+      "name": "Term",
+      "path": "src/main/java/org/biojava/nbio/ontology/Term.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "Variable",
+      "path": "src/main/java/org/biojava/nbio/ontology/Variable.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "InvalidTermException",
+      "path": "src/main/java/org/biojava/nbio/ontology/InvalidTermException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "AlreadyExistsException",
+      "path": "src/main/java/org/biojava/nbio/ontology/AlreadyExistsException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "App",
+      "path": "src/main/java/org/biojava/nbio/ontology/App.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "IntegerOntology",
+      "path": "src/main/java/org/biojava/nbio/ontology/IntegerOntology.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "AbstractTerm",
+      "path": "src/main/java/org/biojava/nbio/ontology/AbstractTerm.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "RemoteTerm",
+      "path": "src/main/java/org/biojava/nbio/ontology/RemoteTerm.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "Synonym",
+      "path": "src/main/java/org/biojava/nbio/ontology/Synonym.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "OntoTools",
+      "path": "src/main/java/org/biojava/nbio/ontology/OntoTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "OntologyOps",
+      "path": "src/main/java/org/biojava/nbio/ontology/OntologyOps.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "OntologyFactory",
+      "path": "src/main/java/org/biojava/nbio/ontology/OntologyFactory.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "Triple",
+      "path": "src/main/java/org/biojava/nbio/ontology/Triple.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "DefaultOps",
+      "path": "src/main/java/org/biojava/nbio/ontology/DefaultOps.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "OntologyTerm",
+      "path": "src/main/java/org/biojava/nbio/ontology/OntologyTerm.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "Ontology",
+      "path": "src/main/java/org/biojava/nbio/ontology/Ontology.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "OntologyException",
+      "path": "src/main/java/org/biojava/nbio/ontology/OntologyException.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology"
+    },
+    {
+      "name": "TabDelimParser",
+      "path": "src/main/java/org/biojava/nbio/ontology/io/TabDelimParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.io"
+    },
+    {
+      "name": "GOParser",
+      "path": "src/main/java/org/biojava/nbio/ontology/io/GOParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.io"
+    },
+    {
+      "name": "OboParser",
+      "path": "src/main/java/org/biojava/nbio/ontology/io/OboParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.io"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/ontology/io/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.io"
+    },
+    {
+      "name": "AssertionFailure",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/AssertionFailure.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "WeakValueHashMap",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/WeakValueHashMap.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "EmptyAnnotation",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/EmptyAnnotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "Annotatable",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/Annotatable.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "StaticMemberPlaceHolder",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/StaticMemberPlaceHolder.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "Annotation",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/Annotation.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "KeyedWeakReference",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/KeyedWeakReference.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "AbstractAnnotation",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/AbstractAnnotation.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "SmallMap",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/SmallMap.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "SmallAnnotation",
+      "path": "src/main/java/org/biojava/nbio/ontology/utils/SmallAnnotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.utils"
+    },
+    {
+      "name": "OboFileParser",
+      "path": "src/main/java/org/biojava/nbio/ontology/obo/OboFileParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.obo"
+    },
+    {
+      "name": "OboFileEventListener",
+      "path": "src/main/java/org/biojava/nbio/ontology/obo/OboFileEventListener.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.ontology.obo"
+    },
+    {
+      "name": "OboFileHandler",
+      "path": "src/main/java/org/biojava/nbio/ontology/obo/OboFileHandler.java",
+      "type": "class",
+      "package": "org.biojava.nbio.ontology.obo"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "junit",
+      "org.apache.logging.log4j",
+      "org.slf4j"
+    ],
+    "internal": []
+  },
+  "next_step": "continue"
+}

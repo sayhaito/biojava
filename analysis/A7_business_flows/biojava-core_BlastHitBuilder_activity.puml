@@ -1,0 +1,15 @@
+@startuml
+title BlastHitBuilder - Activity Flow
+
+start
+:Set HitNum;
+:Set HitId;
+:Set HitDef;
+:Set HitAccession;
+:Set HitLen;
+:Set HitSequence;
+:Set Hsps;
+:Create BlastHit;
+stop
+
+@enduml

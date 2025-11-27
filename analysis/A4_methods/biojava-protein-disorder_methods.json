@@ -1,0 +1,119 @@
+[
+  {
+    "class": "FastaSequence",
+    "method": "getId",
+    "steps": [
+      "return id;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "FastaSequence",
+    "method": "getSequence",
+    "steps": [
+      "return sequence;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "FastaSequence",
+    "method": "getFormattedFasta",
+    "steps": [
+      "return getFormatedSequence(80);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "SequenceUtil",
+    "method": "readFasta",
+    "steps": [
+      "final List<FastaSequence> seqs = new ArrayList<>();",
+      "final BufferedReader infasta = new BufferedReader(",
+      "new InputStreamReader(inStream, \"UTF8\"), 16000);",
+      "final Pattern pattern = Pattern.compile(\"",
+      "String sname = \"\", seqstr = null;",
+      "line = infasta.readLine();",
+      "if ((line == null) || line.startsWith(\">\")) {",
+      "if (seqstr != null) {",
+      "seqs.add(new FastaSequence(sname.substring(1), seqstr));",
+      "sname = line;",
+      "seqstr = \"\";",
+      "final String subseq = pattern.matcher(line).replaceAll(\"\");",
+      "seqstr += subseq;",
+      "infasta.close();",
+      "return seqs;"
+    ],
+    "branches": [
+      {
+        "condition": "(line == null) || line.startsWith(\">\")",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      },
+      {
+        "condition": "seqstr != null",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "Pattern.compile()",
+      "infasta.readLine()",
+      "line.startsWith()",
+      "seqs.add()",
+      "sname.substring()",
+      "pattern.matcher()",
+      "infasta.close()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "ModelLoader",
+    "method": "getModel",
+    "steps": [
+      "return ModelLoader.models.get(modelNum);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "NullOutputStream",
+    "method": "write",
+    "steps": [],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  }
+]

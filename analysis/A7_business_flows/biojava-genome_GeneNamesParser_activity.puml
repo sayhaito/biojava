@@ -1,0 +1,11 @@
+@startuml
+title GeneNamesParser - Activity Flow
+
+start
+:Execute main;
+:Retrieve GeneNames;
+:Retrieve GeneNames;
+:Retrieve GeneName;
+stop
+
+@enduml

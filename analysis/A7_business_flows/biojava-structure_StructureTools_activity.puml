@@ -1,0 +1,15 @@
+@startuml
+title StructureTools - Activity Flow
+
+start
+:Retrieve NrAtoms;
+:Retrieve NrGroups;
+:Retrieve AtomArray;
+:Retrieve AllAtomArray;
+:Retrieve AllAtomArray;
+:Retrieve AllAtomArray;
+:Retrieve UnalignedGroups;
+:Retrieve LigandsByProximity;
+stop
+
+@enduml

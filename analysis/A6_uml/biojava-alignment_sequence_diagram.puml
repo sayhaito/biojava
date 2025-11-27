@@ -1,0 +1,24 @@
+@startuml
+title biojava-alignment - Sequence Diagram
+
+actor User
+
+participant StockholmFileParser
+participant StockholmStructure
+participant inStream
+participant seqsAnnotation
+
+User -> StockholmStructure: getSequenceAnnotation()
+StockholmStructure -> seqsAnnotation: containsKey()
+StockholmStructure -> seqsAnnotation: put()
+
+User -> StockholmFileParser: parse()
+StockholmFileParser -> inStream: close()
+
+User -> StockholmFileParser: parse()
+StockholmFileParser -> inStream: close()
+
+User -> StockholmFileParser: parse()
+StockholmFileParser -> inStream: close()
+
+@enduml

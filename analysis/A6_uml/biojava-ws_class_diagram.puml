@@ -1,0 +1,68 @@
+@startuml
+title biojava-ws - Class Diagram
+
+interface RemotePairwiseAlignmentProperties {
+  + serialVersionUID: long
+}
+
+interface RemotePairwiseAlignmentService {
+}
+
+interface RemotePairwiseAlignmentOutputProperties {
+  + serialVersionUID: long
+}
+
+enum BlastOutputAlignmentFormatEnum {
+}
+
+enum BlastAlignmentParameterEnum {
+}
+
+class NCBIQBlastService {
+  + WAIT_INCREMENT: long
+  - MAP_TO_STRING_TRANSFORMER: MapToStringTransformer
+  - SERVICE_URL: String
+  - DEFAULT_EMAIL: String
+  - DEFAULT_TOOL: String
+  - init(String svcUrl): void
+  + getRemoteBlastInfo(): String
+  + sendAlignmentRequest(Sequence<Compound> seq, RemotePairwiseAlignmentProperties rpa): String
+  + sendAlignmentRequest(int gid, RemotePairwiseAlignmentProperties rpa): String
+  + sendAlignmentRequest(String query, RemotePairwiseAlignmentProperties alignmentProperties): String
+  + isReady(String id): boolean
+  + isReady(String id, long present): boolean
+  + getAlignmentResults(String id, RemotePairwiseAlignmentOutputProperties outputProperties): InputStream
+}
+
+class NCBIQBlastAlignmentProperties {
+  - serialVersionUID: long
+  + getAlignmentOption(String key): String
+  + setAlignementOption(String key, String val): void
+  + getAlignmentOptions(): Set<String>
+  + getAlignmentOption(BlastAlignmentParameterEnum key): String
+  + setAlignmentOption(BlastAlignmentParameterEnum key, String val): void
+  + removeAlignmentOption(BlastAlignmentParameterEnum key): void
+  + getBlastProgram(): BlastProgramEnum
+  + setBlastProgram(BlastProgramEnum program): void
+}
+
+interface HmmerScan {
+}
+
+
+Serializable <|-- RemotePairwiseAlignmentProperties
+RemotePairwiseAlignmentService --> Sequence
+RemotePairwiseAlignmentService --> Compound
+Serializable <|-- RemotePairwiseAlignmentOutputProperties
+RemotePairwiseAlignmentService <|.. NCBIQBlastService
+NCBIQBlastService --> IOUtils
+NCBIQBlastService --> Sequence
+NCBIQBlastService --> *
+NCBIQBlastService --> Compound
+NCBIQBlastService --> RID
+RemotePairwiseAlignmentProperties <|.. NCBIQBlastAlignmentProperties
+NCBIQBlastAlignmentProperties --> RemotePairwiseAlignmentProperties
+NCBIQBlastAlignmentProperties --> *
+HmmerScan --> ProteinSequence
+
+@enduml

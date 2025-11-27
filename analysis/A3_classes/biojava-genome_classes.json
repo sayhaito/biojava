@@ -1,0 +1,971 @@
+[
+  {
+    "class_name": "GeneNamesParser",
+    "package": "org.biojava.nbio.genome.parsers.genename",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_GENENAMES_URL",
+        "type": "String",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getGeneNames",
+        "params": [],
+        "return_type": "List<GeneName>",
+        "visibility": "public"
+      },
+      {
+        "name": "getGeneNames",
+        "params": [
+          "InputStream inStream"
+        ],
+        "return_type": "List<GeneName>",
+        "visibility": "public"
+      },
+      {
+        "name": "getGeneName",
+        "params": [
+          "String line"
+        ],
+        "return_type": "GeneName",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [
+      "InputStreamProvider"
+    ],
+    "external_references": [
+      "java.io.InputStream",
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "java.net.URL",
+      "org.slf4j.LoggerFactory",
+      "java.io.InputStreamReader",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GeneChromosomePositionParser",
+    "package": "org.biojava.nbio.genome.parsers.genename",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_MAPPING_URL",
+        "type": "String",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getChromosomeMappings",
+        "params": [],
+        "return_type": "List<GeneChromosomePosition>",
+        "visibility": "public"
+      },
+      {
+        "name": "getChromosomeMappings",
+        "params": [
+          "InputStream inStream"
+        ],
+        "return_type": "List<GeneChromosomePosition>",
+        "visibility": "public"
+      },
+      {
+        "name": "getGeneChromosomePosition",
+        "params": [
+          "String line"
+        ],
+        "return_type": "GeneChromosomePosition",
+        "visibility": "private"
+      },
+      {
+        "name": "getIntegerList",
+        "params": [
+          "String lst"
+        ],
+        "return_type": "List<Integer>",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "InputStreamProvider",
+      "App"
+    ],
+    "external_references": [
+      "java.io.InputStream",
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "java.net.URL",
+      "org.slf4j.LoggerFactory",
+      "java.io.InputStreamReader",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "FeatureI",
+    "package": "org.biojava.nbio.genome.parsers.gff",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@Override",
+      "@param",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GFF3Reader",
+    "package": "org.biojava.nbio.genome.parsers.gff",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "p",
+        "type": "Pattern",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "read",
+        "params": [
+          "String filename",
+          "List<String> indexes"
+        ],
+        "return_type": "FeatureList",
+        "visibility": "public"
+      },
+      {
+        "name": "read",
+        "params": [
+          "Path path",
+          "List<String> indexes"
+        ],
+        "return_type": "FeatureList",
+        "visibility": "public"
+      },
+      {
+        "name": "read",
+        "params": [
+          "String filename"
+        ],
+        "return_type": "FeatureList",
+        "visibility": "public"
+      },
+      {
+        "name": "read",
+        "params": [
+          "Path path"
+        ],
+        "return_type": "FeatureList",
+        "visibility": "public"
+      },
+      {
+        "name": "parseLine",
+        "params": [
+          "String s"
+        ],
+        "return_type": "Feature",
+        "visibility": "private"
+      },
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@SuppressWarnings",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.nio.file.Path",
+      "java.nio.file.Paths",
+      "org.slf4j.Logger",
+      "java.io.IOException",
+      "org.slf4j.LoggerFactory",
+      "java.nio.file.Files",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GeneIDGFF2Reader",
+    "package": "org.biojava.nbio.genome.parsers.gff",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "read",
+        "params": [
+          "String filename"
+        ],
+        "return_type": "FeatureList",
+        "visibility": "public"
+      },
+      {
+        "name": "parseLine",
+        "params": [
+          "String s"
+        ],
+        "return_type": "Feature",
+        "visibility": "private"
+      },
+      {
+        "name": "write",
+        "params": [
+          "FeatureList features",
+          "String filename"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "writeLine",
+        "params": [
+          "Feature f",
+          "BufferedWriter bw"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.*",
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GFF3Writer",
+    "package": "org.biojava.nbio.genome.parsers.gff",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "write",
+        "params": [
+          "OutputStream outputStream",
+          "Map<String",
+          "ChromosomeSequence> chromosomeSequenceList"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getGFF3Note",
+        "params": [
+          "List<String> notesList"
+        ],
+        "return_type": "String",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@throws"
+    ],
+    "internal_references": [
+      "*"
+    ],
+    "external_references": [
+      "java.io.OutputStream"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GeneMarkGTFReader",
+    "package": "org.biojava.nbio.genome.parsers.gff",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "read",
+        "params": [
+          "String filename"
+        ],
+        "return_type": "FeatureList",
+        "visibility": "public"
+      },
+      {
+        "name": "parseLine",
+        "params": [
+          "String s"
+        ],
+        "return_type": "Feature",
+        "visibility": "private"
+      },
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return",
+      "@throws"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "java.io.FileReader",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "CytobandParser",
+    "package": "org.biojava.nbio.genome.parsers.cytoband",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_LOCATION",
+        "type": "String",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllCytobands",
+        "params": [
+          "URL u"
+        ],
+        "return_type": "SortedSet<Cytoband>",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllCytobands",
+        "params": [
+          "InputStream instream"
+        ],
+        "return_type": "SortedSet<Cytoband>",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.InputStream",
+      "java.io.IOException",
+      "org.slf4j.Logger",
+      "java.net.URL",
+      "org.slf4j.LoggerFactory",
+      "java.io.InputStreamReader",
+      "java.io.BufferedReader"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "GeneIDXMLReader",
+    "package": "org.biojava.nbio.genome.parsers.geneid",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [
+      "ProteinSequence",
+      "XMLHelper",
+      "DNASequence",
+      "AccessionID",
+      "FastaWriterHelper"
+    ],
+    "external_references": [
+      "java.io.File",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "org.w3c.dom.Element",
+      "org.w3c.dom.Document"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "TwoBitParser",
+    "package": "org.biojava.nbio.genome.parsers.twobit",
+    "type": "class",
+    "extends": "InputStream",
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_BUFFER_SIZE",
+        "type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "raf",
+        "type": "RandomAccessFile",
+        "visibility": "private"
+      },
+      {
+        "name": "f",
+        "type": "File",
+        "visibility": "private"
+      },
+      {
+        "name": "reverse",
+        "type": "boolean",
+        "visibility": "private"
+      },
+      {
+        "name": "seq_names",
+        "type": "String[]",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_seq_name",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_nn_blocks",
+        "type": "long[][]",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_mask_blocks",
+        "type": "long[][]",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_seq_pos",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_dna_size",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_nn_block_num",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_mask_block_num",
+        "type": "int",
+        "visibility": "private"
+      },
+      {
+        "name": "cur_bits",
+        "type": "int[]",
+        "visibility": "private"
+      },
+      {
+        "name": "buffer",
+        "type": "byte[]",
+        "visibility": "private"
+      },
+      {
+        "name": "buffer_size",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "buffer_pos",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "start_file_pos",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "file_pos",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "bit_chars",
+        "type": "char[]",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "readFourBytes",
+        "params": [],
+        "return_type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "getSequenceNames",
+        "params": [],
+        "return_type": "String[]",
+        "visibility": "public"
+      },
+      {
+        "name": "setCurrentSequence",
+        "params": [
+          "String seq_name"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getCurrentSequencePosition",
+        "params": [],
+        "return_type": "long",
+        "visibility": "public"
+      },
+      {
+        "name": "setCurrentSequencePosition",
+        "params": [
+          "long pos"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "loadBits",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "read",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "close",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "available",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "closeParser",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getFile",
+        "params": [],
+        "return_type": "File",
+        "visibility": "public"
+      },
+      {
+        "name": "loadFragment",
+        "params": [
+          "long seq_pos",
+          "int len"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "printFastaSequence",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "printFastaSequence",
+        "params": [
+          "long len"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@throws",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.InputStream",
+      "java.io.IOException",
+      "java.io.File",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "java.io.RandomAccessFile"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ProteinMappingTools",
+    "package": "org.biojava.nbio.genome.util",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "convertDNAtoProteinSequence",
+        "params": [
+          "String dnaSequence"
+        ],
+        "return_type": "ProteinSequence",
+        "visibility": "public"
+      },
+      {
+        "name": "convertDNAtoProteinSequence",
+        "params": [
+          "DNASequence dnaSequence"
+        ],
+        "return_type": "ProteinSequence",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [
+      "CompoundNotFoundException",
+      "ProteinSequence",
+      "RNASequence",
+      "DNASequence"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ParseListener",
+    "package": "org.biojava.nbio.genome.io.fastq",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@param",
+      "@author",
+      "@throws"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SolexaFastqReader",
+    "package": "org.biojava.nbio.genome.io.fastq",
+    "type": "class",
+    "extends": "AbstractFastqReader",
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "getVariant",
+        "params": [],
+        "return_type": "FastqVariant",
+        "visibility": "protected"
+      }
+    ],
+    "annotations": [
+      "@since",
+      "@author",
+      "@link",
+      "@Override"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "FastqReader",
+    "package": "org.biojava.nbio.genome.io.fastq",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.IOException",
+      "java.io.InputStream",
+      "java.net.URL",
+      "java.io.File"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "FastqBuilder",
+    "package": "org.biojava.nbio.genome.io.fastq",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "description",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "sequence",
+        "type": "StringBuilder",
+        "visibility": "private"
+      },
+      {
+        "name": "quality",
+        "type": "StringBuilder",
+        "visibility": "private"
+      },
+      {
+        "name": "variant",
+        "type": "FastqVariant",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_VARIANT",
+        "type": "FastqVariant",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getDescription",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "withDescription",
+        "params": [
+          "final String description"
+        ],
+        "return_type": "FastqBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "withSequence",
+        "params": [
+          "final String sequence"
+        ],
+        "return_type": "FastqBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "appendSequence",
+        "params": [
+          "final String sequence"
+        ],
+        "return_type": "FastqBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "withQuality",
+        "params": [
+          "final String quality"
+        ],
+        "return_type": "FastqBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "appendQuality",
+        "params": [
+          "final String quality"
+        ],
+        "return_type": "FastqBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "sequenceAndQualityLengthsMatch",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "withVariant",
+        "params": [
+          "final FastqVariant variant"
+        ],
+        "return_type": "FastqBuilder",
+        "visibility": "public"
+      },
+      {
+        "name": "build",
+        "params": [],
+        "return_type": "Fastq",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  }
+]

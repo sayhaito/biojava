@@ -1,0 +1,313 @@
+{
+  "module": "biojava-alignment",
+  "packages": [
+    "org.biojava.nbio.alignment",
+    "org.biojava.nbio.alignment.io",
+    "org.biojava.nbio.alignment.routines",
+    "org.biojava.nbio.alignment.template",
+    "org.biojava.nbio.phylo"
+  ],
+  "total_classes": 48,
+  "classes": [
+    {
+      "name": "DistanceTreeEvaluator",
+      "path": "src/main/java/org/biojava/nbio/phylo/DistanceTreeEvaluator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "TreeConstructor",
+      "path": "src/main/java/org/biojava/nbio/phylo/TreeConstructor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "TreeType",
+      "path": "src/main/java/org/biojava/nbio/phylo/TreeType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "TreeConstructorType",
+      "path": "src/main/java/org/biojava/nbio/phylo/TreeConstructorType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "DistanceMatrixCalculator",
+      "path": "src/main/java/org/biojava/nbio/phylo/DistanceMatrixCalculator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "Comparison",
+      "path": "src/main/java/org/biojava/nbio/phylo/Comparison.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "ForesterWrapper",
+      "path": "src/main/java/org/biojava/nbio/phylo/ForesterWrapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phylo"
+    },
+    {
+      "name": "NeedlemanWunsch",
+      "path": "src/main/java/org/biojava/nbio/alignment/NeedlemanWunsch.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "GuideTree",
+      "path": "src/main/java/org/biojava/nbio/alignment/GuideTree.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "SubstitutionMatrixScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/SubstitutionMatrixScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "SimpleGapPenalty",
+      "path": "src/main/java/org/biojava/nbio/alignment/SimpleGapPenalty.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "SmithWaterman",
+      "path": "src/main/java/org/biojava/nbio/alignment/SmithWaterman.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "Alignments",
+      "path": "src/main/java/org/biojava/nbio/alignment/Alignments.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "FractionalIdentityInProfileScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/FractionalIdentityInProfileScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "FractionalSimilarityInProfileScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/FractionalSimilarityInProfileScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "SimpleProfileProfileAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/SimpleProfileProfileAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "FractionalSimilarityScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/FractionalSimilarityScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "FractionalIdentityScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/FractionalIdentityScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "StandardRescoreRefiner",
+      "path": "src/main/java/org/biojava/nbio/alignment/StandardRescoreRefiner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment"
+    },
+    {
+      "name": "AnchoredPairwiseSequenceAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/routines/AnchoredPairwiseSequenceAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.routines"
+    },
+    {
+      "name": "GuanUberbacher",
+      "path": "src/main/java/org/biojava/nbio/alignment/routines/GuanUberbacher.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.routines"
+    },
+    {
+      "name": "AlignerHelper",
+      "path": "src/main/java/org/biojava/nbio/alignment/routines/AlignerHelper.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.alignment.routines"
+    },
+    {
+      "name": "StockholmStructure",
+      "path": "src/main/java/org/biojava/nbio/alignment/io/StockholmStructure.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.io"
+    },
+    {
+      "name": "StockholmFileAnnotation",
+      "path": "src/main/java/org/biojava/nbio/alignment/io/StockholmFileAnnotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.io"
+    },
+    {
+      "name": "StockholmConsensusAnnotation",
+      "path": "src/main/java/org/biojava/nbio/alignment/io/StockholmConsensusAnnotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.io"
+    },
+    {
+      "name": "StockholmResidueAnnotation",
+      "path": "src/main/java/org/biojava/nbio/alignment/io/StockholmResidueAnnotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.io"
+    },
+    {
+      "name": "StockholmSequenceAnnotation",
+      "path": "src/main/java/org/biojava/nbio/alignment/io/StockholmSequenceAnnotation.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.io"
+    },
+    {
+      "name": "StockholmFileParser",
+      "path": "src/main/java/org/biojava/nbio/alignment/io/StockholmFileParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.io"
+    },
+    {
+      "name": "MatrixAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/MatrixAligner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "PairwiseSequenceAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/PairwiseSequenceAligner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "HierarchicalClusterer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/HierarchicalClusterer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "GapPenalty",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/GapPenalty.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "AbstractPairwiseSequenceAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/AbstractPairwiseSequenceAligner.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "AbstractMatrixAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/AbstractMatrixAligner.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "RescoreRefiner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/RescoreRefiner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "PartitionRefiner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/PartitionRefiner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "Aligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/Aligner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "Scorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/Scorer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "AbstractScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/AbstractScorer.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "ProfileProfileScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/ProfileProfileScorer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "CallablePairwiseSequenceScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/CallablePairwiseSequenceScorer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "PairInProfileScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/PairInProfileScorer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "CallableProfileProfileAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/CallableProfileProfileAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "PairwiseSequenceScorer",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/PairwiseSequenceScorer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "GuideTreeNode",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/GuideTreeNode.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "ProfileProfileAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/ProfileProfileAligner.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "CallablePairwiseSequenceAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/CallablePairwiseSequenceAligner.java",
+      "type": "class",
+      "package": "org.biojava.nbio.alignment.template"
+    },
+    {
+      "name": "AbstractProfileProfileAligner",
+      "path": "src/main/java/org/biojava/nbio/alignment/template/AbstractProfileProfileAligner.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.alignment.template"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "junit",
+      "org.apache.logging.log4j",
+      "org.biojava.thirdparty",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-core"
+    ]
+  },
+  "next_step": "continue"
+}

@@ -1,0 +1,711 @@
+{
+  "module": "biojava-structure-gui",
+  "packages": [
+    "org.biojava.nbio.structure.align.gui",
+    "org.biojava.nbio.structure.align.gui.aligpanel",
+    "org.biojava.nbio.structure.align.gui.autosuggest",
+    "org.biojava.nbio.structure.align.gui.jmol",
+    "org.biojava.nbio.structure.align.webstart",
+    "org.biojava.nbio.structure.gui",
+    "org.biojava.nbio.structure.gui.events",
+    "org.biojava.nbio.structure.gui.util",
+    "org.biojava.nbio.structure.gui.util.color",
+    "org.biojava.nbio.structure.symmetry.gui",
+    "org.biojava.nbio.structure.symmetry.jmolScript"
+  ],
+  "total_classes": 113,
+  "classes": [
+    {
+      "name": "JmolViewerImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/JmolViewerImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "Selection",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/Selection.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "SequenceDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/SequenceDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "BiojavaJmol",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/BiojavaJmol.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "StructureViewer",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/StructureViewer.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "RenderStyle",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/RenderStyle.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "WrapLayout",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/WrapLayout.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "SelectionImpl",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/SelectionImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "JMatrixPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/JMatrixPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "ScaleableMatrixPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/ScaleableMatrixPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui"
+    },
+    {
+      "name": "CoordManager",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/CoordManager.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "StructurePairSelector",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/StructurePairSelector.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "SequenceMouseListener",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/SequenceMouseListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "SequenceScalePanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/SequenceScalePanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "AlternativeAlignmentFrame",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/AlternativeAlignmentFrame.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "PDBDirPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/PDBDirPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "JTableMouseButtonListener",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/JTableMouseButtonListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "PDBServerPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/PDBServerPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "ScopSelectPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/ScopSelectPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "AlignedPosition",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/AlignedPosition.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "ScopInstallationInstance",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/ScopInstallationInstance.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "SelectMultiplePanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/SelectMultiplePanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "JButtonTableCellRenderer",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/JButtonTableCellRenderer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "PDBUploadPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/PDBUploadPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "AlignmentCalc",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/AlignmentCalc.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "MenuCreator",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/MenuCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "JTableDataButtonModel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/JTableDataButtonModel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util"
+    },
+    {
+      "name": "LinearColorInterpolator",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/LinearColorInterpolator.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "ColorUtils",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/ColorUtils.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "GradientPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/GradientPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "DefaultMatrixMapper",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/DefaultMatrixMapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "GradientMapper",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/GradientMapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "ColorInterpolator",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/ColorInterpolator.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "SqrtColorMapper",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/SqrtColorMapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "ContinuousColorMapperTransform",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/ContinuousColorMapperTransform.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "ContinuousColorMapper",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/ContinuousColorMapper.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "LogColorMapper",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/LogColorMapper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "HSVColorSpace",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/util/color/HSVColorSpace.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.util.color"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/events/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.events"
+    },
+    {
+      "name": "AlignmentPositionListener",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/events/AlignmentPositionListener.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.gui.events"
+    },
+    {
+      "name": "JmolAlignedPositionListener",
+      "path": "src/main/java/org/biojava/nbio/structure/gui/events/JmolAlignedPositionListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.gui.events"
+    },
+    {
+      "name": "StructureLoaderThread",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/StructureLoaderThread.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MyExportListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MyExportListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "ParameterGUI",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/ParameterGUI.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "ConfigPDBInstallPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/ConfigPDBInstallPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MultipleAlignmentJmolDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MultipleAlignmentJmolDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MyTableRowSorter",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MyTableRowSorter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "HelpDialog",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/HelpDialog.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MemoryMonitor",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MemoryMonitor.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "DisplayAFP",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/DisplayAFP.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "DotPlotPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/DotPlotPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MySaveFileListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MySaveFileListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "SelectPDBPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/SelectPDBPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MultipleAlignmentCalc",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MultipleAlignmentCalc.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "SystemInfo",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/SystemInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "StructureAlignmentDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/StructureAlignmentDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "AboutDialog",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/AboutDialog.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "AlignmentTextPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/AlignmentTextPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "ShowPDBIDListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/ShowPDBIDListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "AlignmentCalculationRunnable",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/AlignmentCalculationRunnable.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MultipleAlignmentGUI",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MultipleAlignmentGUI.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "AlignmentCalc",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/AlignmentCalc.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "ChooseDirAction",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/ChooseDirAction.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MyDistMaxListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MyDistMaxListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MyAlignmentLoadListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MyAlignmentLoadListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "JPrintPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/JPrintPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MenuCreator",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MenuCreator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "AlignmentGui",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/AlignmentGui.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "MyOpenPdbFileListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/MyOpenPdbFileListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui"
+    },
+    {
+      "name": "DefaultAutoSuggestProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/autosuggest/DefaultAutoSuggestProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.autosuggest"
+    },
+    {
+      "name": "SCOPAutoSuggestProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/autosuggest/SCOPAutoSuggestProvider.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.autosuggest"
+    },
+    {
+      "name": "JAutoSuggest",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/autosuggest/JAutoSuggest.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.autosuggest"
+    },
+    {
+      "name": "AutoSuggestProvider",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/autosuggest/AutoSuggestProvider.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.structure.align.gui.autosuggest"
+    },
+    {
+      "name": "AFPChainCoordManager",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/AFPChainCoordManager.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "AligPanelMouseMotionListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/AligPanelMouseMotionListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "MultipleAlignmentCoordManager",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/MultipleAlignmentCoordManager.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "StatusDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/StatusDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "AligPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/AligPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "MultipleAligPanelMouseMotionListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/MultipleAligPanelMouseMotionListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "MultipleAligPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/MultipleAligPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "MultipleStatusDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/aligpanel/MultipleStatusDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.aligpanel"
+    },
+    {
+      "name": "RasmolCommandListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/RasmolCommandListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "AtomInfo",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/AtomInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "MyJmolStatusListener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/MyJmolStatusListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "JmolPanel",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/JmolPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "AtomInfoParser",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/AtomInfoParser.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "StructureAlignmentJmol",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/StructureAlignmentJmol.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "JmolTools",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/JmolTools.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "AbstractAlignmentJmol",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/AbstractAlignmentJmol.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "MultipleAlignmentJmol",
+      "path": "src/main/java/org/biojava/nbio/structure/align/gui/jmol/MultipleAlignmentJmol.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.gui.jmol"
+    },
+    {
+      "name": "JNLPProxy",
+      "path": "src/main/java/org/biojava/nbio/structure/align/webstart/JNLPProxy.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.webstart"
+    },
+    {
+      "name": "BrowserOpener",
+      "path": "src/main/java/org/biojava/nbio/structure/align/webstart/BrowserOpener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.webstart"
+    },
+    {
+      "name": "ConfigXMLHandler",
+      "path": "src/main/java/org/biojava/nbio/structure/align/webstart/ConfigXMLHandler.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.webstart"
+    },
+    {
+      "name": "package-info",
+      "path": "src/main/java/org/biojava/nbio/structure/align/webstart/package-info.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.webstart"
+    },
+    {
+      "name": "WebStartMain",
+      "path": "src/main/java/org/biojava/nbio/structure/align/webstart/WebStartMain.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.webstart"
+    },
+    {
+      "name": "AligUIManager",
+      "path": "src/main/java/org/biojava/nbio/structure/align/webstart/AligUIManager.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.align.webstart"
+    },
+    {
+      "name": "SymmetryDisplay",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/gui/SymmetryDisplay.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.gui"
+    },
+    {
+      "name": "SymmetryGui",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/gui/SymmetryGui.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.gui"
+    },
+    {
+      "name": "SymmetryListener",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/gui/SymmetryListener.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.gui"
+    },
+    {
+      "name": "SymmetryCalc",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/gui/SymmetryCalc.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.gui"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorI",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorI.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorT",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorT.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorH",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorH.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGenerator",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGenerator.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorPointGroup",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorPointGroup.java",
+      "type": "abstract",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorDn",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorDn.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorCn",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorCn.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorO",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorO.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "ColorConverter",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/ColorConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    },
+    {
+      "name": "JmolSymmetryScriptGeneratorC1",
+      "path": "src/main/java/org/biojava/nbio/structure/symmetry/jmolScript/JmolSymmetryScriptGeneratorC1.java",
+      "type": "class",
+      "package": "org.biojava.nbio.structure.symmetry.jmolScript"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "junit",
+      "net.sourceforge.jmol",
+      "org.apache.logging.log4j",
+      "org.biojava",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-core",
+      "org.biojava.biojava-structure"
+    ]
+  },
+  "next_step": "continue"
+}

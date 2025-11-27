@@ -1,0 +1,98 @@
+@startuml
+title biojava-modfinder - Class Diagram
+
+interface ProteinModification {
+}
+
+interface ModificationCondition {
+}
+
+class ProteinModificationImpl {
+  - id: String
+  - condition: ModificationCondition
+  - category: ModificationCategory
+  - occurrenceType: ModificationOccurrenceType
+  - pdbccId: String
+  + getId(): String
+  + getPdbccId(): String
+  + getPdbccName(): String
+  + getResidId(): String
+  + getResidName(): String
+  + getPsimodId(): String
+  + getPsimodName(): String
+  + getSystematicName(): String
+}
+
+class ProteinModificationRegistry {
+  - logger: Logger
+  - registry: Set<ProteinModification>
+  - DIR_XML_PTM_LIST: String
+  - registerCommonProteinModifications(InputStream inStream): void
+  + init(): void
+  + init(InputStream inStream): void
+  + register(final ProteinModification modification): void
+  + unregister(ProteinModification modification): void
+  + getById(final String id): ProteinModification
+  + getByResidId(final String residId): Set<ProteinModification>
+  + getByPsimodId(final String psimodId): Set<ProteinModification>
+}
+
+class StructureAtomXMLConverter {
+  + toXML(StructureAtom atom): String
+  + toXML(StructureAtom atom, PrettyXMLWriter xml): void
+  + fromXML(Node structureAtomElement): StructureAtom
+  - getAttribute(Node node, String attr): String
+}
+
+class StructureGroupXMLConverter {
+  + toXML(StructureGroup group, PrettyXMLWriter xml): void
+  + fromXML(Node n): StructureGroup
+  - getAttribute(Node node, String attr): String
+}
+
+class ProteinModificationXmlReader {
+  + registerProteinModificationFromXml(InputStream isXml): void
+}
+
+class StructureUtil {
+  + getStructureGroup(Group group, boolean isAminoAcid): StructureGroup
+  + getStructureAtom(Atom atom, boolean isParentAminoAcid): StructureAtom
+  + getAtomDistance(Atom atom1, Atom atom2): double
+  - hasMetalBond(Atom a1, Atom a2, MetalBondDistance definition): boolean
+  - getMetalDistanceCutoff(String name1, String name2): MetalBondDistance
+  + getAtomNames(Group group): List<String>
+  + getAminoAcids(Chain chain): List<Group>
+}
+
+interface ModifiedCompound {
+}
+
+class StructureAtomLinkage {
+  - atom1: StructureAtom
+  - atom2: StructureAtom
+  - distance: double
+  + getAtom1(): StructureAtom
+  + getAtom2(): StructureAtom
+  + getDistance(): double
+  + equals(Object obj): boolean
+  + hashCode(): int
+  + toString(): String
+}
+
+
+ProteinModification <|.. ProteinModificationImpl
+Comparable<ProteinModification> <|.. ProteinModificationImpl
+ProteinModificationRegistry --> ProteinModificationXmlReader
+StructureAtomXMLConverter --> PrettyXMLWriter
+StructureAtomXMLConverter --> StructureGroup
+StructureAtomXMLConverter --> StructureAtom
+StructureGroupXMLConverter --> PrettyXMLWriter
+StructureGroupXMLConverter --> StructureGroup
+StructureGroupXMLConverter --> ResidueNumber
+ProteinModificationXmlReader --> *
+StructureUtil --> MetalBondConverter
+StructureUtil --> *
+StructureUtil --> MetalBondDistance
+ModifiedCompound --> ProteinModification
+
+@enduml

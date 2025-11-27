@@ -1,0 +1,36 @@
+[
+  {
+    "feature": "Term",
+    "module": "biojava-ontology",
+    "actor": "User",
+    "summary": "User uses Term to perform operations",
+    "steps": [
+      "Execute addSynonym",
+      "Execute removeSynonym",
+      "Retrieve Synonyms",
+      "Retrieve Name",
+      "Set Annotation",
+      "Set Synonyms",
+      "Retrieve Description",
+      "Retrieve Ontology"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "RemoteTerm",
+    "module": "biojava-ontology",
+    "actor": "User",
+    "summary": "User uses RemoteTerm to perform operations",
+    "steps": [
+      "Execute addSynonym",
+      "Execute removeSynonym",
+      "Retrieve Synonyms",
+      "Retrieve Name",
+      "Retrieve Description",
+      "Retrieve Ontology",
+      "Retrieve RemoteTerm",
+      "Execute toString"
+    ],
+    "next_step": "continue"
+  }
+]

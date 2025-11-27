@@ -1,0 +1,15 @@
+@startuml
+title StructureIO - Activity Flow
+
+start
+:Retrieve Structure;
+:Execute checkInitAtomCache;
+:Set AtomCache;
+:Retrieve AtomCache;
+:Retrieve BiologicalAssembly;
+:Retrieve BiologicalAssembly;
+:Retrieve BiologicalAssembly;
+:Retrieve BiologicalAssembly;
+stop
+
+@enduml

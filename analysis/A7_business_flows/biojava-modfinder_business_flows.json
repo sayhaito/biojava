@@ -1,0 +1,49 @@
+[
+  {
+    "feature": "ProteinModificationImpl",
+    "module": "biojava-modfinder",
+    "actor": "User",
+    "summary": "User uses ProteinModificationImpl to perform operations",
+    "steps": [
+      "Retrieve Id",
+      "Retrieve PdbccId",
+      "Retrieve PdbccName",
+      "Retrieve ResidId",
+      "Retrieve ResidName",
+      "Retrieve PsimodId",
+      "Retrieve PsimodName",
+      "Retrieve SystematicName"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "ProteinModificationRegistry",
+    "module": "biojava-modfinder",
+    "actor": "User",
+    "summary": "User uses ProteinModificationRegistry to perform operations",
+    "steps": [
+      "Execute registerCommonProteinModifications",
+      "Execute init",
+      "Execute init",
+      "Execute register",
+      "Execute unregister",
+      "Retrieve ById",
+      "Retrieve ByResidId",
+      "Retrieve ByPsimodId"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "StructureAtomXMLConverter",
+    "module": "biojava-modfinder",
+    "actor": "User",
+    "summary": "User uses StructureAtomXMLConverter to processes molecular structures",
+    "steps": [
+      "Execute toXML",
+      "Execute toXML",
+      "Execute fromXML",
+      "Retrieve Attribute"
+    ],
+    "next_step": "continue"
+  }
+]

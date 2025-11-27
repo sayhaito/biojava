@@ -1,0 +1,49 @@
+[
+  {
+    "feature": "PrettyXMLWriter",
+    "module": "biojava-core",
+    "actor": "User",
+    "summary": "User uses PrettyXMLWriter to writes data to destination",
+    "steps": [
+      "Execute declareNamespace",
+      "Execute handleDeclaredNamespaces",
+      "Write Indent",
+      "Execute _openTag",
+      "Execute allocPrefix",
+      "Execute openTag",
+      "Execute openTag",
+      "Execute attribute"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "SequenceTools",
+    "module": "biojava-core",
+    "actor": "User",
+    "summary": "User uses SequenceTools to manipulates biological sequences",
+    "steps": [
+      "Execute permuteCyclic",
+      "Execute percentNucleotideSequence",
+      "Execute isNucleotideSequence",
+      "Execute equalLengthSequences"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "BlastHitBuilder",
+    "module": "biojava-core",
+    "actor": "User",
+    "summary": "User uses BlastHitBuilder to constructs objects",
+    "steps": [
+      "Set HitNum",
+      "Set HitId",
+      "Set HitDef",
+      "Set HitAccession",
+      "Set HitLen",
+      "Set HitSequence",
+      "Set Hsps",
+      "Create BlastHit"
+    ],
+    "next_step": "continue"
+  }
+]

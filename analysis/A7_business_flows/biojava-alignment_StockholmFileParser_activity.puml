@@ -1,0 +1,15 @@
+@startuml
+title StockholmFileParser - Activity Flow
+
+start
+:Parse ;
+:Parse ;
+:Parse ;
+:Parse ;
+:Parse Next;
+:Execute handleSequenceLine;
+:Execute handleFileAnnotation;
+:Execute handleConsensusAnnotation;
+stop
+
+@enduml

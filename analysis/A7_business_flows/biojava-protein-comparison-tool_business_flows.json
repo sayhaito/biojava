@@ -1,0 +1,12 @@
+[
+  {
+    "feature": "HelloWorld",
+    "module": "biojava-protein-comparison-tool",
+    "actor": "User",
+    "summary": "User uses HelloWorld to perform operations",
+    "steps": [
+      "Execute print"
+    ],
+    "next_step": "continue"
+  }
+]

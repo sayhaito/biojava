@@ -1,0 +1,15 @@
+[
+  {
+    "feature": "CompactCharSequence",
+    "module": "biojava-survival",
+    "actor": "User",
+    "summary": "User uses CompactCharSequence to manipulates biological sequences",
+    "steps": [
+      "Execute charAt",
+      "Execute length",
+      "Execute subSequence",
+      "Execute toString"
+    ],
+    "next_step": "continue"
+  }
+]

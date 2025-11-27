@@ -1,0 +1,11 @@
+@startuml
+title AnchoredPairwiseSequenceAligner - Activity Flow
+
+start
+:Retrieve Anchors;
+:Set Anchors;
+:Execute addAnchor;
+:Set Profile;
+stop
+
+@enduml

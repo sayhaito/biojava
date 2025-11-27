@@ -1,0 +1,11 @@
+@startuml
+title CoordManager - Activity Flow
+
+start
+:Set Length;
+:Set Scale;
+:Retrieve SeqPos;
+:Retrieve PanelPos;
+stop
+
+@enduml

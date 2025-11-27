@@ -1,0 +1,538 @@
+[
+  {
+    "class_name": "RemotePairwiseAlignmentProperties",
+    "package": "org.biojava.nbio.ws.alignment",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "public"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "RemotePairwiseAlignmentService",
+    "package": "org.biojava.nbio.ws.alignment",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "Sequence",
+      "Compound"
+    ],
+    "external_references": [
+      "java.io.InputStream"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "RemotePairwiseAlignmentOutputProperties",
+    "package": "org.biojava.nbio.ws.alignment",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "public"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastOutputAlignmentFormatEnum",
+    "package": "org.biojava.nbio.ws.alignment.qblast",
+    "type": "enum",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "BlastAlignmentParameterEnum",
+    "package": "org.biojava.nbio.ws.alignment.qblast",
+    "type": "enum",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "NCBIQBlastService",
+    "package": "org.biojava.nbio.ws.alignment.qblast",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "RemotePairwiseAlignmentService"
+    ],
+    "fields": [
+      {
+        "name": "WAIT_INCREMENT",
+        "type": "long",
+        "visibility": "public"
+      },
+      {
+        "name": "MAP_TO_STRING_TRANSFORMER",
+        "type": "MapToStringTransformer",
+        "visibility": "private"
+      },
+      {
+        "name": "SERVICE_URL",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_EMAIL",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "DEFAULT_TOOL",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "serviceUrl",
+        "type": "URL",
+        "visibility": "private"
+      },
+      {
+        "name": "email",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "tool",
+        "type": "String",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "init",
+        "params": [
+          "String svcUrl"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "getRemoteBlastInfo",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "sendAlignmentRequest",
+        "params": [
+          "Sequence<Compound> seq",
+          "RemotePairwiseAlignmentProperties rpa"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "sendAlignmentRequest",
+        "params": [
+          "int gid",
+          "RemotePairwiseAlignmentProperties rpa"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "sendAlignmentRequest",
+        "params": [
+          "String query",
+          "RemotePairwiseAlignmentProperties alignmentProperties"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "isReady",
+        "params": [
+          "String id"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "isReady",
+        "params": [
+          "String id",
+          "long present"
+        ],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "getAlignmentResults",
+        "params": [
+          "String id",
+          "RemotePairwiseAlignmentOutputProperties outputProperties"
+        ],
+        "return_type": "InputStream",
+        "visibility": "public"
+      },
+      {
+        "name": "sendDeleteRequest",
+        "params": [
+          "String id"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setQBlastServiceProperties",
+        "params": [
+          "URLConnection conn"
+        ],
+        "return_type": "URLConnection",
+        "visibility": "private"
+      },
+      {
+        "name": "setTool",
+        "params": [
+          "String tool"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getTool",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setEmail",
+        "params": [
+          "String email"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getEmail",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@code",
+      "@link",
+      "@value",
+      "@author",
+      "@throws",
+      "@biojava",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "IOUtils",
+      "Sequence",
+      "*",
+      "Compound",
+      "RID",
+      "RemotePairwiseAlignmentOutputProperties",
+      "RemotePairwiseAlignmentProperties",
+      "RemotePairwiseAlignmentService"
+    ],
+    "external_references": [
+      "java.net.URLConnection",
+      "java.io.*",
+      "java.net.MalformedURLException",
+      "java.net.URL"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "NCBIQBlastAlignmentProperties",
+    "package": "org.biojava.nbio.ws.alignment.qblast",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "RemotePairwiseAlignmentProperties"
+    ],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getAlignmentOption",
+        "params": [
+          "String key"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setAlignementOption",
+        "params": [
+          "String key",
+          "String val"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getAlignmentOptions",
+        "params": [],
+        "return_type": "Set<String>",
+        "visibility": "public"
+      },
+      {
+        "name": "getAlignmentOption",
+        "params": [
+          "BlastAlignmentParameterEnum key"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setAlignmentOption",
+        "params": [
+          "BlastAlignmentParameterEnum key",
+          "String val"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "removeAlignmentOption",
+        "params": [
+          "BlastAlignmentParameterEnum key"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastProgram",
+        "params": [],
+        "return_type": "BlastProgramEnum",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastProgram",
+        "params": [
+          "BlastProgramEnum program"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastDatabase",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastDatabase",
+        "params": [
+          "String database"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastExpect",
+        "params": [],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastExpect",
+        "params": [
+          "double expect"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastWordSize",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastWordSize",
+        "params": [
+          "int word"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastGapCreation",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastGapExtension",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastGapCosts",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastGapCosts",
+        "params": [
+          "int gapCreation",
+          "int gapExtension"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastMatrix",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastMatrix",
+        "params": [
+          "BlastMatrixEnum matrix"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastFromToPosition",
+        "params": [
+          "int start",
+          "int end"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastFromPosition",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastToPosition",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "setBlastAdvancedOptions",
+        "params": [
+          "String advancedOptions"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getBlastAdvancedOptions",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@linkplain",
+      "@Override",
+      "@code",
+      "@link",
+      "@author",
+      "@throws",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "RemotePairwiseAlignmentProperties",
+      "*"
+    ],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "HmmerScan",
+    "package": "org.biojava.nbio.ws.hmmer",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@author"
+    ],
+    "internal_references": [
+      "ProteinSequence"
+    ],
+    "external_references": [
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  }
+]

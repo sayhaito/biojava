@@ -1,0 +1,54 @@
+[
+  {
+    "class": "StockholmStructure",
+    "method": "getSequenceAnnotation",
+    "calls": [
+      {
+        "from": "StockholmStructure.getSequenceAnnotation",
+        "to": "seqsAnnotation.containsKey"
+      },
+      {
+        "from": "StockholmStructure.getSequenceAnnotation",
+        "to": "seqsAnnotation.put"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmFileParser",
+    "method": "parse",
+    "calls": [
+      {
+        "from": "StockholmFileParser.parse",
+        "to": "inStream.close"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmFileParser",
+    "method": "parse",
+    "calls": [
+      {
+        "from": "StockholmFileParser.parse",
+        "to": "inStream.close"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "StockholmFileParser",
+    "method": "parse",
+    "calls": [
+      {
+        "from": "StockholmFileParser.parse",
+        "to": "inStream.close"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

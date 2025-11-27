@@ -1,0 +1,539 @@
+[
+  {
+    "class_name": "IPeptideProperties",
+    "package": "org.biojava.nbio.aaproperties",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@author",
+      "@throws",
+      "@version",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "AminoAcidCompound",
+      "ProteinSequence",
+      "AminoAcidCompositionTable"
+    ],
+    "external_references": [
+      "jakarta.xml.bind.JAXBException",
+      "java.io.FileNotFoundException",
+      "java.io.File"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Convert2SecondaryStructure",
+    "package": "org.biojava.nbio.aaproperties.profeat.convertor",
+    "type": "class",
+    "extends": "Convertor",
+    "implements": [],
+    "fields": [
+      {
+        "name": "subCategory",
+        "type": "String[]",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "convert",
+        "params": [
+          "char c"
+        ],
+        "return_type": "char",
+        "visibility": "public"
+      },
+      {
+        "name": "getGrouping",
+        "params": [],
+        "return_type": "String[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAttribute",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "PeptidePropertiesImpl",
+    "package": "org.biojava.nbio.aaproperties",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "IPeptideProperties"
+    ],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      },
+      {
+        "name": "hydrogenMW",
+        "type": "double",
+        "visibility": "final"
+      },
+      {
+        "name": "hydroxideMW",
+        "type": "double",
+        "visibility": "final"
+      },
+      {
+        "name": "a",
+        "type": "double",
+        "visibility": "final"
+      },
+      {
+        "name": "b",
+        "type": "double",
+        "visibility": "final"
+      },
+      {
+        "name": "difference",
+        "type": "double",
+        "visibility": "final"
+      },
+      {
+        "name": "cPk",
+        "type": "double[][]",
+        "visibility": "private"
+      },
+      {
+        "name": "PH_MIN",
+        "type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "PH_MAX",
+        "type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "MAXLOOP",
+        "type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "EPSI",
+        "type": "double",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getWaterMoleculeWeight",
+        "params": [],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getSequence",
+        "params": [
+          "String sequence",
+          "boolean ignoreCase"
+        ],
+        "return_type": "char[]",
+        "visibility": "private"
+      },
+      {
+        "name": "getMolecularWeight",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getMolecularWeight",
+        "params": [
+          "ProteinSequence sequence",
+          "File aminoAcidCompositionFile"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getMolecularWeight",
+        "params": [
+          "ProteinSequence sequence",
+          "File elementMassFile",
+          "File aminoAcidCompositionFile"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getMolecularWeightBasedOnXML",
+        "params": [
+          "ProteinSequence sequence",
+          "AminoAcidCompositionTable aminoAcidCompositionTable"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "obtainAminoAcidCompositionTable",
+        "params": [
+          "File aminoAcidCompositionFile"
+        ],
+        "return_type": "AminoAcidCompositionTable",
+        "visibility": "public"
+      },
+      {
+        "name": "obtainAminoAcidCompositionTable",
+        "params": [
+          "File elementMassFile",
+          "File aminoAcidCompositionFile"
+        ],
+        "return_type": "AminoAcidCompositionTable",
+        "visibility": "public"
+      },
+      {
+        "name": "getExtinctionCoefficient",
+        "params": [
+          "ProteinSequence sequence",
+          "boolean assumeCysReduced"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getAbsorbance",
+        "params": [
+          "ProteinSequence sequence",
+          "boolean assumeCysReduced"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getInstabilityIndex",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getApliphaticIndex",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getAvgHydropathy",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getIsoelectricPoint",
+        "params": [
+          "ProteinSequence sequence",
+          "boolean useExpasyValues"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getIsoelectricPointInnovagen",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "exp10",
+        "params": [
+          "double pka"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getIsoelectricPointExpasy",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getIsoelectricPoint",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getNetCharge",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getNetCharge",
+        "params": [
+          "ProteinSequence sequence",
+          "boolean useExpasyValues"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getNetCharge",
+        "params": [
+          "ProteinSequence sequence",
+          "boolean useExpasyValues",
+          "double pHPoint"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getNetChargeExpasy",
+        "params": [
+          "String sequence",
+          "double pHPoint"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getNetChargeExpasy",
+        "params": [
+          "int[] comp",
+          "int nTermResidue",
+          "int cTermResidue",
+          "double ph"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getNetChargeInnovagen",
+        "params": [
+          "ProteinSequence sequence",
+          "double pHPoint"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getNetChargeInnovagen",
+        "params": [
+          "Map<AminoAcidCompound",
+          "Integer> chargedAA2Count",
+          "double ph",
+          "char nTerminalChar",
+          "char cTerminalChar"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getPosCharge",
+        "params": [
+          "double pka",
+          "double ph"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getNegCharge",
+        "params": [
+          "double pka",
+          "double ph"
+        ],
+        "return_type": "double",
+        "visibility": "private"
+      },
+      {
+        "name": "getEnrichment",
+        "params": [
+          "ProteinSequence sequence",
+          "AminoAcidCompound aminoAcidCode"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      },
+      {
+        "name": "getAromaticity",
+        "params": [
+          "ProteinSequence sequence"
+        ],
+        "return_type": "double",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@author",
+      "@since",
+      "@version",
+      "@see",
+      "@return"
+    ],
+    "internal_references": [
+      "ProteinSequence",
+      "AminoAcidCompositionTable",
+      "AminoAcidCompoundSet",
+      "MyValidationEventHandler",
+      "ElementTable",
+      "AminoAcidCompound"
+    ],
+    "external_references": [
+      "jakarta.xml.bind.JAXBException",
+      "jakarta.xml.bind.Unmarshaller",
+      "org.slf4j.Logger",
+      "java.io.File",
+      "org.slf4j.LoggerFactory",
+      "jakarta.xml.bind.JAXBContext",
+      "java.io.FileNotFoundException",
+      "java.io.FileInputStream"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Utils",
+    "package": "org.biojava.nbio.aaproperties",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "final"
+      },
+      {
+        "name": "characterSet",
+        "type": "Set<Character>",
+        "visibility": "final"
+      }
+    ],
+    "methods": [
+      {
+        "name": "checkSequence",
+        "params": [
+          "String sequence"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "checkSequence",
+        "params": [
+          "String sequence",
+          "Set<Character> cSet"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@author",
+      "@since",
+      "@version",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "java.nio.CharBuffer",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "CommandPrompt",
+    "package": "org.biojava.nbio.aaproperties",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [
+      {
+        "name": "main",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "run",
+        "params": [
+          "String[] args"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "printHeader",
+        "params": [
+          "PrintStream output",
+          "List<Character> propertyList",
+          "List<Character> specificList",
+          "String delimiter"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "showHelp",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      }
+    ],
+    "annotations": [
+      "@param",
+      "@author",
+      "@throws"
+    ],
+    "internal_references": [
+      "CompoundSet",
+      "ProteinSequence",
+      "AminoAcidCompositionTable",
+      "AminoAcidCompoundSet",
+      "*",
+      "CompoundNotFoundException",
+      "AminoAcidCompound",
+      "CaseFreeAminoAcidCompoundSet"
+    ],
+    "external_references": [
+      "java.io.IOException",
+      "java.io.FileInputStream",
+      "java.io.PrintStream",
+      "java.io.File"
+    ],
+    "next_step": "continue"
+  }
+]

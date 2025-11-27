@@ -1,0 +1,1194 @@
+[
+  {
+    "class_name": "PDBRecord",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@author",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Chain",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@Override",
+      "@link",
+      "@value",
+      "@author",
+      "@throws",
+      "@since",
+      "@version",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "Sequence",
+      "ChemComp"
+    ],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Atom",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Cloneable, PDBRecord",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@version",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "javax.vecmath.Point3d"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureIO",
+    "package": "org.biojava.nbio.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "cache",
+        "type": "AtomCache",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getStructure",
+        "params": [
+          "String name"
+        ],
+        "return_type": "Structure",
+        "visibility": "public"
+      },
+      {
+        "name": "checkInitAtomCache",
+        "params": [],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "setAtomCache",
+        "params": [
+          "AtomCache c"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtomCache",
+        "params": [],
+        "return_type": "AtomCache",
+        "visibility": "public"
+      },
+      {
+        "name": "getBiologicalAssembly",
+        "params": [
+          "String pdbId",
+          "boolean multiModel"
+        ],
+        "return_type": "Structure",
+        "visibility": "public"
+      },
+      {
+        "name": "getBiologicalAssembly",
+        "params": [
+          "String pdbId"
+        ],
+        "return_type": "Structure",
+        "visibility": "public"
+      },
+      {
+        "name": "getBiologicalAssembly",
+        "params": [
+          "String pdbId",
+          "int biolAssemblyNr",
+          "boolean multiModel"
+        ],
+        "return_type": "Structure",
+        "visibility": "public"
+      },
+      {
+        "name": "getBiologicalAssembly",
+        "params": [
+          "String pdbId",
+          "int biolAssemblyNr"
+        ],
+        "return_type": "Structure",
+        "visibility": "public"
+      },
+      {
+        "name": "getBiologicalAssemblies",
+        "params": [
+          "String pdbId",
+          "boolean multiModel"
+        ],
+        "return_type": "List<Structure>",
+        "visibility": "public"
+      },
+      {
+        "name": "getBiologicalAssemblies",
+        "params": [
+          "String pdbId"
+        ],
+        "return_type": "List<Structure>",
+        "visibility": "public"
+      },
+      {
+        "name": "guessFiletype",
+        "params": [
+          "String filename"
+        ],
+        "return_type": "StructureFiletype",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@link",
+      "@value",
+      "@author",
+      "@throws",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "StructureFiletype",
+      "AtomCache"
+    ],
+    "external_references": [
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureTools",
+    "package": "org.biojava.nbio.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "CA_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "N_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "C_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "O_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "CB_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "C1_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "C2_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "C3_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "C4_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "O2_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "O3_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "O4_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "O5_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "OP1_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "OP2_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "P_ATOM_NAME",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "NUCLEOTIDE_REPRESENTATIVE",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "UNKNOWN_GROUP_LABEL",
+        "type": "char",
+        "visibility": "public"
+      },
+      {
+        "name": "RATIO_RESIDUES_TO_TOTAL",
+        "type": "double",
+        "visibility": "public"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getNrAtoms",
+        "params": [
+          "Structure s"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "getNrGroups",
+        "params": [
+          "Structure s"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtomArray",
+        "params": [
+          "Structure s",
+          "String[] atomNames"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllAtomArray",
+        "params": [
+          "Structure s"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllAtomArray",
+        "params": [
+          "Structure s",
+          "int model"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllAtomArray",
+        "params": [
+          "Chain c"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getUnalignedGroups",
+        "params": [
+          "Atom[] ca"
+        ],
+        "return_type": "List<Group>",
+        "visibility": "public"
+      },
+      {
+        "name": "getLigandsByProximity",
+        "params": [
+          "Collection<Group> target",
+          "Atom[] query",
+          "double cutoff"
+        ],
+        "return_type": "List<Group>",
+        "visibility": "public"
+      },
+      {
+        "name": "addGroupToStructure",
+        "params": [
+          "Structure s",
+          "Group g",
+          "int model",
+          "Chain chainGuess",
+          "boolean clone"
+        ],
+        "return_type": "Chain",
+        "visibility": "public"
+      },
+      {
+        "name": "addGroupsToStructure",
+        "params": [
+          "Structure s",
+          "Collection<Group> groups",
+          "int model",
+          "boolean clone"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllGroupsFromSubset",
+        "params": [
+          "Atom[] atoms"
+        ],
+        "return_type": "Set<Group>",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllGroupsFromSubset",
+        "params": [
+          "Atom[] atoms",
+          "GroupType types"
+        ],
+        "return_type": "Set<Group>",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllNonHAtomArray",
+        "params": [
+          "Structure s",
+          "boolean hetAtoms"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllNonHAtomArray",
+        "params": [
+          "Structure s",
+          "boolean hetAtoms",
+          "int modelNr"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllNonHAtomArray",
+        "params": [
+          "Structure s",
+          "boolean hetAtoms",
+          "AtomIterator iter"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "private"
+      },
+      {
+        "name": "getAllNonHAtomArray",
+        "params": [
+          "Chain c",
+          "boolean hetAtoms"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAllNonHCoordsArray",
+        "params": [
+          "Chain c",
+          "boolean hetAtoms"
+        ],
+        "return_type": "Point3d[]",
+        "visibility": "public"
+      },
+      {
+        "name": "extractAtoms",
+        "params": [
+          "String[] atomNames",
+          "List<Chain> chains",
+          "List<Atom> atoms"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "getAtomArray",
+        "params": [
+          "Chain c",
+          "String[] atomNames"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtomCAArray",
+        "params": [
+          "Chain c"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getRepresentativeAtomArray",
+        "params": [
+          "Chain c"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "cloneAtomArray",
+        "params": [
+          "Atom[] ca"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "cloneGroups",
+        "params": [
+          "Atom[] ca"
+        ],
+        "return_type": "Group[]",
+        "visibility": "public"
+      },
+      {
+        "name": "duplicateCA2",
+        "params": [
+          "Atom[] ca2"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getAtomCAArray",
+        "params": [
+          "Structure s"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getRepresentativeAtomArray",
+        "params": [
+          "Structure s"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "getBackboneAtomArray",
+        "params": [
+          "Structure s"
+        ],
+        "return_type": "Atom[]",
+        "visibility": "public"
+      },
+      {
+        "name": "addNucleotideAndAminoAtoms",
+        "params": [
+          "List<Atom> atoms",
+          "Group g",
+          "Set<String> atomNames"
+        ],
+        "return_type": "void",
+        "visibility": "private"
+      },
+      {
+        "name": "get1LetterCodeAmino",
+        "params": [
+          "String groupCode3"
+        ],
+        "return_type": "Character",
+        "visibility": "public"
+      },
+      {
+        "name": "get1LetterCode",
+        "params": [
+          "String groupCode3"
+        ],
+        "return_type": "Character",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@code",
+      "@link",
+      "@value",
+      "@author",
+      "@throws",
+      "@since",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "FileParsingParameters",
+      "AtomContactSet",
+      "Grid",
+      "AtomCache",
+      "FileDownloadUtils",
+      "PDBFileParser"
+    ],
+    "external_references": [
+      "java.io.InputStream",
+      "java.io.IOException",
+      "java.io.File",
+      "org.slf4j.Logger",
+      "org.slf4j.LoggerFactory",
+      "java.io.FileInputStream",
+      "javax.vecmath.Point3d"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureImpl",
+    "package": "org.biojava.nbio.structure",
+    "type": "class",
+    "extends": null,
+    "implements": [
+      "Structure"
+    ],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "private"
+      },
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbId",
+        "type": "PdbId",
+        "visibility": "private"
+      },
+      {
+        "name": "models",
+        "type": "List<Model>",
+        "visibility": "private"
+      },
+      {
+        "name": "entityInfos",
+        "type": "List<EntityInfo>",
+        "visibility": "private"
+      },
+      {
+        "name": "dbrefs",
+        "type": "List<DBRef>",
+        "visibility": "private"
+      },
+      {
+        "name": "ssbonds",
+        "type": "List<Bond>",
+        "visibility": "private"
+      },
+      {
+        "name": "sites",
+        "type": "List<Site>",
+        "visibility": "private"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "visibility": "private"
+      },
+      {
+        "name": "structureIdentifier",
+        "type": "StructureIdentifier",
+        "visibility": "private"
+      },
+      {
+        "name": "pdbHeader",
+        "type": "PDBHeader",
+        "visibility": "private"
+      },
+      {
+        "name": "biologicalAssembly",
+        "type": "boolean",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "clone",
+        "params": [],
+        "return_type": "Structure",
+        "visibility": "public"
+      },
+      {
+        "name": "findGroup",
+        "params": [
+          "String chainName",
+          "String pdbResnum",
+          "int modelIdx"
+        ],
+        "return_type": "Group",
+        "visibility": "public"
+      },
+      {
+        "name": "findGroup",
+        "params": [
+          "String chainName",
+          "String pdbResnum"
+        ],
+        "return_type": "Group",
+        "visibility": "public"
+      },
+      {
+        "name": "setName",
+        "params": [
+          "String nam"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getName",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "getStructureIdentifier",
+        "params": [],
+        "return_type": "StructureIdentifier",
+        "visibility": "public"
+      },
+      {
+        "name": "setStructureIdentifier",
+        "params": [
+          "StructureIdentifier structureIdentifier"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addChain",
+        "params": [
+          "Chain chain"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "addChain",
+        "params": [
+          "Chain chain",
+          "int modelIdx"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getChainByIndex",
+        "params": [
+          "int number"
+        ],
+        "return_type": "Chain",
+        "visibility": "public"
+      },
+      {
+        "name": "getChainByIndex",
+        "params": [
+          "int modelIdx",
+          "int number"
+        ],
+        "return_type": "Chain",
+        "visibility": "public"
+      },
+      {
+        "name": "addModel",
+        "params": [
+          "List<Chain> modelChains"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setChains",
+        "params": [
+          "List<Chain> chains"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "setModel",
+        "params": [
+          "int position",
+          "List<Chain> modelChains"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "toString",
+        "params": [],
+        "return_type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "size",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "size",
+        "params": [
+          "int modelIdx"
+        ],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "nrModels",
+        "params": [],
+        "return_type": "int",
+        "visibility": "public"
+      },
+      {
+        "name": "isCrystallographic",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "isNmr",
+        "params": [],
+        "return_type": "boolean",
+        "visibility": "public"
+      },
+      {
+        "name": "getChains",
+        "params": [
+          "int modelIdx"
+        ],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getChains",
+        "params": [],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getPolyChains",
+        "params": [],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getPolyChains",
+        "params": [
+          "int modelIdx"
+        ],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getNonPolyChains",
+        "params": [],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getNonPolyChains",
+        "params": [
+          "int modelIdx"
+        ],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getWaterChains",
+        "params": [],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "getWaterChains",
+        "params": [
+          "int modelIdx"
+        ],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      },
+      {
+        "name": "setChains",
+        "params": [
+          "int modelIdx",
+          "List<Chain> chains"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getModel",
+        "params": [
+          "int modelIdx"
+        ],
+        "return_type": "List<Chain>",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@Override",
+      "@link",
+      "@inheritDoc",
+      "@author",
+      "@since",
+      "@version",
+      "@Deprecated",
+      "@deprecated",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "FileConvert"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "SeqMisMatch",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@Override",
+      "@author"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "AminoAcid",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Group",
+    "implements": [],
+    "fields": [
+      {
+        "name": "ATOMRECORD",
+        "type": "String",
+        "visibility": "public"
+      },
+      {
+        "name": "SEQRESRECORD",
+        "type": "String",
+        "visibility": "public"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@version",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureIdentifier",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@throws",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "AtomCache"
+    ],
+    "external_references": [
+      "java.io.Serializable",
+      "java.io.IOException"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "StructureException",
+    "package": "org.biojava.nbio.structure",
+    "type": "class",
+    "extends": "Exception",
+    "implements": [],
+    "fields": [
+      {
+        "name": "serialVersionUID",
+        "type": "long",
+        "visibility": "public"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@since",
+      "@version",
+      "@author",
+      "@param"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Bond",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@ebi",
+      "@author",
+      "@throws",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Group",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Serializable",
+    "implements": [],
+    "fields": [
+      {
+        "name": "SEC_STRUC",
+        "type": "String",
+        "visibility": "public"
+      }
+    ],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@version",
+      "@see",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [
+      "ChemComp"
+    ],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "Structure",
+    "package": "org.biojava.nbio.structure",
+    "type": "interface",
+    "extends": "Cloneable, Serializable",
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@Override",
+      "@code",
+      "@link",
+      "@author",
+      "@throws",
+      "@since",
+      "@Deprecated",
+      "@deprecated",
+      "@see",
+      "@param"
+    ],
+    "internal_references": [
+      "PDBFileReader",
+      "FileConvert"
+    ],
+    "external_references": [
+      "java.io.Serializable"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ChemCompProvider",
+    "package": "org.biojava.nbio.structure.chem",
+    "type": "interface",
+    "extends": null,
+    "implements": [],
+    "fields": [],
+    "methods": [],
+    "annotations": [
+      "@link",
+      "@author",
+      "@since",
+      "@param",
+      "@return"
+    ],
+    "internal_references": [],
+    "external_references": [],
+    "next_step": "continue"
+  },
+  {
+    "class_name": "ChemCompGroupFactory",
+    "package": "org.biojava.nbio.structure.chem",
+    "type": "class",
+    "extends": null,
+    "implements": [],
+    "fields": [
+      {
+        "name": "logger",
+        "type": "Logger",
+        "visibility": "private"
+      },
+      {
+        "name": "chemCompProvider",
+        "type": "ChemCompProvider",
+        "visibility": "private"
+      }
+    ],
+    "methods": [
+      {
+        "name": "getChemComp",
+        "params": [
+          "String recordName"
+        ],
+        "return_type": "ChemComp",
+        "visibility": "public"
+      },
+      {
+        "name": "setChemCompProvider",
+        "params": [
+          "ChemCompProvider provider"
+        ],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getChemCompProvider",
+        "params": [],
+        "return_type": "ChemCompProvider",
+        "visibility": "public"
+      },
+      {
+        "name": "clearCache",
+        "params": [],
+        "return_type": "void",
+        "visibility": "public"
+      },
+      {
+        "name": "getGroupFromChemCompDictionary",
+        "params": [
+          "String recordName"
+        ],
+        "return_type": "Group",
+        "visibility": "public"
+      },
+      {
+        "name": "getOneLetterCode",
+        "params": [
+          "ChemComp cc"
+        ],
+        "return_type": "String",
+        "visibility": "public"
+      }
+    ],
+    "annotations": [
+      "@param"
+    ],
+    "internal_references": [
+      "AminoAcidImpl",
+      "HetatomImpl",
+      "NucleotideImpl",
+      "SoftHashMap",
+      "AminoAcid",
+      "Group"
+    ],
+    "external_references": [
+      "org.slf4j.LoggerFactory",
+      "org.slf4j.Logger"
+    ],
+    "next_step": "continue"
+  }
+]

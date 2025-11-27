@@ -1,0 +1,12 @@
+@startuml
+title GeneIDGFF2Reader - Activity Flow
+
+start
+:Read ;
+:Parse Line;
+:Write ;
+:Write Line;
+:Execute main;
+stop
+
+@enduml

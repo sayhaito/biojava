@@ -1,0 +1,15 @@
+@startuml
+title FastaSequence - Activity Flow
+
+start
+:Retrieve Id;
+:Retrieve Sequence;
+:Retrieve FormattedFasta;
+:Retrieve OnelineFasta;
+:Retrieve FormatedSequence;
+:Retrieve Length;
+:Execute toString;
+:Execute hashCode;
+stop
+
+@enduml

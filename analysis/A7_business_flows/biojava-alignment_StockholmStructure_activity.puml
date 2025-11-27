@@ -1,0 +1,15 @@
+@startuml
+title StockholmStructure - Activity Flow
+
+start
+:Retrieve FileAnnotation;
+:Retrieve ConsAnnotation;
+:Execute appendToSequence;
+:Retrieve SequenceAnnotation;
+:Execute addGSAccessionNumber;
+:Execute addGSDescription;
+:Execute addGSdbReference;
+:Execute addGSOrganismSpecies;
+stop
+
+@enduml

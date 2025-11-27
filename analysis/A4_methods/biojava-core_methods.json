@@ -1,0 +1,160 @@
+[
+  {
+    "class": "PrettyXMLWriter",
+    "method": "writeIndent",
+    "steps": [
+      "for (int i = 0; i < indent * indentUnit; ++i) {",
+      "writer.write(' ');"
+    ],
+    "branches": [],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "int i = 0; i < indent * indentUnit; ++i"
+      }
+    ],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "writer.write()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "PrettyXMLWriter",
+    "method": "_closeTag",
+    "steps": [
+      "isOpeningTag = false;",
+      "afterNewline = true;",
+      "List<String> hereBindings = namespaceBindings.removeLast();",
+      "if (hereBindings != null) {",
+      "for (Iterator<String> bi = hereBindings.iterator(); bi.hasNext(); ) {",
+      "namespacePrefixes.remove(bi.next());"
+    ],
+    "branches": [
+      {
+        "condition": "hereBindings != null",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "Iterator<String> bi = hereBindings.iterator(); bi.hasNext();"
+      }
+    ],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "namespaceBindings.removeLast()",
+      "hereBindings.iterator()",
+      "bi.hasNext()",
+      "namespacePrefixes.remove()",
+      "bi.next()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "PrettyXMLWriter",
+    "method": "closeTag",
+    "steps": [
+      "String prefix = namespacePrefixes.get(nsURI);",
+      "if (prefix == null) {",
+      "throw new IOException(\"Assertion failed: unknown namespace when closing tag\");",
+      "if (isOpeningTag) {",
+      "writer.println(\" />\");",
+      "if (afterNewline) {",
+      "writeIndent();",
+      "writer.print(\"</\");",
+      "writer.print(prefix);",
+      "writer.print(':');",
+      "writer.print(localName);",
+      "writer.println('>');",
+      "_closeTag();"
+    ],
+    "branches": [
+      {
+        "condition": "prefix == null",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      },
+      {
+        "condition": "isOpeningTag",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      },
+      {
+        "condition": "afterNewline",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "writer.println()",
+      "writer.print()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "BlastHitBuilder",
+    "method": "setHitNum",
+    "steps": [
+      "this.hitNum = hitNum;",
+      "return this;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "BlastHitBuilder",
+    "method": "setHitId",
+    "steps": [
+      "this.hitId = hitId;",
+      "return this;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "BlastHitBuilder",
+    "method": "setHitDef",
+    "steps": [
+      "this.hitDef = hitDef;",
+      "return this;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  }
+]

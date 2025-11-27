@@ -1,0 +1,15 @@
+@startuml
+title ProteinModificationImpl - Activity Flow
+
+start
+:Retrieve Id;
+:Retrieve PdbccId;
+:Retrieve PdbccName;
+:Retrieve ResidId;
+:Retrieve ResidName;
+:Retrieve PsimodId;
+:Retrieve PsimodName;
+:Retrieve SystematicName;
+stop
+
+@enduml

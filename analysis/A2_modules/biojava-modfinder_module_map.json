@@ -1,0 +1,163 @@
+{
+  "module": "biojava-modfinder",
+  "packages": [
+    "org.biojava.nbio.phosphosite",
+    "org.biojava.nbio.protmod",
+    "org.biojava.nbio.protmod.io",
+    "org.biojava.nbio.protmod.structure"
+  ],
+  "total_classes": 23,
+  "classes": [
+    {
+      "name": "Dataset",
+      "path": "src/main/java/org/biojava/nbio/phosphosite/Dataset.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phosphosite"
+    },
+    {
+      "name": "Site",
+      "path": "src/main/java/org/biojava/nbio/phosphosite/Site.java",
+      "type": "class",
+      "package": "org.biojava.nbio.phosphosite"
+    },
+    {
+      "name": "ModificationConditionImpl",
+      "path": "src/main/java/org/biojava/nbio/protmod/ModificationConditionImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ProteinModification",
+      "path": "src/main/java/org/biojava/nbio/protmod/ProteinModification.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ModificationCategory",
+      "path": "src/main/java/org/biojava/nbio/protmod/ModificationCategory.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ModificationCondition",
+      "path": "src/main/java/org/biojava/nbio/protmod/ModificationCondition.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ProteinModificationImpl",
+      "path": "src/main/java/org/biojava/nbio/protmod/ProteinModificationImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ModificationLinkage",
+      "path": "src/main/java/org/biojava/nbio/protmod/ModificationLinkage.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ModificationOccurrenceType",
+      "path": "src/main/java/org/biojava/nbio/protmod/ModificationOccurrenceType.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "Component",
+      "path": "src/main/java/org/biojava/nbio/protmod/Component.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "ProteinModificationRegistry",
+      "path": "src/main/java/org/biojava/nbio/protmod/ProteinModificationRegistry.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod"
+    },
+    {
+      "name": "StructureAtomXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/protmod/io/StructureAtomXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.io"
+    },
+    {
+      "name": "StructureGroupXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/protmod/io/StructureGroupXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.io"
+    },
+    {
+      "name": "ModifiedCompoundXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/protmod/io/ModifiedCompoundXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.io"
+    },
+    {
+      "name": "ComponentXMLConverter",
+      "path": "src/main/java/org/biojava/nbio/protmod/io/ComponentXMLConverter.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.io"
+    },
+    {
+      "name": "ProteinModificationXmlReader",
+      "path": "src/main/java/org/biojava/nbio/protmod/io/ProteinModificationXmlReader.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.io"
+    },
+    {
+      "name": "StructureUtil",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/StructureUtil.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.structure"
+    },
+    {
+      "name": "ModifiedCompound",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/ModifiedCompound.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.protmod.structure"
+    },
+    {
+      "name": "StructureAtomLinkage",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/StructureAtomLinkage.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.structure"
+    },
+    {
+      "name": "ModifiedCompoundImpl",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/ModifiedCompoundImpl.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.structure"
+    },
+    {
+      "name": "StructureGroup",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/StructureGroup.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.structure"
+    },
+    {
+      "name": "StructureAtom",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/StructureAtom.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.structure"
+    },
+    {
+      "name": "ProteinModificationIdentifier",
+      "path": "src/main/java/org/biojava/nbio/protmod/structure/ProteinModificationIdentifier.java",
+      "type": "class",
+      "package": "org.biojava.nbio.protmod.structure"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "jakarta.xml.bind",
+      "junit",
+      "org.apache.logging.log4j",
+      "org.glassfish.jaxb",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-structure"
+    ]
+  },
+  "next_step": "continue"
+}

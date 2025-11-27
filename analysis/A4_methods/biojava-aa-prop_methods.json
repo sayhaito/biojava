@@ -1,0 +1,173 @@
+[
+  {
+    "class": "Convert2SecondaryStructure",
+    "method": "getGrouping",
+    "steps": [
+      "return subCategory;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "Convert2SecondaryStructure",
+    "method": "getAttribute",
+    "steps": [
+      "return \"Secondary Structure\";"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "PeptidePropertiesImpl",
+    "method": "getWaterMoleculeWeight",
+    "steps": [
+      "final double hydrogenMW = 1.0079;",
+      "final double hydroxideMW = 17.0073;",
+      "return hydrogenMW + hydroxideMW;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "JAXBException",
+      "FileNotFoundException"
+    ],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "PeptidePropertiesImpl",
+    "method": "getSequence",
+    "steps": [
+      "if(ignoreCase){",
+      "return sequence.toUpperCase().toCharArray();",
+      "return sequence.toCharArray();"
+    ],
+    "branches": [
+      {
+        "condition": "ignoreCase",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [],
+    "exceptions": [
+      "JAXBException",
+      "FileNotFoundException"
+    ],
+    "external_calls": [
+      "sequence.toUpperCase()",
+      "sequence.toCharArray()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "PeptidePropertiesImpl",
+    "method": "getMolecularWeight",
+    "steps": [
+      "double value = 0.0;",
+      "AminoAcidCompoundSet aaSet = new AminoAcidCompoundSet();",
+      "char[] seq = getSequence(sequence.toString(), true);",
+      "for(char aa:seq){",
+      "AminoAcidCompound c = aaSet.getCompoundForString(String.valueOf(aa));",
+      "if(Constraints.aa2MolecularWeight.containsKey(c)){",
+      "value += Constraints.aa2MolecularWeight.get(c);",
+      "if(value == 0)",
+      "return value;",
+      "return value + getWaterMoleculeWeight();"
+    ],
+    "branches": [
+      {
+        "condition": "Constraints.aa2MolecularWeight.containsKey(c)",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "char aa:seq"
+      },
+      {
+        "type": "foreach",
+        "collection": "seq"
+      }
+    ],
+    "exceptions": [
+      "JAXBException",
+      "FileNotFoundException"
+    ],
+    "external_calls": [
+      "aaSet.getCompoundForString()",
+      "String.valueOf()",
+      "aa2MolecularWeight.containsKey()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "CommandPrompt",
+    "method": "run",
+    "steps": [
+      "List<Character> propertyList = new ArrayList<>();",
+      "List<Character> specificList = new ArrayList<>();",
+      "String inputLocation = null;",
+      "String outputLocation = null;",
+      "String aminoAcidCompositionLocation = null;",
+      "String elementMassLocation = null;",
+      "String delimiter = \",\";",
+      "int decimalPlace = 4;",
+      "for(int i = 0; i < args.length; i++){",
+      "if(args[i].charAt(0) != '-' || args[i].length() != 2){",
+      "showHelp();",
+      "throw new Error(\"Unknown option: \" + args[i]);",
+      "switch(args[i].charAt(1)){",
+      "case 'i': inputLocation = args[++i]; break;",
+      "case 'o': outputLocation = args[++i]; break;",
+      "if(\"csv\".equalsIgnoreCase(args[i])) delimiter = \",\";",
+      "else if(\"tsv\".equalsIgnoreCase(args[i])) delimiter = \"\\t\";",
+      "else throw new Error(\"Invalid value for -f: \" + args[i] + \". Please choose either csv or tsv only.\")",
+      "case 'x': aminoAcidCompositionLocation = args[++i]; break;",
+      "case 'y': elementMassLocation = args[++i]; break;"
+    ],
+    "branches": [
+      {
+        "condition": "args[i].charAt(0) != '-' || args[i].length() != 2",
+        "true_path": [
+          "unknown_or_not_in_code"
+        ],
+        "false_path": [
+          "unknown_or_not_in_code"
+        ]
+      }
+    ],
+    "loops": [
+      {
+        "type": "for",
+        "declaration": "int i = 0; i < args.length; i++"
+      }
+    ],
+    "exceptions": [
+      "Error",
+      "Exception"
+    ],
+    "external_calls": [
+      "Integer.parseInt()",
+      "propertyList.add()",
+      "specificList.add()"
+    ],
+    "next_step": "continue"
+  }
+]

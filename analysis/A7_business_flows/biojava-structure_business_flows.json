@@ -1,0 +1,36 @@
+[
+  {
+    "feature": "StructureIO",
+    "module": "biojava-structure",
+    "actor": "User",
+    "summary": "User uses StructureIO to processes molecular structures",
+    "steps": [
+      "Retrieve Structure",
+      "Execute checkInitAtomCache",
+      "Set AtomCache",
+      "Retrieve AtomCache",
+      "Retrieve BiologicalAssembly",
+      "Retrieve BiologicalAssembly",
+      "Retrieve BiologicalAssembly",
+      "Retrieve BiologicalAssembly"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "StructureTools",
+    "module": "biojava-structure",
+    "actor": "User",
+    "summary": "User uses StructureTools to processes molecular structures",
+    "steps": [
+      "Retrieve NrAtoms",
+      "Retrieve NrGroups",
+      "Retrieve AtomArray",
+      "Retrieve AllAtomArray",
+      "Retrieve AllAtomArray",
+      "Retrieve AllAtomArray",
+      "Retrieve UnalignedGroups",
+      "Retrieve LigandsByProximity"
+    ],
+    "next_step": "continue"
+  }
+]

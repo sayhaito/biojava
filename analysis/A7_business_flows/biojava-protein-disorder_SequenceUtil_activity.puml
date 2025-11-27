@@ -1,0 +1,14 @@
+@startuml
+title SequenceUtil - Activity Flow
+
+start
+:Execute isNucleotideSequence;
+:Execute isNonAmbNucleotideSequence;
+:Execute cleanSequence;
+:Execute deepCleanSequence;
+:Execute isProteinSequence;
+:Execute isAmbiguosProtein;
+:Read Fasta;
+stop
+
+@enduml

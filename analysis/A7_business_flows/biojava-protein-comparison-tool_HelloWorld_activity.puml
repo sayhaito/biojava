@@ -1,0 +1,8 @@
+@startuml
+title HelloWorld - Activity Flow
+
+start
+:Execute print;
+stop
+
+@enduml

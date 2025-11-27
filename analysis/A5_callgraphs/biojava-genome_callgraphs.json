@@ -1,0 +1,274 @@
+[
+  {
+    "class": "GeneNamesParser",
+    "method": "getGeneNames",
+    "calls": [
+      {
+        "from": "GeneNamesParser.getGeneNames",
+        "to": "prov.getInputStream"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneNamesParser",
+    "method": "getGeneNames",
+    "calls": [
+      {
+        "from": "GeneNamesParser.getGeneNames",
+        "to": "prov.getInputStream"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneNamesParser",
+    "method": "getGeneName",
+    "calls": [
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "line.split"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "logger.warn"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "line.replaceAll"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setApprovedSymbol"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setApprovedName"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setStatus"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setPreviousSymbols"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setPreviousNames"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setSynonyms"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setChromosome"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setAccessionNr"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setOmimId"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setRefseqIds"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setEnsemblGeneId"
+      },
+      {
+        "from": "GeneNamesParser.getGeneName",
+        "to": "gn.setUniprot"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneChromosomePositionParser",
+    "method": "getChromosomeMappings",
+    "calls": [
+      {
+        "from": "GeneChromosomePositionParser.getChromosomeMappings",
+        "to": "prov.getInputStream"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneChromosomePositionParser",
+    "method": "getChromosomeMappings",
+    "calls": [
+      {
+        "from": "GeneChromosomePositionParser.getChromosomeMappings",
+        "to": "prov.getInputStream"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneChromosomePositionParser",
+    "method": "getGeneChromosomePosition",
+    "calls": [
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "line.split"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "logger.warn"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setGeneName"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setGenebankId"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setChromosome"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setOrientation"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setTranscriptionStart"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "Integer.parseInt"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setTranscriptionEnd"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setCdsStart"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setCdsEnd"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setExonCount"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setExonStarts"
+      },
+      {
+        "from": "GeneChromosomePositionParser.getGeneChromosomePosition",
+        "to": "g.setExonEnds"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneIDGFF2Reader",
+    "method": "read",
+    "calls": [
+      {
+        "from": "GeneIDGFF2Reader.read",
+        "to": "logger.info"
+      },
+      {
+        "from": "GeneIDGFF2Reader.read",
+        "to": "br.readLine"
+      },
+      {
+        "from": "GeneIDGFF2Reader.read",
+        "to": "s.trim"
+      },
+      {
+        "from": "GeneIDGFF2Reader.read",
+        "to": "s.charAt"
+      },
+      {
+        "from": "GeneIDGFF2Reader.read",
+        "to": "features.add"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneIDGFF2Reader",
+    "method": "parseLine",
+    "calls": [
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "s.indexOf"
+      },
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "s.substring"
+      },
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "Double.parseDouble"
+      },
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "s.charAt"
+      },
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "Location.fromBio"
+      },
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "Integer.parseInt"
+      },
+      {
+        "from": "GeneIDGFF2Reader.parseLine",
+        "to": "location.isNegative"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "GeneIDGFF2Reader",
+    "method": "write",
+    "calls": [
+      {
+        "from": "GeneIDGFF2Reader.write",
+        "to": "logger.info"
+      },
+      {
+        "from": "GeneIDGFF2Reader.write",
+        "to": "features.listIterator"
+      },
+      {
+        "from": "GeneIDGFF2Reader.write",
+        "to": "iter.hasNext"
+      },
+      {
+        "from": "GeneIDGFF2Reader.write",
+        "to": "iter.next"
+      },
+      {
+        "from": "GeneIDGFF2Reader.write",
+        "to": "bw.close"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

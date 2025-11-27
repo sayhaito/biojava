@@ -1,0 +1,27 @@
+@startuml
+title biojava-core - Sequence Diagram
+
+actor User
+
+participant PrettyXMLWriter
+participant bi
+participant hereBindings
+participant namespaceBindings
+participant namespacePrefixes
+participant writer
+
+User -> PrettyXMLWriter: writeIndent()
+PrettyXMLWriter -> writer: write()
+
+User -> PrettyXMLWriter: _closeTag()
+PrettyXMLWriter -> namespaceBindings: removeLast()
+PrettyXMLWriter -> hereBindings: iterator()
+PrettyXMLWriter -> bi: hasNext()
+PrettyXMLWriter -> namespacePrefixes: remove()
+PrettyXMLWriter -> bi: next()
+
+User -> PrettyXMLWriter: closeTag()
+PrettyXMLWriter -> writer: println()
+PrettyXMLWriter -> writer: print()
+
+@enduml

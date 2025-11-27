@@ -1,0 +1,15 @@
+@startuml
+title RemoteTerm - Activity Flow
+
+start
+:Execute addSynonym;
+:Execute removeSynonym;
+:Retrieve Synonyms;
+:Retrieve Name;
+:Retrieve Description;
+:Retrieve Ontology;
+:Retrieve RemoteTerm;
+:Execute toString;
+stop
+
+@enduml

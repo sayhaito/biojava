@@ -1,0 +1,143 @@
+@startuml
+title biojava-core - Class Diagram
+
+interface XMLWriter {
+}
+
+class PrettyXMLWriter {
+  - indentUnit: int
+  - writer: PrintWriter
+  - isOpeningTag: boolean
+  - afterNewline: boolean
+  - indent: int
+  + declareNamespace(String nsURI, String prefixHint): void
+  - handleDeclaredNamespaces(): void
+  # writeIndent(): void
+  - _openTag(): void
+  - allocPrefix(String nsURI): String
+  + openTag(String nsURI, String localName): void
+  + openTag(String qName): void
+  + attribute(String nsURI, String localName, String value): void
+}
+
+class SequenceTools {
+  # NUCLEOTIDE_LETTERS: String
+  + permuteCyclic(String string, int n): String
+  + percentNucleotideSequence(String sequence): int
+  + isNucleotideSequence(String sequence): boolean
+  + equalLengthSequences(ProteinSequence[] sequences): boolean
+}
+
+interface ResultFactory {
+}
+
+class BlastHitBuilder {
+  - hitNum: int
+  - hitId: String
+  - hitDef: String
+  - hitAccession: String
+  - hitLen: int
+  + setHitNum(int hitNum): BlastHitBuilder
+  + setHitId(String hitId): BlastHitBuilder
+  + setHitDef(String hitDef): BlastHitBuilder
+  + setHitAccession(String hitAccession): BlastHitBuilder
+  + setHitLen(int hitLen): BlastHitBuilder
+  + setHitSequence(Sequence s): BlastHitBuilder
+  + setHsps(List<Hsp> hsps): BlastHitBuilder
+  + createBlastHit(): BlastHit
+}
+
+class BlastResultBuilder {
+  - program: String
+  - version: String
+  - reference: String
+  - dbFile: String
+  - iterationNumber: int
+  + setProgram(String program): BlastResultBuilder
+  + setVersion(String version): BlastResultBuilder
+  + setReference(String reference): BlastResultBuilder
+  + setDbFile(String dbFile): BlastResultBuilder
+  + setProgramSpecificParameters(Map<String, String> programSpecificParameters): BlastResultBuilder
+  + setIterationNumber(int iterationNumber): BlastResultBuilder
+  + setQueryID(String queryID): BlastResultBuilder
+  + setQueryDef(String queryDef): BlastResultBuilder
+}
+
+class BlastHspBuilder {
+  - hspNum: int
+  - hspBitScore: double
+  - hspScore: int
+  - hspEvalue: double
+  - hspQueryFrom: int
+  + setHspNum(int hspNum): BlastHspBuilder
+  + setHspBitScore(double hspBitScore): BlastHspBuilder
+  + setHspScore(int hspScore): BlastHspBuilder
+  + setHspEvalue(double hspEvalue): BlastHspBuilder
+  + setHspQueryFrom(int hspQueryFrom): BlastHspBuilder
+  + setHspQueryTo(int hspQueryTo): BlastHspBuilder
+  + setHspHitFrom(int hspHitFrom): BlastHspBuilder
+  + setHspHitTo(int hspHitTo): BlastHspBuilder
+}
+
+class BlastXMLParser {
+  - targetFile: File
+  + setFile(File f): void
+  - readFile(String blastFile): void
+  + createObjects(double maxEScore): List<Result>
+  + getFileExtensions(): List<String>
+  + setQueryReferences(List<Sequence> sequences): void
+  + setDatabaseReferences(List<Sequence> sequences): void
+  - mapIds(): void
+  + storeObjects(List<Result> results): void
+}
+
+class BlastTabularParser {
+  - blastReference: String
+  - log: Logger
+  - targetFile: File
+  - fileLinesCount: int
+  - parsingConsistency: PARSING_CONSISTENCY
+  + getFileExtensions(): List<String>
+  + setFile(File f): void
+  + createObjects(double maxEScore): List<Result>
+  - fetchData(Scanner scanner): String
+  + storeObjects(List<Result> results): void
+  + setQueryReferences(List<Sequence> sequences): void
+  + setDatabaseReferences(List<Sequence> sequences): void
+  + setParsingConsistency(PARSING_CONSISTENCY parsingConsistency): void
+}
+
+class SequenceOptimizationHints {
+  - sequenceUsage: SequenceUsage
+  - sequenceCollection: SequenceCollection
+  + getSequenceUsage(): SequenceUsage
+  + setSequenceUsage(SequenceUsage aSequenceUsage): void
+  + getSequenceCollection(): SequenceCollection
+  + setSequenceCollection(SequenceCollection aSequenceColection): void
+}
+
+
+XMLWriter <|.. PrettyXMLWriter
+SequenceTools --> CompoundNotFoundException
+SequenceTools --> Sequence
+SequenceTools --> ProteinSequence
+SequenceTools --> DNASequence
+ResultFactory --> Sequence
+BlastHitBuilder --> Sequence
+BlastHitBuilder --> Hsp
+BlastResultBuilder --> Sequence
+BlastResultBuilder --> Hit
+ResultFactory <|.. BlastXMLParser
+BlastXMLParser --> Result
+BlastXMLParser --> ResultFactory
+BlastXMLParser --> Sequence
+BlastXMLParser --> XMLHelper
+BlastXMLParser --> Hsp
+ResultFactory <|.. BlastTabularParser
+BlastTabularParser --> Result
+BlastTabularParser --> ResultFactory
+BlastTabularParser --> Sequence
+BlastTabularParser --> Hsp
+BlastTabularParser --> Hit
+
+@enduml

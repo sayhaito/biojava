@@ -1,0 +1,15 @@
+@startuml
+title StockholmSequenceAnnotation - Activity Flow
+
+start
+:Retrieve Description;
+:Set Description;
+:Execute addToDescription;
+:Retrieve DbReferences;
+:Set DbReferences;
+:Execute addDBReference;
+:Retrieve AccessionNumber;
+:Set AccessionNumber;
+stop
+
+@enduml

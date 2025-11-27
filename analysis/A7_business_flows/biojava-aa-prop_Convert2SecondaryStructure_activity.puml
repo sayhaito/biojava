@@ -1,0 +1,10 @@
+@startuml
+title Convert2SecondaryStructure - Activity Flow
+
+start
+:Execute convert;
+:Retrieve Grouping;
+:Retrieve Attribute;
+stop
+
+@enduml

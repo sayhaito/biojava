@@ -1,0 +1,62 @@
+[
+  {
+    "class": "StructureIO",
+    "method": "getStructure",
+    "calls": [
+      {
+        "from": "StructureIO.getStructure",
+        "to": "cache.getStructure"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureTools",
+    "method": "getNrAtoms",
+    "calls": [
+      {
+        "from": "StructureTools.getNrAtoms",
+        "to": "iter.hasNext"
+      },
+      {
+        "from": "StructureTools.getNrAtoms",
+        "to": "iter.next"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureTools",
+    "method": "getNrGroups",
+    "calls": [
+      {
+        "from": "StructureTools.getNrGroups",
+        "to": "s.getChains"
+      },
+      {
+        "from": "StructureTools.getNrGroups",
+        "to": "c.getAtomLength"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureTools",
+    "method": "getAtomArray",
+    "calls": [
+      {
+        "from": "StructureTools.getAtomArray",
+        "to": "s.getModel"
+      },
+      {
+        "from": "StructureTools.getAtomArray",
+        "to": "atoms.toArray"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

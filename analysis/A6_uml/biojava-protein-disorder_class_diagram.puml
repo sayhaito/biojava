@@ -1,0 +1,56 @@
+@startuml
+title biojava-protein-disorder - Class Diagram
+
+class FastaSequence {
+  - id: String
+  - sequence: String
+  # p: Pattern
+  # m: Matcher
+  # sb: StringBuilder
+  + getId(): String
+  + getSequence(): String
+  + getFormattedFasta(): String
+  + getOnelineFasta(): String
+  + getFormatedSequence(final int width): String
+  + getLength(): int
+  + toString(): String
+  + hashCode(): int
+}
+
+class SequenceUtil {
+  - logger: Logger
+  + WHITE_SPACE: Pattern
+  + DIGIT: Pattern
+  + NONWORD: Pattern
+  + AA: Pattern
+  + isNucleotideSequence(final FastaSequence s): boolean
+  + isNonAmbNucleotideSequence(String sequence): boolean
+  + cleanSequence(String sequence): String
+  + deepCleanSequence(String sequence): String
+  + isProteinSequence(String sequence): boolean
+  + isAmbiguosProtein(String sequence): boolean
+  + readFasta(final InputStream inStream): List<FastaSequence>
+}
+
+class ModelLoader {
+  - logger: Logger
+  # mu0: float
+  # mu1: float
+  # sigma0: float
+  # sigma1: float
+  + hashCode(): int
+  + equals(final Object obj): boolean
+  + toString(): String
+  + getModel(final int modelNum): Model
+  + main(final String[] args): void
+}
+
+class NullOutputStream {
+  + write(final int b): void
+}
+
+
+Comparable<FastaSequence> <|.. FastaSequence
+OutputStream <|-- NullOutputStream
+
+@enduml

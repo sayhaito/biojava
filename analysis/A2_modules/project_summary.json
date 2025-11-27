@@ -1,0 +1,21 @@
+{
+  "project": "BioJava",
+  "total_modules": 12,
+  "modules": [
+    "biojava-core",
+    "biojava-alignment",
+    "biojava-structure",
+    "biojava-structure-gui",
+    "biojava-genome",
+    "biojava-modfinder",
+    "biojava-ws",
+    "biojava-protein-disorder",
+    "biojava-aa-prop",
+    "biojava-survival",
+    "biojava-ontology",
+    "biojava-protein-comparison-tool"
+  ],
+  "total_classes": 971,
+  "analysis_level": "A2_MODULE_ANALYSIS",
+  "next_step": "A3_CLASS_STRUCTURE"
+}

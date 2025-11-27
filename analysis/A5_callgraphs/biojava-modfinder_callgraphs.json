@@ -1,0 +1,26 @@
+[
+  {
+    "class": "StructureAtomXMLConverter",
+    "method": "getAttribute",
+    "calls": [
+      {
+        "from": "StructureAtomXMLConverter.getAttribute",
+        "to": "node.hasAttributes"
+      },
+      {
+        "from": "StructureAtomXMLConverter.getAttribute",
+        "to": "node.getAttributes"
+      },
+      {
+        "from": "StructureAtomXMLConverter.getAttribute",
+        "to": "atts.getNamedItem"
+      },
+      {
+        "from": "StructureAtomXMLConverter.getAttribute",
+        "to": "att.getTextContent"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

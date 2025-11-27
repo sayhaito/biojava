@@ -1,0 +1,11 @@
+@startuml
+title CommandPrompt - Activity Flow
+
+start
+:Execute main;
+:Execute run;
+:Execute printHeader;
+:Execute showHelp;
+stop
+
+@enduml

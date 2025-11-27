@@ -1,0 +1,15 @@
+@startuml
+title Term - Activity Flow
+
+start
+:Execute addSynonym;
+:Execute removeSynonym;
+:Retrieve Synonyms;
+:Retrieve Name;
+:Set Annotation;
+:Set Synonyms;
+:Retrieve Description;
+:Retrieve Ontology;
+stop
+
+@enduml

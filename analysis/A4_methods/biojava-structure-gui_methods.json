@@ -1,0 +1,79 @@
+[
+  {
+    "class": "SequenceDisplay",
+    "method": "getStructurePairAligner",
+    "steps": [
+      "return structurePairAligner;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "SequenceDisplay",
+    "method": "setStructurePairAligner",
+    "steps": [
+      "this.structurePairAligner = structurePairAligner;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "SequenceDisplay",
+    "method": "getIdx1",
+    "steps": [
+      "return idx1;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "CoordManager",
+    "method": "setLength",
+    "steps": [
+      "chainLength = length;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "CoordManager",
+    "method": "setScale",
+    "steps": [
+      "this.scale = scale;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "CoordManager",
+    "method": "getSeqPos",
+    "steps": [
+      "int seqPos = Math.round((panelPos - SequenceScalePanel.DEFAULT_X_START) / scale) ;",
+      "if ( seqPos < 0)",
+      "seqPos = 0;",
+      "return seqPos;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [
+      "Math.round()"
+    ],
+    "next_step": "continue"
+  }
+]

@@ -1,0 +1,17 @@
+@startuml
+title biojava-modfinder - Sequence Diagram
+
+actor User
+
+participant StructureAtomXMLConverter
+participant att
+participant atts
+participant node
+
+User -> StructureAtomXMLConverter: getAttribute()
+StructureAtomXMLConverter -> node: hasAttributes()
+StructureAtomXMLConverter -> node: getAttributes()
+StructureAtomXMLConverter -> atts: getNamedItem()
+StructureAtomXMLConverter -> att: getTextContent()
+
+@enduml

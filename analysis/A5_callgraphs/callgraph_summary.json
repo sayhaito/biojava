@@ -1,0 +1,6 @@
+{
+  "project": "BioJava",
+  "total_call_graphs": 30,
+  "analysis_level": "A5_CALL_GRAPH",
+  "next_step": "A6_UML_GENERATION"
+}

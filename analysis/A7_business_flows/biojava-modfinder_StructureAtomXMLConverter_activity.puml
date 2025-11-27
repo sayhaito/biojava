@@ -1,0 +1,11 @@
+@startuml
+title StructureAtomXMLConverter - Activity Flow
+
+start
+:Execute toXML;
+:Execute toXML;
+:Execute fromXML;
+:Retrieve Attribute;
+stop
+
+@enduml

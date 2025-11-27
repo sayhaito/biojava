@@ -1,0 +1,103 @@
+[
+  {
+    "class": "ProteinModificationImpl",
+    "method": "getId",
+    "steps": [
+      "return id;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "ProteinModificationImpl",
+    "method": "getPdbccId",
+    "steps": [
+      "return pdbccId;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "ProteinModificationImpl",
+    "method": "getPdbccName",
+    "steps": [
+      "return pdbccName;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "ProteinModificationRegistry",
+    "method": "init",
+    "steps": [
+      "lazyInit();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "ProteinModificationRegistry",
+    "method": "init",
+    "steps": [
+      "lazyInit();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "ProteinModificationRegistry",
+    "method": "getById",
+    "steps": [
+      "lazyInit();",
+      "return byId.get(id);"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "StructureAtomXMLConverter",
+    "method": "getAttribute",
+    "steps": [
+      "if( ! node.hasAttributes())",
+      "return null;",
+      "NamedNodeMap atts = node.getAttributes();",
+      "if ( atts == null)",
+      "return null;",
+      "Node att = atts.getNamedItem(attr);",
+      "if ( att == null)",
+      "return null;",
+      "String value = att.getTextContent();",
+      "return value;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [
+      "IOException"
+    ],
+    "external_calls": [
+      "node.hasAttributes()",
+      "node.getAttributes()",
+      "atts.getNamedItem()",
+      "att.getTextContent()"
+    ],
+    "next_step": "continue"
+  }
+]

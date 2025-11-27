@@ -1,0 +1,82 @@
+[
+  {
+    "class": "Term",
+    "method": "getSynonyms",
+    "steps": [
+      "return this.synonyms.toArray();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [
+      "synonyms.toArray()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "Term",
+    "method": "getName",
+    "steps": [
+      "return name;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "Term",
+    "method": "setAnnotation",
+    "steps": [
+      "this.annotation = annotation;"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [],
+    "next_step": "continue"
+  },
+  {
+    "class": "RemoteTerm",
+    "method": "getSynonyms",
+    "steps": [
+      "return this.synonyms.toArray();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [
+      "synonyms.toArray()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "RemoteTerm",
+    "method": "getName",
+    "steps": [
+      "return getOntology().getName() + \":\" + remoteTerm.getName();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [
+      "remoteTerm.getName()"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "class": "RemoteTerm",
+    "method": "getDescription",
+    "steps": [
+      "return remoteTerm.getDescription();"
+    ],
+    "branches": [],
+    "loops": [],
+    "exceptions": [],
+    "external_calls": [
+      "remoteTerm.getDescription()"
+    ],
+    "next_step": "continue"
+  }
+]

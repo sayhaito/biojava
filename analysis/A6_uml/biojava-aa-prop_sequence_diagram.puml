@@ -1,0 +1,30 @@
+@startuml
+title biojava-aa-prop - Sequence Diagram
+
+actor User
+
+participant CommandPrompt
+participant Integer
+participant PeptidePropertiesImpl
+participant String
+participant aa2MolecularWeight
+participant aaSet
+participant propertyList
+participant sequence
+participant specificList
+
+User -> PeptidePropertiesImpl: getSequence()
+PeptidePropertiesImpl -> sequence: toUpperCase()
+PeptidePropertiesImpl -> sequence: toCharArray()
+
+User -> PeptidePropertiesImpl: getMolecularWeight()
+PeptidePropertiesImpl -> aaSet: getCompoundForString()
+PeptidePropertiesImpl -> String: valueOf()
+PeptidePropertiesImpl -> aa2MolecularWeight: containsKey()
+
+User -> CommandPrompt: run()
+CommandPrompt -> Integer: parseInt()
+CommandPrompt -> propertyList: add()
+CommandPrompt -> specificList: add()
+
+@enduml

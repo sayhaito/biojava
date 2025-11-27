@@ -1,0 +1,7 @@
+{
+  "project": "BioJava",
+  "class_diagrams_generated": 12,
+  "sequence_diagrams_generated": 9,
+  "analysis_level": "A6_UML_GENERATION",
+  "next_step": "A7_BUSINESS_FLOWS"
+}

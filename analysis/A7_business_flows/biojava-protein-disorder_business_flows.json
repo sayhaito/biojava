@@ -1,0 +1,59 @@
+[
+  {
+    "feature": "FastaSequence",
+    "module": "biojava-protein-disorder",
+    "actor": "User",
+    "summary": "User uses FastaSequence to manipulates biological sequences",
+    "steps": [
+      "Retrieve Id",
+      "Retrieve Sequence",
+      "Retrieve FormattedFasta",
+      "Retrieve OnelineFasta",
+      "Retrieve FormatedSequence",
+      "Retrieve Length",
+      "Execute toString",
+      "Execute hashCode"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "SequenceUtil",
+    "module": "biojava-protein-disorder",
+    "actor": "User",
+    "summary": "User uses SequenceUtil to manipulates biological sequences",
+    "steps": [
+      "Execute isNucleotideSequence",
+      "Execute isNonAmbNucleotideSequence",
+      "Execute cleanSequence",
+      "Execute deepCleanSequence",
+      "Execute isProteinSequence",
+      "Execute isAmbiguosProtein",
+      "Read Fasta"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "ModelLoader",
+    "module": "biojava-protein-disorder",
+    "actor": "User",
+    "summary": "User uses ModelLoader to perform operations",
+    "steps": [
+      "Execute hashCode",
+      "Execute equals",
+      "Execute toString",
+      "Retrieve Model",
+      "Execute main"
+    ],
+    "next_step": "continue"
+  },
+  {
+    "feature": "NullOutputStream",
+    "module": "biojava-protein-disorder",
+    "actor": "User",
+    "summary": "User uses NullOutputStream to perform operations",
+    "steps": [
+      "Write "
+    ],
+    "next_step": "continue"
+  }
+]

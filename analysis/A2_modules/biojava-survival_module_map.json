@@ -1,0 +1,301 @@
+{
+  "module": "biojava-survival",
+  "packages": [
+    "org.biojava.nbio.survival.cox",
+    "org.biojava.nbio.survival.cox.comparators",
+    "org.biojava.nbio.survival.cox.matrix",
+    "org.biojava.nbio.survival.cox.stats",
+    "org.biojava.nbio.survival.data",
+    "org.biojava.nbio.survival.kaplanmeier.figure",
+    "org.biojava.nbio.survival.kaplanmeier.metadata"
+  ],
+  "total_classes": 46,
+  "classes": [
+    {
+      "name": "ChangeValue",
+      "path": "src/main/java/org/biojava/nbio/survival/data/ChangeValue.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.survival.data"
+    },
+    {
+      "name": "WorkSheet",
+      "path": "src/main/java/org/biojava/nbio/survival/data/WorkSheet.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.data"
+    },
+    {
+      "name": "HeaderInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/data/HeaderInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.data"
+    },
+    {
+      "name": "CompactCharSequence",
+      "path": "src/main/java/org/biojava/nbio/survival/data/CompactCharSequence.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.data"
+    },
+    {
+      "name": "DiscreteQuantizerInterface",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/metadata/DiscreteQuantizerInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.survival.kaplanmeier.metadata"
+    },
+    {
+      "name": "MeanQuantizer",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/metadata/MeanQuantizer.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.metadata"
+    },
+    {
+      "name": "MetaDataInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/metadata/MetaDataInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.metadata"
+    },
+    {
+      "name": "ClinicalMetaDataOutcome",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/metadata/ClinicalMetaDataOutcome.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.metadata"
+    },
+    {
+      "name": "CensorStatusSelect",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/CensorStatusSelect.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "KaplanMeierFigure",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/KaplanMeierFigure.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "KMFigureInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/KMFigureInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "GroupResults",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/GroupResults.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "SurvFitKM",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/SurvFitKM.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "CensorStatus",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/CensorStatus.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "ExpressionFigure",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/ExpressionFigure.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "NumbersAtRiskPanel",
+      "path": "src/main/java/org/biojava/nbio/survival/kaplanmeier/figure/NumbersAtRiskPanel.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.kaplanmeier.figure"
+    },
+    {
+      "name": "CoxInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "StrataInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/StrataInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "SurvFitInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/SurvFitInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "SurvivalInfoHelper",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/SurvivalInfoHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "WaldTestInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/WaldTestInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxMart",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxMart.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "SurvivalInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/SurvivalInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxVariables",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxVariables.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "WaldTest",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/WaldTest.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "ResidualsCoxph",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/ResidualsCoxph.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxScore",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxScore.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxHelper",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxHelper.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "RiskInfo",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/RiskInfo.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxCC",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxCC.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxCoefficient",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxCoefficient.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "SurvivalInfoIndex",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/SurvivalInfoIndex.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxMethod",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxMethod.java",
+      "type": "enum",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "CoxR",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/CoxR.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox"
+    },
+    {
+      "name": "SurvivalInfoValueComparator",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/comparators/SurvivalInfoValueComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.comparators"
+    },
+    {
+      "name": "CoxVariablesVariableComparator",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/comparators/CoxVariablesVariableComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.comparators"
+    },
+    {
+      "name": "CoxVariablesOverallModelFitComparator",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/comparators/CoxVariablesOverallModelFitComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.comparators"
+    },
+    {
+      "name": "MeanModelComparator",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/comparators/MeanModelComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.comparators"
+    },
+    {
+      "name": "CoxComparatorInterface",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/comparators/CoxComparatorInterface.java",
+      "type": "interface",
+      "package": "org.biojava.nbio.survival.cox.comparators"
+    },
+    {
+      "name": "SurvivalInfoComparator",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/comparators/SurvivalInfoComparator.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.comparators"
+    },
+    {
+      "name": "StdArrayIO",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/matrix/StdArrayIO.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.matrix"
+    },
+    {
+      "name": "Matrix",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/matrix/Matrix.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.matrix"
+    },
+    {
+      "name": "Chsolve2",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/stats/Chsolve2.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.stats"
+    },
+    {
+      "name": "ChiSq",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/stats/ChiSq.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.stats"
+    },
+    {
+      "name": "Cholesky2",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/stats/Cholesky2.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.stats"
+    },
+    {
+      "name": "AgScore",
+      "path": "src/main/java/org/biojava/nbio/survival/cox/stats/AgScore.java",
+      "type": "class",
+      "package": "org.biojava.nbio.survival.cox.stats"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "junit",
+      "org.apache.commons",
+      "org.apache.logging.log4j",
+      "org.slf4j"
+    ],
+    "internal": []
+  },
+  "next_step": "continue"
+}

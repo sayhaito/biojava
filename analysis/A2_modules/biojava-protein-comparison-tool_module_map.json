@@ -1,0 +1,30 @@
+{
+  "module": "biojava-protein-comparison-tool",
+  "packages": [
+    "org.biojava.nbio.proteincomparisontool"
+  ],
+  "total_classes": 1,
+  "classes": [
+    {
+      "name": "HelloWorld",
+      "path": "src/main/java/org/biojava/nbio/proteincomparisontool/HelloWorld.java",
+      "type": "class",
+      "package": "org.biojava.nbio.proteincomparisontool"
+    }
+  ],
+  "dependencies": {
+    "external": [
+      "junit",
+      "net.sourceforge.jmol",
+      "org.apache.logging.log4j",
+      "org.slf4j"
+    ],
+    "internal": [
+      "org.biojava.biojava-alignment",
+      "org.biojava.biojava-core",
+      "org.biojava.biojava-structure",
+      "org.biojava.biojava-structure-gui"
+    ]
+  },
+  "next_step": "continue"
+}

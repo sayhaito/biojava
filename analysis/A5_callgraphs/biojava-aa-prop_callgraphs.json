@@ -1,0 +1,58 @@
+[
+  {
+    "class": "PeptidePropertiesImpl",
+    "method": "getSequence",
+    "calls": [
+      {
+        "from": "PeptidePropertiesImpl.getSequence",
+        "to": "sequence.toUpperCase"
+      },
+      {
+        "from": "PeptidePropertiesImpl.getSequence",
+        "to": "sequence.toCharArray"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "PeptidePropertiesImpl",
+    "method": "getMolecularWeight",
+    "calls": [
+      {
+        "from": "PeptidePropertiesImpl.getMolecularWeight",
+        "to": "aaSet.getCompoundForString"
+      },
+      {
+        "from": "PeptidePropertiesImpl.getMolecularWeight",
+        "to": "String.valueOf"
+      },
+      {
+        "from": "PeptidePropertiesImpl.getMolecularWeight",
+        "to": "aa2MolecularWeight.containsKey"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  },
+  {
+    "class": "CommandPrompt",
+    "method": "run",
+    "calls": [
+      {
+        "from": "CommandPrompt.run",
+        "to": "Integer.parseInt"
+      },
+      {
+        "from": "CommandPrompt.run",
+        "to": "propertyList.add"
+      },
+      {
+        "from": "CommandPrompt.run",
+        "to": "specificList.add"
+      }
+    ],
+    "depth": 1,
+    "next_step": "continue"
+  }
+]

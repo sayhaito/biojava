@@ -1,0 +1,120 @@
+@startuml
+title biojava-ontology - Class Diagram
+
+interface Term {
+  - serialVersionUID: long
+  - name: String
+  - ontology: Ontology
+  - annotation: Annotation
+  - synonyms: Set<Object>
+  + addSynonym(Object synonym): void
+  + removeSynonym(Object synonym): void
+  + getSynonyms(): Object[]
+  + getName(): String
+  + setAnnotation(Annotation annotation): void
+  + setSynonyms(Set<Object> synonyms): void
+  + getDescription(): String
+  + getOntology(): Ontology
+}
+
+interface Variable {
+  - serialVersionUID: long
+}
+
+interface RemoteTerm {
+  - serialVersionUID: long
+  - ontology: Ontology
+  - remoteTerm: Term
+  - name: String
+  - synonyms: Set
+  + addSynonym(Object synonym): void
+  + removeSynonym(Object synonym): void
+  + getSynonyms(): Object[]
+  + getName(): String
+  + getDescription(): String
+  + getOntology(): Ontology
+  + getRemoteTerm(): Term
+  + toString(): String
+}
+
+interface OntologyOps {
+}
+
+interface OntologyFactory {
+}
+
+interface Triple {
+  - serialVersionUID: long
+  - subject: Term
+  - object: Term
+  - predicate: Term
+  - name: String
+  + addSynonym(Object synonym): void
+  + removeSynonym(Object synonym): void
+  + getSynonyms(): Object[]
+  + getName(): String
+  + getDescription(): String
+  + setDescription(String desc): void
+  + getOntology(): Ontology
+  + getSubject(): Term
+}
+
+interface OntologyTerm {
+  - serialVersionUID: long
+  - ontology: Ontology
+  - target: Ontology
+  - synonyms: Set
+  + addSynonym(Object synonym): void
+  + removeSynonym(Object synonym): void
+  + getSynonyms(): Object[]
+  + getName(): String
+  + getDescription(): String
+  + setDescription(String description): void
+  + getOntology(): Ontology
+  + getTargetOntology(): Ontology
+}
+
+interface Ontology {
+  - serialVersionUID: long
+  - triples: Set<Triple>
+  - localRemoteTerms: Set<Term>
+  - name: String
+  - description: String
+  + getRemoteTerms(): Set<Term>
+  + getName(): String
+  + getDescription(): String
+  + setDescription(String description): void
+  + getTerms(): Set<Term>
+  + getTerm(String name): Term
+  + getTriples(Term subject, Term object, Term predicate): Set<Triple>
+  - filterTriples(Set<Triple> base, Term subject, Term object, Term predicate): Set<Triple>
+}
+
+class TabDelimParser {
+  + parse(BufferedReader in, OntologyFactory of): Ontology
+  - resolveTerm(String termName, Ontology onto): Term
+  - resolveTriple(Term sub, Term obj, Term rel, Ontology onto): Triple
+}
+
+class GOParser {
+  - safeAddTriple(Ontology onto, Term s, Term o, Term p): void
+  - parseTerm(Ontology onto, String s): Term
+}
+
+
+Annotatable <|-- Term
+Term --> Annotation
+Term --> Annotatable
+Term --> SmallAnnotation
+Term <|-- Variable
+Term <|-- RemoteTerm
+RemoteTerm --> Annotation
+Term <|-- Triple
+Triple --> Annotation
+Term <|-- OntologyTerm
+OntologyTerm --> Annotation
+Ontology --> AssertionFailure
+TabDelimParser --> *
+GOParser --> *
+
+@enduml

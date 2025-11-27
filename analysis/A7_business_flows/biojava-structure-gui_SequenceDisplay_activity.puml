@@ -1,0 +1,15 @@
+@startuml
+title SequenceDisplay - Activity Flow
+
+start
+:Execute main;
+:Execute windowClosing;
+:Execute clearListeners;
+:Execute addAlignmentPositionListener;
+:Retrieve StructurePairAligner;
+:Set StructurePairAligner;
+:Retrieve Idx1;
+:Set Idx1;
+stop
+
+@enduml
