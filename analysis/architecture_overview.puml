@@ -1,0 +1,251 @@
+@startuml
+title BioJava — Architectural Overview
+
+skinparam backgroundColor #FEFEFE
+skinparam packageBackgroundColor #E8F4F8
+skinparam componentBackgroundColor #FFFFFF
+
+!define CORE_COLOR #4A90E2
+!define STRUCTURE_COLOR #7ED321
+!define ALIGNMENT_COLOR #F5A623
+!define DATA_COLOR #D0021B
+!define GUI_COLOR #9013FE
+!define SERVICE_COLOR #50E3C2
+
+' Layered architecture
+package "Presentation Layer" #LightCyan {
+    component "biojava-structure-gui" as GUI GUI_COLOR [
+        **Structure GUI**
+        ====
+        • Jmol Integration
+        • Alignment Viewer
+        • 3D Visualization
+        ----
+        ~85 classes
+    ]
+}
+
+package "Application Layer" #LightYellow {
+    component "biojava-ws" as WS SERVICE_COLOR [
+        **Web Services**
+        ====
+        • NCBI BLAST
+        • Remote Alignments
+        • HMMER
+        ----
+        ~38 classes
+    ]
+
+    component "biojava-protein-comparison-tool" as PCT SERVICE_COLOR [
+        **Comparison Tools**
+        ====
+        • Structure Comparison
+        • Analysis Utilities
+        ----
+        ~12 classes
+    ]
+}
+
+package "Domain/Business Layer" #LightGreen {
+    component "biojava-structure" as STRUCT STRUCTURE_COLOR [
+        **3D Structure**
+        ====
+        • PDB/MMTF Parser
+        • Chain/Atom Model
+        • Structure I/O
+        • Bond Analysis
+        ----
+        ~297 classes
+    ]
+
+    component "biojava-alignment" as ALIGN ALIGNMENT_COLOR [
+        **Alignment**
+        ====
+        • Pairwise/Multiple
+        • Scoring Matrices
+        • Stockholm Format
+        ----
+        ~107 classes
+    ]
+
+    component "biojava-genome" as GENOME DATA_COLOR [
+        **Genomic Data**
+        ====
+        • GFF3/FASTQ
+        • Gene Mapping
+        • Chromosome Data
+        ----
+        ~67 classes
+    ]
+
+    component "biojava-modfinder" as MOD DATA_COLOR [
+        **Modifications**
+        ====
+        • PTM Detection
+        • Protein Mods
+        ----
+        ~42 classes
+    ]
+
+    component "biojava-ontology" as ONTO DATA_COLOR [
+        **Ontologies**
+        ====
+        • GO/OBO Parser
+        • Term Management
+        ----
+        ~22 classes
+    ]
+
+    component "biojava-aa-prop" as AAPROP DATA_COLOR [
+        **AA Properties**
+        ====
+        • Peptide Calc
+        • Secondary Structure
+        ----
+        ~31 classes
+    ]
+
+    component "biojava-protein-disorder" as DISORDER DATA_COLOR [
+        **Disorder Prediction**
+        ====
+        • RONN Predictor
+        ----
+        ~18 classes
+    ]
+
+    component "biojava-survival" as SURVIVAL DATA_COLOR [
+        **Survival Analysis**
+        ====
+        • Cox Regression
+        ----
+        ~15 classes
+    ]
+}
+
+package "Foundation Layer" #LightBlue {
+    component "biojava-core" as CORE CORE_COLOR [
+        **Core Library**
+        ====
+        • Sequence API
+        • I/O Framework
+        • Alignment Core
+        • Search/BLAST
+        • Utilities
+        ----
+        186 classes
+        23 packages
+        **NO DEPENDENCIES**
+    ]
+}
+
+package "External Dependencies" #LightGray {
+    database "Data Sources" as DATA {
+        [PDB Database]
+        [NCBI Services]
+        [UniProt]
+        [Local Files]
+    }
+
+    frame "Libraries" as LIBS {
+        [slf4j/log4j]
+        [JUnit]
+        [JAXB]
+        [vecmath]
+        [MMTF-Java]
+        [Jmol]
+    }
+}
+
+' Dependencies - Presentation
+GUI --> STRUCT
+GUI --> ALIGN
+GUI --> LIBS
+
+' Dependencies - Application
+WS --> CORE
+WS --> DATA
+PCT --> STRUCT
+PCT --> ALIGN
+
+' Dependencies - Domain
+STRUCT --> CORE
+STRUCT --> LIBS
+ALIGN --> CORE
+GENOME --> CORE
+MOD --> STRUCT
+MOD --> CORE
+ONTO --> CORE
+AAPROP --> CORE
+DISORDER --> CORE
+SURVIVAL --> CORE
+
+' Data flow
+DATA ..> WS : "external data"
+DATA ..> STRUCT : "PDB files"
+DATA ..> GENOME : "genomic data"
+
+' Key patterns
+note right of CORE
+  **Foundation Module**
+  • Zero dependencies
+  • Provides base APIs
+  • Template patterns
+  • Builder patterns
+end note
+
+note right of STRUCT
+  **Largest Module**
+  • Complex 3D models
+  • Multiple file formats
+  • Heavy computation
+end note
+
+note right of GUI
+  **User Interface**
+  • Jmol-based
+  • Event-driven
+  • Swing/AWT
+end note
+
+note bottom of ALIGN
+  **Algorithms**
+  • Strategy pattern
+  • Multiple implementations
+  • Scoring matrices
+end note
+
+' Layer labels
+note top of GUI
+  <b>PRESENTATION</b>
+  Visualization & UI
+end note
+
+note top of WS
+  <b>APPLICATION</b>
+  Services & Tools
+end note
+
+note top of STRUCT
+  <b>DOMAIN/BUSINESS</b>
+  Core Business Logic
+end note
+
+note top of CORE
+  <b>FOUNDATION</b>
+  Base Framework
+end note
+
+legend bottom right
+  |= Layer |= Responsibility |
+  | Presentation | User interface, visualization |
+  | Application | Services, external integration |
+  | Domain | Business logic, algorithms |
+  | Foundation | Core APIs, utilities |
+
+  |= Coupling |= Description |
+  | Low | 0-1 dependencies |
+  | Medium | 2-3 dependencies |
+  | High | 4+ dependencies |
+endlegend
+
+@enduml

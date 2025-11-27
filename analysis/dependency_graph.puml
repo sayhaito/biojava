@@ -1,0 +1,154 @@
+@startuml
+title BioJava — Module Dependency Graph
+
+skinparam componentStyle rectangle
+skinparam backgroundColor #FEFEFE
+skinparam defaultFontName Arial
+
+package "External Dependencies" {
+  [slf4j] <<logging>>
+  [log4j] <<logging>>
+  [junit] <<testing>>
+  [jakarta.xml.bind] <<xml>>
+  [vecmath] <<math>>
+  [mmtf] <<format>>
+}
+
+package "BioJava Modules" {
+
+  component "biojava-core" as core #LightBlue {
+    [Sequence API]
+    [Alignment Core]
+    [I/O Parsers]
+    [Utilities]
+  }
+
+  component "biojava-structure" as structure #LightGreen {
+    [3D Structures]
+    [PDB Parser]
+    [MMTF Support]
+    [Chain/Atom Models]
+  }
+
+  component "biojava-alignment" as alignment #LightYellow {
+    [Pairwise Alignment]
+    [Multiple Alignment]
+    [Scoring Matrices]
+    [Stockholm Parser]
+  }
+
+  component "biojava-genome" as genome #LightPink {
+    [GFF Readers]
+    [FASTQ Support]
+    [Gene Mapping]
+    [Chromosome Data]
+  }
+
+  component "biojava-structure-gui" as gui #LightCyan {
+    [Jmol Integration]
+    [Visualization]
+    [Alignment Display]
+  }
+
+  component "biojava-modfinder" as modfinder #Lavender {
+    [Protein Modifications]
+    [PTM Detection]
+    [Structure Analysis]
+  }
+
+  component "biojava-ontology" as ontology #LightSalmon {
+    [GO Parser]
+    [OBO Support]
+    [Term Management]
+  }
+
+  component "biojava-ws" as ws #LightGray {
+    [NCBI BLAST]
+    [Remote Services]
+    [HMMER Integration]
+  }
+
+  component "biojava-aa-prop" as aaprop #PeachPuff {
+    [AA Properties]
+    [Peptide Calculations]
+    [Secondary Structure]
+  }
+
+  component "biojava-protein-disorder" as disorder #MistyRose {
+    [RONN Predictor]
+    [Disorder Analysis]
+  }
+
+  component "biojava-survival" as survival #Honeydew {
+    [Cox Regression]
+    [Survival Analysis]
+  }
+
+  component "biojava-protein-comparison-tool" as pct #Thistle {
+    [Structure Comparison]
+    [Alignment Tools]
+  }
+}
+
+' External dependencies (simplified)
+core ..> [slf4j]
+core ..> [junit]
+core ..> [jakarta.xml.bind]
+
+structure ..> [slf4j]
+structure ..> [vecmath]
+structure ..> [mmtf]
+
+' Internal dependencies
+alignment --> core : depends on
+structure --> core : depends on
+genome --> core : depends on
+ontology --> core : depends on
+ws --> core : depends on
+aaprop --> core : depends on
+
+gui --> structure : depends on
+gui --> alignment : depends on
+
+modfinder --> structure : depends on
+modfinder --> core : depends on
+
+disorder --> core : depends on
+
+pct --> structure : depends on
+pct --> alignment : depends on
+
+survival --> core : depends on
+
+' Notes
+note right of core
+  **Foundation Module**
+  - 189 classes
+  - 24 packages
+  - No internal deps
+end note
+
+note right of structure
+  **Largest Module**
+  - ~297 classes
+  - 35+ packages
+  - PDB/MMTF support
+end note
+
+note bottom of alignment
+  **Sequence Alignment**
+  - Pairwise & Multiple
+  - Various algorithms
+end note
+
+legend right
+  |= Color |= Type |
+  | <#LightBlue> | Core/Foundation |
+  | <#LightGreen> | Structure Processing |
+  | <#LightYellow> | Alignment |
+  | <#LightPink> | Genomic Data |
+  | <#LightCyan> | GUI/Visualization |
+  | <#Lavender> | Analysis Tools |
+endlegend
+
+@enduml
